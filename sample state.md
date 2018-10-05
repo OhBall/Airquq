@@ -17,7 +17,7 @@
         email: 'kit002@gmail.com'    
       }
     },
-    spots: {
+    listings: {
       1: {
         id: 1,
         name: 'Unique Cob Cottage',
@@ -37,7 +37,7 @@
     bookings: {
       1: {
         id: 1,
-        spot_id: 1,
+        listing_id: 1,
         guest_id: 1,
         start_date: 2018-08-02,
         end_date: 2018-08-04,
@@ -47,7 +47,7 @@
       1: {
         id: 1,
         author_id: 1,
-        spot_id: 1,
+        listing_id: 1,
         title: 'Awesome place!',
         body: 'We enjoyed our stay!',
         accuracy: 5,

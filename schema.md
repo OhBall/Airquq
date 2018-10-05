@@ -16,12 +16,13 @@ column name       | data type | details
 - index on `username, unique: true`
 - index on `session_token, unique: true`
 
-## `spots`
+## `listings`
 
 column name       | data type | details
 ------------------|-----------|-----------------------
 `id`              | integer   | not null, primary key
 `name`            | string    | not null
+`host_id`         | integer   | not null, foreign key, indexed
 `description`     | text      | not null
 `price`           | float     | not null
 `bed_num`         | integer   | not null
@@ -29,10 +30,9 @@ column name       | data type | details
 `city`            | string    | not null
 `state`           | string    | not null
 `country`         | string    | not null
-`zipcode`         | string    | not null
-`lat`             | float     | not null
-`lng`             | float     | not null
-`host_id`         | integer   | not null, foreign key, indexed
+`zipcode`         | string    | 
+`lat`             | float     | 
+`lng`             | float     | 
 `timestamps`      | datetime  | not null
 
 - `host_id` references `users`
@@ -43,15 +43,15 @@ column name       | data type | details
 column name       | data type | details
 ------------------|-----------|-----------------------
 `id`              | integer   | not null, primary key
-`spot_id`         | integer   | not null, foreign key, indexed
+`listing_id`      | integer   | not null, foreign key, indexed
 `guest_id`        | integer   | not null, foreign key, indexed
-`start_date`      | date      | not null
-`end_date`        | date      | not null
+`checkin_date`    | date      | not null
+`checkout_date`   | date      | not null
 `timestamps`      | datetime  | not null
 
-- `spot_id` references `spots`
+- `listing_id` references `listings`
 - `guest_id` references `users`
-- index on `spot_id` & `guest_id`
+- index on `listing_id` & `guest_id`
 
 
 ## `Reviews`
@@ -60,7 +60,7 @@ column name       | data type | details
 ------------------|-----------|-----------------------
 `id`              | integer   | not null, primary key
 `author_id`       | integer   | not null, foreign key, indexed
-`spot_id`         | integer   | not null, foreign key, indexed
+`listing_id`      | integer   | not null, foreign key, indexed
 `title`           | string    | not null
 `body`            | text      | not null
 `accuracy`        | integer   | 
@@ -72,8 +72,8 @@ column name       | data type | details
 `timestamps`      | datetime  | not null
 
 - `author_id` references `users`
-- `spot_id` references `spots`
-- index on `author_id` & `spot_id`
+- `listing_id` references `listings`
+- index on `author_id` & `listing_id`
 
 ## `Messages`
 
