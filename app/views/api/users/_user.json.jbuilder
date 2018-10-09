@@ -1,0 +1,4 @@
+json.username user.username
+json.firstName user.first_name
+json.lastName user.last_name
+json.email user.email
