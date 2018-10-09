@@ -35,8 +35,12 @@ class LoginForm extends React.Component {
   }
   
   render() {
+    const { otherForm, closeModal } = this.props;
+    
     return(
       <div>
+        Please log in or { otherForm }
+        <div onClick={ closeModal } className="close-x">X</div>
         { this.renderErrors() }
         <form onSubmit={ this.handleSubmit }>
           <label>Username: 

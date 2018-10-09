@@ -1,18 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { openModal } from '../../actions/modal_actions';
 
-const Greeting = ({ currentUser, logout }) => {
+const Greeting = ({ currentUser, openModal, logout }) => {
   const sessionLinks = () => (
-    <nav className="login-signup">
-      <Link to="/login">Login</Link>
+    <nav>
+      <button onClick={() => openModal('login')}>Log In</button>
       &nbsp;or&nbsp;
-      <Link to="/signup">Sign up!</Link>
+      <button onClick={() => openModal('signup')}>Sign Up</button>
     </nav>
   );
   const personalGreeting = () => (
-    <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.username}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
+    <hgroup>
+      <h2>Hi, {currentUser.username}!</h2>
+      <button onClick={logout}>Log Out</button>
     </hgroup>
   );
 

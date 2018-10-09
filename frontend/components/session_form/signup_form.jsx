@@ -38,8 +38,13 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    const { otherForm, closeModal } = this.props;
+
     return (
-      <div>
+      <div>        
+        Please sign up or { otherForm }
+        <div onClick={closeModal} className="close-x">X</div>
+
         {this.renderErrors()}
         <form onSubmit={this.handleSubmit}>
           <label>Username:

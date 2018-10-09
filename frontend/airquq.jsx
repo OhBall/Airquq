@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
+import { openModal } from './actions/modal_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   // testing start
+  window.openModal = openModal;
   window.store = store;
   // testing end
   
