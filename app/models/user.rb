@@ -14,9 +14,9 @@
 #
 
 class User < ApplicationRecord
-  validates :username, :session_token, presence: true, uniqueness: true
+  validates :email, :session_token, presence: true, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
-  validates :password_digest, :email, :first_name, :last_name, presence: true
+  validates :password_digest, :first_name, :last_name, presence: true
 
   after_initialize :ensure_session_token
 
@@ -34,8 +34,8 @@ class User < ApplicationRecord
   foreign_key: :host_id,
   class_name: :Listing
 
-  def self.find_by_credentials(username, password)
-    user = User.find_by_username(username);
+  def self.find_by_credentials(email, password)
+    user = User.find_by_email(email);
     user && user.is_password?(password) ? user : nil
   end
 

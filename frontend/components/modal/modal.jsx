@@ -20,8 +20,8 @@ function Modal({ modal, closeModal }) {
       return null;
   }
   return (
-    <div onClick={ closeModal }>
-      <div onClick={ e => e.stopPropagation() } id='modal'>
+    <div id='modal' onClick={ closeModal }>
+      <div onClick={ e => e.stopPropagation() }>
         {component}
       </div>
     </div>

@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-rika = User.create!(username: 'rika', password:'123456', first_name:'Rika', last_name:'Sun', email:'rika@gmail.com')
-danny = User.create!(username: 'danny', password:'123456', first_name:'Danny', last_name:'Xu', email:'danny@gmail.com')
-dirk = User.create!(username: 'dirk', password:'123456', first_name:'Haupt', last_name:'Sun', email:'dirk@gmail.com')
-john = User.create!(username: 'john', password:'123456', first_name:'John', last_name:'Huang', email:'john@gmail.com')
-tony = User.create!(username: 'tony', password:'123456', first_name:'Tony', last_name:'Huang', email:'tony@gmail.com')
+rika = User.create!(password:'123456', first_name:'Rika', last_name:'Sun', email:'rika@gmail.com')
+danny = User.create!(password:'123456', first_name:'Danny', last_name:'Xu', email:'danny@gmail.com')
+dirk = User.create!(password:'123456', first_name:'Haupt', last_name:'Sun', email:'dirk@gmail.com')
+john = User.create!(password:'123456', first_name:'John', last_name:'Huang', email:'john@gmail.com')
+tony = User.create!(password:'123456', first_name:'Tony', last_name:'Huang', email:'tony@gmail.com')
 
 listing1 = Listing.create!(name: 'La casa', host_id: rika.id, description: 'A cottage made up of stone and timber built on two storeys, with a large living room, glass window, a couch for two people and a bathroom with sauna; on the second storey there is a double bedroom. Outdoors, there is a large garden with a porch equipped with BBQ and a wooden table. The site is located on the pleasant hills between Bellegra and Olevano Romano. We have currently added two beds, set up in a wonderful Indian teepe available for two extra guests in addition to the four ones.',
                           price: 309, room_num: 2, bed_num: 2, bath_num: 1, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: true, hair_dryer: false, shampoo: false, 

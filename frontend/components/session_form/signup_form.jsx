@@ -34,41 +34,37 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(this.props.closeModal);
   }
 
   render() {
     const { otherForm, closeModal } = this.props;
 
     return (
-      <div>        
-        Already have an Airquq account? { otherForm }
+      <div className='session-signup'>        
         <div onClick={closeModal} className="close-x">X</div>
 
         {this.renderErrors()}
         <form onSubmit={this.handleSubmit}>
-          <label>Username:
-            <input type="text" value={this.state.username} onChange={this.handleInput('username')} />
+          <label>
+            <input type="text" value={this.state.email} onChange={this.handleInput('email')} placeholder='Email' required />
           </label><br /><br />
 
-          <label>Password:
-            <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
+          <label>
+            <input type="password" value={this.state.password} onChange={this.handleInput('password')} placeholder='Password' required />
           </label><br /><br />
 
-          <label>First Name:
-            <input type="text" value={this.state.first_name} onChange={this.handleInput('first_name')} />
+          <label>
+            <input type="text" value={this.state.first_name} onChange={this.handleInput('first_name')} placeholder='First Name' required />
           </label><br /><br />
 
-          <label>Last Name:
-            <input type="text" value={this.state.last_name} onChange={this.handleInput('last_name')} />
+          <label>
+            <input type="text" value={this.state.last_name} onChange={this.handleInput('last_name')} placeholder='Last Name' required />
           </label><br /><br />
 
-          <label>Email:
-            <input type="text" value={this.state.email} onChange={this.handleInput('email')} />
-          </label><br /><br />
-
-          <button>Sign Up</button>
+          <div className='session-button'>Sign Up</div>
         </form>
+        <div className='session-option'>Already have an Airquq account? {otherForm}</div>
       </div>
     );
   }

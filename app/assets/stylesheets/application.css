@@ -14,12 +14,29 @@
  *= require_self
  */
 
+/* reset  */
 * {
   list-style: none;
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -37,10 +54,14 @@
 #nav-search input {
   padding: 15px;
   box-sizing: border-box;
-  font-weight: 800;
   font-size: 13px;
   width: 460px;
   height: 50px;
+  font-family: Open Sans;
+  font-weight: 700;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px #ccc;
 }
 
 #logo-container img {
@@ -65,25 +86,67 @@
   text-align: center;
   padding-top: 30px;
   cursor: pointer;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .nav-right li:last-child {
-  padding-right: 25px;
+  margin-right: 25px;
 }
 
 .nav-right li:hover {
   border-bottom: 3px solid #ccc;
 }
 
+/* .modal-screen {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+} */
+
 #modal {
-  position: absolute;
   background-color: antiquewhite;
+  position: absolute;
+  left: 400px;
+  top: 100px;
+  width: 570px;
+  height: 500px;
+  padding: 20px;
 }
 
-.shadow {
-  -moz-box-shadow:    0px 1px 1px 0px #ccc;
-  -webkit-box-shadow: 0px 1px 1px 0px #ccc;
-  box-shadow:         0px 1px 1px 0px #ccc;
+[class*="session-"] input {
+  font-weight: 400;
+  font-size: 15px;
+  padding: 7px;
+  width: 500px;
+  height: 20px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0;
+}
+
+.session-button {
+  background-color: #fd5c63;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 500px;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 12px;
+}
+
+.session-option-button {
+  color: #008489;
+  display: inline;
+}
+
+.session-option {
+  padding: 20px;
+  text-align: center;
 }

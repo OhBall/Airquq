@@ -5,7 +5,7 @@ import { openModal } from '../../actions/modal_actions';
 import Navbar from './navbar';
 
 const mapStateToProps = ({ session }) => ({
-  currentUser: session.currentUser
+  currentUser: session.id
 });
 
 const mapDispatchToProps = dispatch => ({

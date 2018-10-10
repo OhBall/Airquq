@@ -5,7 +5,7 @@ class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      email: '',
       password: ''
     };
 
@@ -31,28 +31,28 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(this.props.closeModal);
   }
   
   render() {
     const { otherForm, closeModal } = this.props;
     
     return(
-      <div>
-        Please log in or { otherForm }
+      <div className='session-login'>
         <div onClick={ closeModal } className="close-x">X</div>
         { this.renderErrors() }
-        <form onSubmit={ this.handleSubmit }>
-          <label>Username: 
-            <input type="text" value={ this.state.username } onChange={ this.handleInput('username') } />
+        <form>
+          <label>
+            <input type="text" value={this.state.email} onChange={this.handleInput('email')} placeholder="Email address" />
           </label><br /><br />
 
-          <label>Password: 
-            <input type="password" value={ this.state.password } onChange={ this.handleInput('password') } />
+          <label>
+            <input type="password" value={this.state.password} onChange={this.handleInput('password')} placeholder="Password" />
           </label><br /><br />
 
-          <button>Log In</button>     
+          <div onClick={ this.handleSubmit } className='session-button'>Log In</div>
         </form>
+        <div className='session-option'>Don't have an account? {otherForm}</div>      
       </div>
     );
   }
