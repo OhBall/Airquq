@@ -23,6 +23,7 @@ function Modal({ modal, closeModal }) {
     <div id='modal' onClick={ closeModal }>
       <div onClick={ e => e.stopPropagation() }>
         {component}
+        <div onClick={closeModal} className="modal-screen" />
       </div>
     </div>
   );

@@ -3,12 +3,11 @@
 # Table name: users
 #
 #  id              :bigint(8)        not null, primary key
-#  username        :string           not null
-#  password_digest :string           not null
-#  session_token   :string           not null
 #  email           :string           not null
 #  first_name      :string           not null
 #  last_name       :string           not null
+#  session_token   :string           not null
+#  password_digest :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
@@ -43,9 +42,9 @@ class User < ApplicationRecord
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
-  def password=(passoword)
-    @passoword = passoword
-    self.password_digest = BCrypt::Password.create(passoword)
+  def password=(password)
+    @password = password
+    self.password_digest = BCrypt::Password.create(password)
   end
 
   def reset_session_token!

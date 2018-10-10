@@ -1,0 +1,83 @@
+.modal-screen {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+[class*="session-form"] {
+  background-color: white;
+  position: absolute;
+  left: 400px;
+  top: 100px;
+  width: 40%;
+  padding: 20px;
+  z-index: 3;
+}
+
+.session-input-container {
+  margin-left: 10px;
+}
+
+[class*="session-form"] input {
+  font-weight: 400;
+  font-size: 15px;
+  padding: 7px;
+  width: 94%;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+}
+
+[class*="session-form"] input:focus {
+  border: 1px solid $airbnb-blue;
+}
+
+
+.session-button {
+  background-color: $airbnb-orange;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 93%;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 17px;
+}
+
+.session-button:last-child {
+  margin-bottom: 25px;
+}
+
+.divide-line {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.session-option-button {
+  color: $airbnb-blue;
+  display: inline;
+}
+
+.session-option {
+  padding: 20px;
+  text-align: center;
+}
+
+.close-x {
+  color: grey;
+  font-size: 20px; 
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.errors-ul {
+  margin: 10px;
+  color: $airbnb-orange;
+  margin-bottom: 25px;
+}

@@ -10,11 +10,12 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="errors-ul">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -33,15 +34,28 @@ class LoginForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
   }
+
+  handleDemoLogin(e) {
+    e.preventDefault();
+
+    const demoUser = {
+      email: 'demo@gmail.com',
+      password: 'demodemo'
+    }
+
+    this.props.processForm(demoUser).then(this.props.closeModal);
+  }
   
   render() {
     const { otherForm, closeModal } = this.props;
+
+
     
     return(
-      <div className='session-login'>
-        <div onClick={ closeModal } className="close-x">X</div>
+      <div className='session-form-login'>
+        <div onClick={closeModal} className="close-x">✕</div>
         { this.renderErrors() }
-        <form>
+        <form className="session-input-container">
           <label>
             <input type="text" value={this.state.email} onChange={this.handleInput('email')} placeholder="Email address" />
           </label><br /><br />
@@ -51,7 +65,9 @@ class LoginForm extends React.Component {
           </label><br /><br />
 
           <div onClick={ this.handleSubmit } className='session-button'>Log In</div>
+          <div onClick={ this.handleDemoLogin } className='session-button'>Demo Log In</div>
         </form>
+        <div class="divide-line" />
         <div className='session-option'>Don't have an account? {otherForm}</div>      
       </div>
     );

@@ -30,6 +30,7 @@ const Greeting = ({ currentUser, openModal, logout }) => {
         <div id='logo-container'><img src={airquq_logo} /></div>
         <div id='nav-search' className='shadow'>
           <label>
+            <i class="fas fa-search"></i>
             <input type="text" placeholder='Try "San Francisco"' />
           </label>
         </div>

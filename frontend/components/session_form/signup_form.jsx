@@ -17,7 +17,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="errors-ul">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -41,11 +41,11 @@ class SessionForm extends React.Component {
     const { otherForm, closeModal } = this.props;
 
     return (
-      <div className='session-signup'>        
-        <div onClick={closeModal} className="close-x">X</div>
+      <div className='session-form-signup'>        
+        <div onClick={closeModal} className="close-x">✕</div>
 
         {this.renderErrors()}
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="session-input-container">
           <label>
             <input type="text" value={this.state.email} onChange={this.handleInput('email')} placeholder='Email' required />
           </label><br /><br />
@@ -62,8 +62,9 @@ class SessionForm extends React.Component {
             <input type="text" value={this.state.last_name} onChange={this.handleInput('last_name')} placeholder='Last Name' required />
           </label><br /><br />
 
-          <div className='session-button'>Sign Up</div>
+          <div onClick={ this.handleSubmit } className='session-button'>Sign Up</div>
         </form>
+        <div class="divide-line" />
         <div className='session-option'>Already have an Airquq account? {otherForm}</div>
       </div>
     );
