@@ -53,7 +53,7 @@ class LoginForm extends React.Component {
     
     return(
       <div className='session-form-login'>
-        <div onClick={closeModal} className="close-x">✕</div>
+        <div onClick={ closeModal } className="close-x">✕</div>
         { this.renderErrors() }
         <form className="session-input-container">
           <label>

@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => ({
   otherForm: (
     <div className='session-option-button' onClick={() => dispatch(openModal('signup'))}>Sign Up</div>
   ),
-  closeModal: () => dispatch(closeModal())
+  closeModal: () => dispatch(closeModal()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);

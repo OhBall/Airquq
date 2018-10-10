@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
+// testing imports
 import { openModal } from './actions/modal_actions';
+import { fetchListings, fetchListing } from './actions/listing_actions'
+// testing imports ends
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -23,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // testing start
   window.openModal = openModal;
   window.store = store;
+  window.fetchListings = fetchListings;
+  window.fetchListing = fetchListing;
   // testing end
   
   const root = document.getElementById('root');

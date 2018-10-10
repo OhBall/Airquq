@@ -1,11 +1,11 @@
 class Api::ListingsController < ApplicationController
   def index
-    @listings = Listings.all
+    @listings = Listing.all
     render :index
   end
 
   def show
-    @listing = Listing.find_by_id(params[:id])
+    @listing = Listing.find(params[:id])
     render :show
   end
 

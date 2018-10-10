@@ -1,0 +1,19 @@
+.index-container {
+  width: 95%;
+}
+
+.index-title {
+  font-weight: 500;
+  font-size: 25px;
+  color: $dark-grey;
+}
+
+.listings-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.listing-details-container {
+  border: 1px solid $airbnb-orange;
+  margin: 10px;
+}
