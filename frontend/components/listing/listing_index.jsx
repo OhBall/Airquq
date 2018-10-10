@@ -7,14 +7,16 @@ class ListingIndex extends React.Component {
     this.props.fetchListings();
   }
 
+ 
+
   render() {
     const listings = this.props.listings.map(listing => (
       <ListingIndexItem key={listing.id} listing={listing} />
     ));
-    
+
     return (
       <div className="index-container">
-        <p className="index-title">Homes around the world</p>
+        <p className="index-title">Homes in San Francisco</p>
         <ul className="listings-container">
           {listings}
         </ul>

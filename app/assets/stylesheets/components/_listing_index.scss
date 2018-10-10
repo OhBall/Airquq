@@ -1,19 +1,51 @@
 .index-container {
-  width: 95%;
+  width: 90%;
+  margin: auto;
+  color: $dark-grey;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 }
 
 .index-title {
   font-weight: 500;
   font-size: 25px;
   color: $dark-grey;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
+
 
 .listings-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
+
 .listing-details-container {
-  border: 1px solid $airbnb-orange;
   margin: 10px;
+  width: 20%;
+  height: 260px;
+}
+
+.listing-details-text div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#listing-city{
+  color: $airbnb-blue;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+#listing-name {
+  font-weight: 500;
+  // font-family: Noto Sans;
+  
+}
+
+#listing-price {
+  font-size: 13px;
+  font-weight: 300;
 }
