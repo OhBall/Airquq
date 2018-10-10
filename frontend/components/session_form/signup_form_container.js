@@ -12,7 +12,7 @@ const mapStateToProps = ({ errors }) => ({
 const mapDispatchToProps = dispatch => ({
   processForm: user => dispatch(signup(user)),
   otherForm: (
-    <button onClick={() => dispatch(openModal('login'))}>Log In</button>
+    <a onClick={() => dispatch(openModal('login'))}>Log In</a>
   ),
   closeModal: () => dispatch(closeModal())
 });

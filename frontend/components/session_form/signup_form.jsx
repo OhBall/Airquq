@@ -42,7 +42,7 @@ class SessionForm extends React.Component {
 
     return (
       <div>        
-        Please sign up or { otherForm }
+        Already have an Airquq account? { otherForm }
         <div onClick={closeModal} className="close-x">X</div>
 
         {this.renderErrors()}

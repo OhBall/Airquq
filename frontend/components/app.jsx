@@ -6,7 +6,7 @@ import {
   Link
 } from 'react-router-dom';
 
-import GreetingContainer from './greeting/greeting_container';
+import NavbarContainer from './greeting/navbar_container';
 import Modal from './modal/modal';
 import { ProtectedRoute } from '../util/route_util';
 
@@ -14,8 +14,7 @@ const App = () => (
   <div>
     <Modal />
     <header>
-      <h1>Welcome to Airquq!</h1>
-      <GreetingContainer />
+      <NavbarContainer />
     </header>
 
   </div>
