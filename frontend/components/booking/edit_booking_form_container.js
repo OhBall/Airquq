@@ -1,26 +1,28 @@
-import { connect } from 'react-redux';
-import React from 'react';
+// import { connect } from 'react-redux';
+// import React from 'react';
 
-class EditBookingForm extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+// class EditBookingForm extends React.Component {
+//   constructor(props) {
+//     super(props);
 
-  componentDidMount() {
+//     this.state = this.props.booking;
+//   }
 
-  }
+//   componentDidMount() {
 
-  render() {
-    
-  }
-}
+//   }
 
-const MapStateToProps = state => ({
+//   render() {
 
-});
+//   }
+// }
 
-const MapDispatchToProps = Dispatch => ({
+// const MapStateToProps = (state, ownProps) => ({
+//   booking: state.entitites.booking()
+// });
 
-});
+// const MapDispatchToProps = dispatch => ({
 
-export default connect(MapStateToProps, MapDispatchToProps)(EditBookingForm);
+// });
+
+// export default connect(MapStateToProps, MapDispatchToProps)(EditBookingForm);

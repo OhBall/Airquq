@@ -2,7 +2,7 @@ import React from 'react';
 import Amenities from './amenities';
 import DetailInfo from './detail_info';
 import PhotoDisplay from './photo_display';
-import BookingForm from './calendar';
+import CreateBookingFormContainer from '../booking/create_booking_form_container';
 
 class ListingShow extends React.Component {
 
@@ -42,7 +42,7 @@ class ListingShow extends React.Component {
           </div>
 
           <div className="listing-show-right">
-            <BookingForm />
+            <CreateBookingFormContainer listing={listing} />
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const LoggedIn = ({ logout }) => (
   <ul className='nav-right'>
-    <li>You're logged in.</li>
+    <p>You're logged in.</p>
     <li onClick={ logout }>Log Out</li>
   </ul>
 );
