@@ -9,12 +9,12 @@ class ListingIndex extends React.Component {
 
   render() {
     const listings = this.props.listings.map(listing => (
-      <ListingIndexItem key={listing.id} listing={listing} />
+      <ListingIndexItem key={listing.id} listing={listing} img={this.props.img}/>
     ));
 
     return (
       <div className="index-container">
-        <p className="index-title">Homes in San Francisco</p>
+        <p className="index-title">Homes in {this.props.city}</p>
         <ul className="listings-container">
           {listings}
         </ul>

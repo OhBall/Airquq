@@ -1,6 +1,9 @@
 .homepage-container {
   color: $dark-grey;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  max-width: 1440px;
+  min-width: 1000px;
+  margin: auto;
 }
 
 .homepage-text {
@@ -42,6 +45,7 @@
 
 #city-name {
   font-weight: 500;
+  font-size: 18px;
 }
 
 #description {
