@@ -17,6 +17,6 @@ class Api::ListingsController < ApplicationController
               :bed_num, :bath_num, :air_conditioning, :heating, 
               :essentials, :wifi, :tv, :washer, :kitchen, 
               :free_parking, :hair_dryer, :shampoo, :address, 
-              :city, :state, :country, :zipcode, :lat, :lng, :image)
+              :city, :state, :country, :zipcode, :lat, :lng, photos:[])
   end 
 end

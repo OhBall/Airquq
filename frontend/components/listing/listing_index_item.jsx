@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ListingIndexItem = ({ listing, img }) => {
   return (
     <div className="listing-details-container">
-      <img src={img} />
+      <Link to={`/listings/${listing.id}`}><img src={img} /></Link>
       <div className="listing-details-text">
         <div id="listing-city">{ listing.city.toUpperCase() }</div>
         <Link to={`/listings/${listing.id}`}><div id="listing-name">{listing.name}</div></Link>

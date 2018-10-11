@@ -1,5 +1,6 @@
 import React from 'react';
 import airquq_logo from '../../../app/assets/images/airquq_logo.png';
+import { Link } from 'react-router-dom';
 
 const LoggedIn = ({ logout }) => (
   <ul className='nav-right'>
@@ -27,7 +28,11 @@ const Greeting = ({ currentUser, openModal, logout }) => {
   const sessionLinks = () => (
     <nav className='navbar'>
       <div className='nav-left'>
-        <div id='logo-container'><img src={airquq_logo} /></div>
+        
+        <Link to="/">
+          <div id='logo-container'><img src={airquq_logo} /></div>
+        </Link>
+        
         <div id='nav-search' className='shadow'>
           <label>
             <i className="fas fa-search"></i>

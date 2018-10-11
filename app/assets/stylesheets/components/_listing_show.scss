@@ -1,12 +1,23 @@
+.listing-show-all-info {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
 // main
+
+.listing-show-left {
+  width: 55%;
+}
+
 .all-info-container {
-  width: 50%;
-  margin-left: 120px;
+  width: 100%;
+  // margin-left: 120px;
 }
 
 // name
 .listing-show-name {
-  margin-top: 30px;
   margin-bottom: 15px;
   font-size: 32px;
   font-weight: 600;
@@ -54,6 +65,12 @@
   margin-bottom: 200px;
 }
 
+.listing-show-amenities-container p {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
 .listing-show-amenities-ul {
   display: flex;
   flex-wrap: wrap;
@@ -66,20 +83,23 @@
 }
 
 .listing-show-amenities-ul li i {
-  width: 25px;
+  width: 30px;
   margin: auto;
   text-align: center;
+  margin-right: 5px;
+  
 }
 
-
-.amenities-text {
+.listing-show-amenities-ul li p {
   display: inline;
+  font-weight: 300;
 }
 
 // Photos - component
 
 .listing-show-photo-container {
   overflow: hidden;
+  height: 450px;
 }
 
 .listing-show-photo-container img {
@@ -91,4 +111,25 @@
 
 .listing-show-photo-container img:hover {
   transform: scale(1.05);
+}
+
+// Calendar
+
+.listing-show-right {
+  margin-top: px;
+  margin-left: 70px;
+  width: 35%;
+  position: relative;
+}
+
+.calendar {
+  // placeholder
+  border: 1px solid lightgrey;
+  color: lightgrey;
+  font-size: 30px;
+  padding: 10px;
+  width: 400px;
+  height: 300px;
+
+  position: absolute;
 }

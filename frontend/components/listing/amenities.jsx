@@ -12,7 +12,7 @@ const Amenities = (props) => {
       return (
         <li key={idx}>
         {icon[idx]}
-        <p className="amenities-text">{name[idx]}</p>
+        <p>{name[idx]}</p>
         </li>
       )
     }
@@ -20,6 +20,7 @@ const Amenities = (props) => {
 
   return (
     <div className="listing-show-amenities-container">
+      <p>Amenities</p>
       <ul className="listing-show-amenities-ul">
         {amenitiesDisplay}
       </ul>
