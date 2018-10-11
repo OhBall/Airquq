@@ -22,10 +22,10 @@ listing2 = Listing.create!(name: 'Joshua Tree House', host_id: john.id, descript
 listing3 = Listing.create!(name: 'Sunny apartment near metro station', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
                           price: 59, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
                           address: '2304 Tree Circle', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '94411', lat: 32.3342, lng: -123.534)
-listing3 = Listing.create!(name: 'Manhattan Lux Loft.Like.Love.Lots.Look !', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
+listing4 = Listing.create!(name: 'Manhattan Lux Loft.Like.Love.Lots.Look !', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
                           price: 89, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
                           address: '2304 Tree Circle', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '94411', lat: 32.3342, lng: -123.534)
-listing3 = Listing.create!(name: 'Sunny, Modern room in East Village!', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
+listing5 = Listing.create!(name: 'Sunny, Modern room in East Village!', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
                           price: 239, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
                           address: '2304 Tree Circle', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '94411', lat: 32.3342, lng: -123.534)
 
@@ -34,6 +34,12 @@ booking2 = Booking.create!(listing_id: listing2.id, guest_id: rika.id, checkin_d
 booking3 = Booking.create!(listing_id: listing3.id, guest_id: tony.id, checkin_date: Date.parse('2019-1-12'), checkout_date: Date.parse('2019-1-15'))
 booking4 = Booking.create!(listing_id: listing2.id, guest_id: dirk.id, checkin_date: Date.parse('2018-8-12'), checkout_date: Date.parse('2018-8-15'))
 booking5 = Booking.create!(listing_id: listing3.id, guest_id: rika.id, checkin_date: Date.parse('2018-7-02'), checkout_date: Date.parse('2018-7-12'))
+
+booking6 = Booking.create!(listing_id: listing1.id, guest_id: demo.id, checkin_date: Date.parse('2018-7-02'), checkout_date: Date.parse('2018-7-12'))
+booking7 = Booking.create!(listing_id: listing2.id, guest_id: demo.id, checkin_date: Date.parse('2018-7-02'), checkout_date: Date.parse('2018-7-12'))
+booking8 = Booking.create!(listing_id: listing3.id, guest_id: demo.id, checkin_date: Date.parse('2018-7-02'), checkout_date: Date.parse('2018-7-12'))
+booking9 = Booking.create!(listing_id: listing4.id, guest_id: demo.id, checkin_date: Date.parse('2018-7-02'), checkout_date: Date.parse('2018-7-12'))
+booking10 = Booking.create!(listing_id: listing5.id, guest_id: demo.id, checkin_date: Date.parse('2018-7-02'), checkout_date: Date.parse('2018-7-12'))
 
 review1 = Review.create!(author_id: danny.id, listing_id: listing1.id, body: 'We loved our time here in the mountains. It’s a charming spot with amazing views. I wish we could have stayed longer.',
                         accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 5, value: 4)
