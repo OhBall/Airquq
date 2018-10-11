@@ -9,6 +9,7 @@ import {
 import Modal from './modal/modal';
 import NavbarContainer from './greeting/navbar_container';
 import ListingIndexContainer from './listing/listing_index_container';
+import HomepageContainer from './homepage/homepage_container';
 import { ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -16,7 +17,7 @@ const App = () => (
     <Modal />
     <NavbarContainer />
     <header>
-      <ListingIndexContainer />
+      <HomepageContainer />
     </header>
   </div>
 );
