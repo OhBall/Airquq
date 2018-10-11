@@ -5,8 +5,12 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resource :session, only: [:show, :create, :destroy]
     resources :users, only: [:show, :create]
-    resources :listings, only: [:index, :show]
-    resources :bookings, only: [:index, :show, :create, :update, :destroy]
+    
+    resources :listings, only: [:index, :show] do 
+      resources :bookings, only: [:create]
+    end
+
+    resources :bookings, only: [:index, :show, :update, :destroy]
     resources :reviews, only: [:index, :create]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
