@@ -1,0 +1,94 @@
+// main
+.all-info-container {
+  width: 55%;
+  margin-left: 120px;
+}
+
+// name
+.listing-show-name {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+// city
+.listing-show-city {
+  margin-bottom: 15px;
+}
+
+// description
+.listing-show-description {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid $lightest-grey;
+  box-shadow: 2px 2px 6px $lightest-grey;
+  padding: 20px;
+  font-weight: 300;
+}
+
+.listing-show-description p {
+  font-size: 13px;
+  font-weight: 700;
+  color: $light-grey;
+  margin-bottom: 10px;
+}
+
+// details - component
+.listing-show-detail-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.listing-show-detail-container div {
+  margin-right: 15px;
+}
+
+.listing-show-detail-container div i {
+  margin-right: 8px;
+}
+
+// amenities - component
+.listing-show-amenities-container {
+  margin-top: 15px;
+  margin-bottom: 200px;
+}
+
+.listing-show-amenities-ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listing-show-amenities-ul li {
+  width: 49%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.listing-show-amenities-ul li i {
+  width: 25px;
+  margin: auto;
+  text-align: center;
+}
+
+
+.amenities-text {
+  display: inline;
+}
+
+// Photos - component
+
+.listing-show-photo-container {
+  overflow: hidden;
+}
+
+.listing-show-photo-container img {
+  max-width: 100%;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.listing-show-photo-container img:hover {
+  transform: scale(1.05);
+}

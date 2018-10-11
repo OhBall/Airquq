@@ -64,7 +64,7 @@ class SessionForm extends React.Component {
 
           <div onClick={ this.handleSubmit } className='session-button'>Sign Up</div>
         </form>
-        <div class="divide-line" />
+        <div className="divide-line" />
         <div className='session-option'>Already have an Airquq account? {otherForm}</div>
       </div>
     );

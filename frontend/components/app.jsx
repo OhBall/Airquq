@@ -8,8 +8,8 @@ import {
 
 import Modal from './modal/modal';
 import NavbarContainer from './greeting/navbar_container';
-import ListingIndexContainer from './listing/listing_index_container';
 import HomepageContainer from './homepage/homepage_container';
+import ListingShowContainer from './listing/listing_show_container';
 import { ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -17,7 +17,8 @@ const App = () => (
     <Modal />
     <NavbarContainer />
     <header>
-      <HomepageContainer />
+      <Route exact path="/" component={HomepageContainer} />
+      <Route path="/listings/:listingId" component={ListingShowContainer} />
     </header>
   </div>
 );
