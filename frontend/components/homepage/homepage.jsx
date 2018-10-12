@@ -1,7 +1,7 @@
 import React from 'react';
 import ListingIndex from '../listing/listing_index';
 import HomepageItems from './homepage_items';
-import { BeatLoader } from 'react-spinners'; 
+import DotLoading from '../dot_loading';
 
 class Homepage extends React.Component {
 
@@ -21,17 +21,7 @@ class Homepage extends React.Component {
   render() {
     
     if (this.state.loading) {
-      return (
-        <div className="react-spinner-container">
-          <BeatLoader
-            className="beat-loader"
-            sizeUnit={"px"}
-            size={20}
-            color={'#008489'}
-            loading={this.state.loading}
-          />
-        </div> 
-      );
+      return <DotLoading state={this.state} />;
     } else {    
       return (
         <div className="homepage-container">

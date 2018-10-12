@@ -1,6 +1,6 @@
 import React from 'react';
 import bulb from '../../../app/assets/images/bulb.png';
-import { BeatLoader } from 'react-spinners'; 
+import DotLoading from '../dot_loading';
 
 class BookingForm extends React.Component {
   constructor(props) {
@@ -46,16 +46,7 @@ class BookingForm extends React.Component {
 
 
     if (this.state.loading) {
-      return (
-        <div className="react-spinner-container">
-          <BeatLoader
-            className="beat-loader"
-            sizeUnit={"px"}
-            size={20}
-            color={'#008489'}
-            loading={this.state.loading}
-          />
-        </div>)
+      return <DotLoading state={this.state} />;
     } else if (!listing){
         return <div />
     } else {

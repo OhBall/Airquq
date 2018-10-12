@@ -3,7 +3,7 @@ import Amenities from './amenities';
 import DetailInfo from './detail_info';
 import PhotoDisplay from './photo_display';
 import CreateBookingFormContainer from '../booking/create_booking_form_container';
-import { BeatLoader } from 'react-spinners'; 
+import DotLoading from '../dot_loading';
 
 class ListingShow extends React.Component {
 
@@ -30,16 +30,7 @@ class ListingShow extends React.Component {
     const listing = this.props.listing;
 
     if(!listing || this.state.loading) {
-      return (
-        <div className="react-spinner-container">
-          <BeatLoader
-            className="beat-loader"
-            sizeUnit={"px"}
-            size={20}
-            color={'#008489'}
-            loading={this.state.loading}
-          />
-      </div> )
+      return <DotLoading state={this.state} />;
     } else {
       return (
         <div className="listing-show-page">
