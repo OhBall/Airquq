@@ -1,12 +1,99 @@
-
 .booking-form-container {
-  // placeholder
   border: 1px solid lightgrey;
-  color: lightgrey;
-  font-size: 30px;
-  padding: 10px;
-  width: 400px;
-  height: 300px;
-
+  padding: 25px;
+  box-sizing: border-box;
+  width: 370px;
+  height: 500px;
   position: absolute;
+}
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+// price number
+.price-container div {
+  font-size: 22px;
+  font-weight: 700;
+  color: $dark-grey;
+}
+
+// price text "per night"
+
+.price-container p {
+  color: $dark-grey;
+  margin-left: 7px;
+  font-size: 15px;
+}
+
+// booking form
+
+.booking-form {
+  margin-top: 20px;
+}
+
+.booking-form input {
+  display: block;
+  border: 2px solid $lightest-grey;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+.booking-form-button {
+  background-color: $airbnb-orange;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 12px;
+  margin-top: 20px;
+  margin-bottom: 17px;
+  height: 45px;
+  text-align: center;
+}
+
+.booking-form p {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+// info under
+
+.info-under-text {
+  width: 100%
+}
+
+.info-under-text p {
+  font-size: 14px;
+}
+
+.info-under-text p:first-child {
+  font-weight: bold;
+}
+
+.info-under-form-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.info-under-form-container img {
+  width: 80px;
+  margin-left: 20px;
+}
+
+// place holder
+
+.thanks {
+  font-weight: 700;
+  color: $airbnb-blue;
+  margin-top: 20px;
 }

@@ -29,8 +29,8 @@ export const fetchBooking = bookingId => dispatch => (
     .then(booking => dispatch(receiveBooking(booking)))
 )
 
-export const createBooking = (listingId, booking) => dispatch => (
-  APIUtil.createBooking(listingId, booking)
+export const createBooking = booking => dispatch => (
+  APIUtil.createBooking(booking)
     .then(booking => dispatch(receiveBooking(booking)))
 )
 
