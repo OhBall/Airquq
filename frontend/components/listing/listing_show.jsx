@@ -11,10 +11,11 @@ class ListingShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true
+      loading: false //change to true later
     }
 
-    setTimeout(() => this.setState({ loading: false}), 1500);
+    // for spinner to work
+    // setTimeout(() => this.setState({ loading: false}), 1500);
   }
 
   componentDidMount() {
@@ -47,8 +48,13 @@ class ListingShow extends React.Component {
                   <p>HOME HIGHLIGHTS</p>
                   {listing.description}
                 </div>
-
                 <div><Amenities listing={listing} /></div>
+              </div>
+
+              <div className="divide-line" />
+
+              <div className="review-index-container">
+                <ReviewIndex reviews={reviews} />
               </div>
             </div>
 
@@ -56,9 +62,6 @@ class ListingShow extends React.Component {
               <CreateBookingFormContainer listing={listing} />
             </div>
 
-          </div>
-          <div className="review-index-container">
-            <ReviewIndex reviews={reviews}/>
           </div>
         </div>
       )

@@ -1,3 +1,88 @@
 .review-index-container {
-  margin-left: 130px;
+  margin-top: 30px;
+  margin-bottom: 150px;
+}
+
+.text-review-container {
+  display: flex;
+  align-items: start;
+  border-bottom: 1px solid $lightest-grey;
+  margin-top: 30px;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+}
+
+
+// profile picture
+
+.text-review-container img {
+  width: 45px;
+  height: 45px;
+}
+
+.text-review-container p {
+  margin-left: 30px;
+}
+.each-review-stars-container {
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+// average review line
+.average-reviews-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.average-reviews-container p {
+  font-size: 24px;
+}
+
+.stars-average {
+  margin-left: 10px;
+}
+
+// all the details
+.stars-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.stars-details-container li {
+  display: flex;
+  justify-content: space-between;
+  width: 49%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding-right: 40px;
+}
+
+.stars-details-container li p {
+  width: 40%;
+}
+
+.stars-details-container li i {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+// individual stars
+.individual-stars-container {
+  
+}
+
+.individual-stars-container i {
+  color: $airbnb-blue;
+}
+
+.solid-star {
+  font-weight: 900;
+}
+
+.empty-star {
+  font-weight: 400;
 }

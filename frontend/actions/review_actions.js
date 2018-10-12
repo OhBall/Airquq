@@ -1,7 +1,7 @@
 import * as APIUtil from '../util/review_api_util';
 
-const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
-const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
+export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 
 const receiveReviews = reviews => ({
   type: RECEIVE_REVIEWS,

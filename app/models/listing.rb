@@ -46,4 +46,12 @@ class Listing < ApplicationRecord
   class_name: :User
 
   has_many_attached :photos
+
+  # def calculate_value 
+
+  # end 
+
+  # json 
+  
+  # json.value_avg @listing.calculate_value 
 end

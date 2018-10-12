@@ -44,8 +44,8 @@ booking10 = Booking.create!(listing_id: listing5.id, guest_id: demo.id, checkin_
 review1 = Review.create!(author_id: danny.id, listing_id: listing1.id, body: 'We loved our time here in the mountains. It’s a charming spot with amazing views. I wish we could have stayed longer.',
                         accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 5, value: 4)
 review2 = Review.create!(author_id: rika.id, listing_id: listing2.id, body: 'A very special place to stay. Hand-crafted house, creatively appointed, in a beautiful location. Pietro is a warm and lovely host, he welcomed us with local cheese and olives and wine and helped us get settled. ',
-                        accuracy: 5, location: 4, communication: 5, check_in: 5, cleanliness: 4, value: 5)
+                        accuracy: 5, location: 1, communication: 2, check_in: 4, cleanliness: 4, value: 5)
 review3 = Review.create!(author_id: tony.id, listing_id: listing3.id, body: 'It doesn’t get any better than this. This most creative and unusual rustic cottage set in an olive grove overlooking a beautiful valley is a travelers dream.',
                         accuracy: 5, location: 4, communication: 5, check_in: 5, cleanliness: 5, value: 5)
 review4 = Review.create!(author_id: tony.id, listing_id: listing1.id, body: 'Awesome place!',
-                        accuracy: 5, location: 4, communication: 5, check_in: 5, cleanliness: 5, value: 5)
+                        accuracy: 5, location: 2, communication: 1, check_in: 5, cleanliness: 4, value: 5)

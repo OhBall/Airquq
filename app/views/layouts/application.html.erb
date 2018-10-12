@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
@@ -20,12 +21,13 @@
         page2: "<%= image_url('page2.png') %>",
         page3: "<%= image_url('page3.png') %>",
         show1: "<%= image_url('show1.png') %>",
-        bulb: "<%= image_url('bulb.png') %>"
+        bulb: "<%= image_url('bulb.png') %>",
+        profile: "<%= image_url('profile.png') %>"
       }
     </script>
 
   <link href="https://fonts.googleapis.com/css?family=Krub:400,500,700|Open+Sans|Roboto:300,400,500,700|Noto+Sans" rel="stylesheet">  </head>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
   <body>
     <%= yield %>
   </body>
