@@ -1,26 +1,31 @@
 import React from 'react';
-import bulb from '../../../app/assets/images/bulb.png'
+import bulb from '../../../app/assets/images/bulb.png';
+import { BeatLoader } from 'react-spinners'; 
 
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.booking;
-
+    this.state = {
+      booking: this.props.booking,
+      loading: false
+    }
     this.thanks = false;
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInput(field) {
-    return e => (
-      this.setState({ [field]: e.currentTarget.value})
-    )
+    const booking = {...this.state.booking};
+    return e => {
+      booking[field] = e.currentTarget.value;
+      this.setState({ booking });
+    }
   }
 
   // place holder
   displayThanks() {
     if (this.thanks) {
-      return (<p className="thanks"> Thank you !!</p>)
+      return (<p className="thanks"> Thank you for your booking! </p>)
     } else {
       return null;
     }
@@ -28,19 +33,32 @@ class BookingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const booking = Object.assign({}, this.state);
-    this.props.processForm(booking)
-      .then(this.thanks = true);
+    const booking = Object.assign({}, this.state.booking);
+    setTimeout(() => this.setState({ loading: false }), 1000);
+    this.setState({ loading: true });
+    this.thanks = true;
+    this.props.processForm(booking);
     // add .then(go-to-booking-index-page) later
   }
 
   render() {
     const listing = this.props.listing;
 
-    if (!listing) {
-      return <div />
-    }
 
+    if (this.state.loading) {
+      return (
+        <div className="react-spinner-container">
+          <BeatLoader
+            className="beat-loader"
+            sizeUnit={"px"}
+            size={20}
+            color={'#008489'}
+            loading={this.state.loading}
+          />
+        </div>)
+    } else if (!listing){
+        return <div />
+    } else {
     return (
     <div className="booking-form-container">
       <div className="price-container">
@@ -73,6 +91,9 @@ class BookingForm extends React.Component {
       </div>
     </div>
     )
+
+
+    }
   }
 }
 
