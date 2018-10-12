@@ -3,6 +3,7 @@ import Amenities from './amenities';
 import DetailInfo from './detail_info';
 import PhotoDisplay from './photo_display';
 import CreateBookingFormContainer from '../booking/create_booking_form_container';
+import ReviewIndex from '../review/review_index';
 import DotLoading from '../dot_loading';
 
 class ListingShow extends React.Component {
@@ -27,7 +28,8 @@ class ListingShow extends React.Component {
   }
 
   render() {
-    const listing = this.props.listing;
+    // const listing = this.props.listing;
+    const { listing, reviews } = this.props;
 
     if(!listing || this.state.loading) {
       return <DotLoading state={this.state} />;
@@ -53,6 +55,10 @@ class ListingShow extends React.Component {
             <div className="listing-show-right">
               <CreateBookingFormContainer listing={listing} />
             </div>
+
+          </div>
+          <div className="review-index-container">
+            <ReviewIndex reviews={reviews}/>
           </div>
         </div>
       )

@@ -47,3 +47,5 @@ review2 = Review.create!(author_id: rika.id, listing_id: listing2.id, body: 'A v
                         accuracy: 5, location: 4, communication: 5, check_in: 5, cleanliness: 4, value: 5)
 review3 = Review.create!(author_id: tony.id, listing_id: listing3.id, body: 'It doesn’t get any better than this. This most creative and unusual rustic cottage set in an olive grove overlooking a beautiful valley is a travelers dream.',
                         accuracy: 5, location: 4, communication: 5, check_in: 5, cleanliness: 5, value: 5)
+review4 = Review.create!(author_id: tony.id, listing_id: listing1.id, body: 'Awesome place!',
+                        accuracy: 5, location: 4, communication: 5, check_in: 5, cleanliness: 5, value: 5)

@@ -1,15 +1,15 @@
 import React from 'react';
 import App from './app';
-import ScrollToTop from './scroll_to_top';
+import StartFromTop from './start_from_top';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 
 const Root = ({ store }) => (
   <Provider store={ store } >
     <HashRouter >
-      <ScrollToTop>
+      <StartFromTop>
         <App />
-      </ScrollToTop>
+      </StartFromTop>
     </HashRouter>
   </Provider>
 );
