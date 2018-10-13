@@ -1,11 +1,14 @@
 import React from 'react';
 
 const TripIndexItem = ({ trip }) => {
+  const { host, listing } = trip;
   return (
-    <div>
-      <h3>Trip - {trip.id}</h3>
-      <p>Host: {trip.host.firstName}</p>
-      <p>Home Name:{trip.listing.name}</p>
+    <div className="trip-index-item-container">
+      <img src={window.images.home2} />
+      <h3>{listing.city}</h3>
+      <p>{trip.checkoutDate}</p>
+      <p>Host: {host.firstName}</p>
+      <p>{listing.name}</p>
     </div>
   )
 };

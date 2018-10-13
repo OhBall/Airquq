@@ -1,0 +1,31 @@
+.all-trip-items {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.trip-index-item-container {
+  width: 27%;
+  border: 1px solid rgb(223, 203, 203);
+  margin: 20px 20px 40px 20px;
+  text-align: center;
+  line-height: 30px;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+
+.trip-index-item-container h3 {
+  border-bottom: 2px solid  rgb(223, 203, 203);
+  padding-bottom: 12px;
+}
+
+.trip-index-item-container p {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.trip-index-item-container img {
+  width: 100%;
+}
