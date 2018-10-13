@@ -2,6 +2,7 @@ import React from 'react';
 
 const TripIndexItem = ({ trip }) => {
   const { host, listing } = trip;
+  // debugger
   return (
     <div className="trip-index-item-container">
       <img src={window.images.home2} />

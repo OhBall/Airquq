@@ -34,14 +34,19 @@
   margin-top: 20px;
 }
 
-.booking-form input {
+.guest-number {
   display: block;
-  border: 2px solid $lightest-grey;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 100%;
-  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family:  Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  height: 46px;
+  font-size: 17px;
+  font-weight: 200;
+  color: #484848;
 
 }
 

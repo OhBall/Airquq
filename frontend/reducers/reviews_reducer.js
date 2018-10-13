@@ -15,6 +15,7 @@ const reviewsReducer = (state = {}, action) => {
     case RECEIVE_LISTING:
       // not sure!
       // return Object.assign({}, state, action.listing.reviews);
+      // debugger
       return action.listing.reviews;
     default:
       return state;
