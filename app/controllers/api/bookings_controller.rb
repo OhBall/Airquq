@@ -3,7 +3,7 @@ class Api::BookingsController < ApplicationController
   before_action :require_log_in
 
   def index
-    @bookings = current_user.bookings
+    @bookings = Booking.includes(:listing, listing: :host).where(guest_id: current_user.id)
     render :index
   end
 

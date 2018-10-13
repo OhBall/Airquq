@@ -65,7 +65,7 @@ class LoginForm extends React.Component {
           </label><br /><br />
 
           <div onClick={ this.handleSubmit } className='session-button'>Log In</div>
-          <div onClick={ this.handleDemoLogin } className='session-button'>Demo Log In</div>
+          <div onClick={this.handleDemoLogin} id="demo-login">Demo Log In</div>
         </form>
         <div className="divide-line" />
         <div className='session-option'>Don't have an account? {otherForm}</div>      

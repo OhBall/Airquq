@@ -22,11 +22,28 @@
 
 .text-review-container p {
   margin-left: 30px;
+  line-height: 24px;
+}
+
+.review-first-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-first-line div {
+  margin-left: 5px;
+}
+
+.review-author-name {
+  font-weight: bold;
 }
 .each-review-stars-container {
   box-sizing: border-box;
   padding-top: 20px;
 }
+
+
 
 // average review line
 .average-reviews-container {

@@ -11,11 +11,11 @@ class ListingShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false //change to true later
+      loading: true //change to true later
     }
 
     // for spinner to work
-    // setTimeout(() => this.setState({ loading: false}), 1500);
+    setTimeout(() => this.setState({ loading: false}), 1500);
   }
 
   componentDidMount() {

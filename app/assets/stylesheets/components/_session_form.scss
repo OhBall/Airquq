@@ -51,6 +51,20 @@
   margin-bottom: 17px;
 }
 
+#demo-login {
+  background-color: $airbnb-blue;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 93%;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 17px;
+}
+
 .session-button:last-child {
   margin-bottom: 25px;
 }

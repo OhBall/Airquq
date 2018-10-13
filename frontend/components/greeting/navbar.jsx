@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 const LoggedIn = ({ logout }) => (
   <ul className='nav-right'>
     <p>You're logged in.</p>
+    <Link to="/trips"><li>Trips</li></Link>
     <li onClick={ logout }>Log Out</li>
+    <Link to="/trips"><img src={window.images.profile} /></Link>
   </ul>
 );
 
@@ -20,7 +22,9 @@ const NotLoggedIn = ({ openModal }) => {
 const Greeting = ({ currentUser, openModal, logout }) => {
 
   if (currentUser) {
-    var component = <LoggedIn logout={logout} />;
+    var component = (
+      <LoggedIn logout={logout} />
+    );
   } else {
     var component = <NotLoggedIn openModal={openModal} />;
   }

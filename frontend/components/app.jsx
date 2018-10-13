@@ -10,6 +10,7 @@ import Modal from './modal/modal';
 import NavbarContainer from './greeting/navbar_container';
 import HomepageContainer from './homepage/homepage_container';
 import ListingShowContainer from './listing/listing_show_container';
+import TripIndexContainer from './trips/trip_index_container';
 import { ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
     <header>
       <Route exact path="/" component={HomepageContainer} />
       <Route path="/listings/:listingId" component={ListingShowContainer} />
+      <Route path="/trips" component={TripIndexContainer} />
     </header>
   </div>
 );
