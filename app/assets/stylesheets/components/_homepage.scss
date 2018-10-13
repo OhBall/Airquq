@@ -1,5 +1,4 @@
 // spinner
-
 .beat-loader {
   margin-top: 30px;
   text-align: center;
@@ -10,13 +9,17 @@
 .homepage-container {
   color: $dark-grey;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-  max-width: 1440px;
-  min-width: 1000px;
+  // max-width: 1440px;
+  // min-width: 1000px;
+  margin-left: 50px;
   margin: auto;
+  // display: grid;
+  // grid-template-columns: 90%;
+  // grid-template-rows: auto;
 }
 
 .homepage-text {
-  margin-left: 88px;
+  margin-left: 70px;
   margin-bottom: 20px;
   margin-top: 30px;
 }
@@ -34,8 +37,11 @@
 .homepage-item-container {
   display: flex;
   justify-content: space-between;
-  width: 88.5%;
+  width: 90%;
   margin: auto;
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  grid-column-gap: 10px;
 }
 
 .item-text-container {
@@ -48,8 +54,6 @@
 }
 
 .homepage-detail-container {
-  width: 32.5%;
-  height: 400px;
 }
 
 #city-name {
@@ -60,4 +64,11 @@
 #description {
   font-size: 15px;
   font-weight: 300;
+}
+
+
+// top part
+.homepage-top-part {
+  height: 450px;
+  max-width: 1180px;
 }

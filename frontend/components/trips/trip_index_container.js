@@ -1,9 +1,15 @@
 import { connect } from 'react-redux';
 import TripIndex from './trip_index';
 
-const mapStateToProps = state => ({
-  trips: Object.values(state.entities.bookings)
-});
+const mapStateToProps = state => {
+  // debugger
+  return ({
+  trips: Object.values(state.entities.bookings),
+  currentUser: state.session.id
+  });
+}
+
+
 
 const mapDispatchToProps = dispatch => ({
   fetchBookings: () => dispatch(fetchBookings)

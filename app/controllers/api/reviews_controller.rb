@@ -4,7 +4,6 @@ class Api::ReviewsController < ApplicationController
 
   def index
     listing = Listing.find_by_id(params[:listing_id])
-    debugger
     @reviews = listing.reviews
     render :index
   end

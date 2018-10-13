@@ -8,10 +8,10 @@ class Homepage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true,
+      loading: false,
     }
 
-    setTimeout(() => this.setState({loading: false}), 1500);
+    // setTimeout(() => this.setState({loading: false}), 1500);
   }
 
   componentDidMount() {
@@ -25,6 +25,7 @@ class Homepage extends React.Component {
     } else {    
       return (
         <div className="homepage-container">
+          <div className="homepage-top-part">
           <div className="homepage-text">
             <p id="homepage-title">Explore the world</p>
             <p id="homepage-description">Book your next trip and escape the ordinary</p>
@@ -34,7 +35,7 @@ class Homepage extends React.Component {
             <HomepageItems img={window.images.page1} num="330+" city="New York" description="Discover Victorian flats, SoMa lofts, and more verified homes in a city where invention meets counterculture."/>
             <HomepageItems img={window.images.page2} num="270+" city="Seattle" description="Experience the modern elegance of verified homes in this ancient and ever-evolving metropolis."/>
           </ul>
-
+          </div>
           <ListingIndex listings={this.props.listings} city="San Francisco" img={window.images.home3}/>
           <ListingIndex listings={this.props.listings} city="New York" img={window.images.home2}/>
           <ListingIndex listings={this.props.listings} city="Seattle" img={window.images.home5} />

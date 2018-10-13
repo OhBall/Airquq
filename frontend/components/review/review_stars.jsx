@@ -41,7 +41,7 @@ class ReviewStars extends React.Component {
   parseDetail(category) {
     const reviewsArray = Object.values(this.props.reviews);
     const allRatings = reviewsArray.map(review => review[category]);
-    const averageRating = this.calculateAverage(allRatings);
+    const averageRating = parseInt(this.calculateAverage(allRatings));
     return this.toStars(averageRating);
   }
 
@@ -125,9 +125,9 @@ class ReviewStars extends React.Component {
         </div>
       )
     } else if (rating > 3.75 && rating <= 4.25) {
-      <div className="individual-stars-container">
+      return (<div className="individual-stars-container">
         {solidStar}{solidStar}{solidStar}{solidStar}{emptyStar}
-      </div>
+      </div>)
     } else if (rating > 4.25 && rating <= 4, 75) {
       return (
         <div className="individual-stars-container">
