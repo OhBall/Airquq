@@ -28,6 +28,36 @@ listing4 = Listing.create!(name: 'Manhattan Lux Loft.Like.Love.Lots.Look !', hos
 listing5 = Listing.create!(name: 'Sunny, Modern room in East Village!', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
                           price: 239, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
                           address: '2304 Tree Circle', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '94411', lat: 32.3342, lng: -123.534)
+listing6 = Listing.create!(name: 'Sunny, Modern room in East Village!', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
+                          price: 239, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
+                          address: '2304 Tree Circle', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '94411', lat: 32.3342, lng: -123.534)
+listing7 = Listing.create!(name: 'Sunny, Modern room in East Village!', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
+                          price: 239, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
+                          address: '2304 Tree Circle', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '94411', lat: 32.3342, lng: -123.534)
+listing8 = Listing.create!(name: 'Sunny, Modern room in East Village!', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
+                          price: 239, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
+                          address: '2304 Tree Circle', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '94411', lat: 32.3342, lng: -123.534)
+listing9 = Listing.create!(name: 'Sunny, Modern room in East Village!', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
+                          price: 239, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
+                          address: '2304 Tree Circle', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '94411', lat: 32.3342, lng: -123.534)
+listing10 = Listing.create!(name: 'Sunny, Modern room in East Village!', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
+                          price: 239, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
+                          address: '2304 Tree Circle', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '94411', lat: 32.3342, lng: -123.534)
+listing11 = Listing.create!(name: 'Joshua Tree House', host_id: john.id, description: '*This cabin was featured in the New York Times in January, 2017. * A magical homesteader cabin embedded in 5 acres of unfenced Joshua Tree desert wilderness, 12 minutes from downtown Joshua Tree. Experience peace, quiet, wildlife and STARS—on the grid but off the pavement.',
+                          price: 109, room_num: 5, bed_num: 6, bath_num: 3, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true, 
+                          address: '2304 Tree Circle', city: 'Los Angeles', state: 'California', country: 'USA', zipcode: '90001', lat: 25.3342, lng: -122.534)                          
+listing12 = Listing.create!(name: 'Joshua Tree House', host_id: john.id, description: '*This cabin was featured in the New York Times in January, 2017. * A magical homesteader cabin embedded in 5 acres of unfenced Joshua Tree desert wilderness, 12 minutes from downtown Joshua Tree. Experience peace, quiet, wildlife and STARS—on the grid but off the pavement.',
+                          price: 109, room_num: 5, bed_num: 6, bath_num: 3, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true, 
+                          address: '2304 Tree Circle', city: 'Los Angeles', state: 'California', country: 'USA', zipcode: '90001', lat: 25.3342, lng: -122.534)                          
+listing13 = Listing.create!(name: 'Joshua Tree House', host_id: john.id, description: '*This cabin was featured in the New York Times in January, 2017. * A magical homesteader cabin embedded in 5 acres of unfenced Joshua Tree desert wilderness, 12 minutes from downtown Joshua Tree. Experience peace, quiet, wildlife and STARS—on the grid but off the pavement.',
+                          price: 109, room_num: 5, bed_num: 6, bath_num: 3, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true, 
+                          address: '2304 Tree Circle', city: 'Los Angeles', state: 'California', country: 'USA', zipcode: '90001', lat: 25.3342, lng: -122.534)                          
+listing14 = Listing.create!(name: 'Joshua Tree House', host_id: john.id, description: '*This cabin was featured in the New York Times in January, 2017. * A magical homesteader cabin embedded in 5 acres of unfenced Joshua Tree desert wilderness, 12 minutes from downtown Joshua Tree. Experience peace, quiet, wildlife and STARS—on the grid but off the pavement.',
+                          price: 109, room_num: 5, bed_num: 6, bath_num: 3, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true, 
+                          address: '2304 Tree Circle', city: 'Los Angeles', state: 'California', country: 'USA', zipcode: '90001', lat: 25.3342, lng: -122.534)                          
+listing15 = Listing.create!(name: 'Joshua Tree House', host_id: john.id, description: '*This cabin was featured in the New York Times in January, 2017. * A magical homesteader cabin embedded in 5 acres of unfenced Joshua Tree desert wilderness, 12 minutes from downtown Joshua Tree. Experience peace, quiet, wildlife and STARS—on the grid but off the pavement.',
+                          price: 109, room_num: 5, bed_num: 6, bath_num: 3, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true, 
+                          address: '2304 Tree Circle', city: 'Los Angeles', state: 'California', country: 'USA', zipcode: '90001', lat: 25.3342, lng: -122.534)                          
 
 booking1 = Booking.create!(listing_id: listing1.id, guest_id: danny.id, checkin_date: Date.parse('2018-11-12'), checkout_date: Date.parse('2018-11-15'), guest_num: 2)
 booking2 = Booking.create!(listing_id: listing2.id, guest_id: rika.id, checkin_date: Date.parse('2018-12-12'), checkout_date: Date.parse('2018-12-15'), guest_num: 6)
@@ -45,7 +75,21 @@ review1 = Review.create!(author_id: danny.id, listing_id: listing1.id, body: 'We
                         accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 5, value: 4)
 review2 = Review.create!(author_id: rika.id, listing_id: listing2.id, body: 'A very special place to stay. Hand-crafted house, creatively appointed, in a beautiful location. Pietro is a warm and lovely host, he welcomed us with local cheese and olives and wine and helped us get settled. ',
                         accuracy: 5, location: 1, communication: 2, check_in: 4, cleanliness: 4, value: 5)
-review3 = Review.create!(author_id: tony.id, listing_id: listing3.id, body: 'It doesn’t get any better than this. This most creative and unusual rustic cottage set in an olive grove overlooking a beautiful valley is a travelers dream.',
+review3 = Review.create!(author_id: rika.id, listing_id: listing3.id, body: 'It doesn’t get any better than this. This most creative and unusual rustic cottage set in an olive grove overlooking a beautiful valley is a travelers dream.',
                         accuracy: 5, location: 4, communication: 5, check_in: 5, cleanliness: 5, value: 5)
-review4 = Review.create!(author_id: tony.id, listing_id: listing1.id, body: 'Awesome place!',
+review5 = Review.create!(author_id: danny.id, listing_id: listing3.id, body: 'Awesome place!',
+                        accuracy: 5, location: 2, communication: 1, check_in: 5, cleanliness: 4, value: 5)
+review6 = Review.create!(author_id: john.id, listing_id: listing1.id, body: 'Awesome place!',
+                        accuracy: 5, location: 2, communication: 1, check_in: 5, cleanliness: 4, value: 5)
+review7 = Review.create!(author_id: dirk.id, listing_id: listing1.id, body: 'Awesome place!',
+                        accuracy: 5, location: 2, communication: 1, check_in: 5, cleanliness: 4, value: 5)
+review8 = Review.create!(author_id: demo.id, listing_id: listing1.id, body: 'Awesome place!',
+                        accuracy: 5, location: 2, communication: 1, check_in: 5, cleanliness: 4, value: 5)
+review9 = Review.create!(author_id: rika.id, listing_id: listing1.id, body: 'Awesome place!',
+                        accuracy: 5, location: 2, communication: 1, check_in: 5, cleanliness: 4, value: 5)
+review10 = Review.create!(author_id: tony.id, listing_id: listing1.id, body: 'Awesome place!',
+                        accuracy: 5, location: 2, communication: 1, check_in: 5, cleanliness: 4, value: 5)
+review11 = Review.create!(author_id: danny.id, listing_id: listing1.id, body: 'Awesome place!',
+                        accuracy: 5, location: 2, communication: 1, check_in: 5, cleanliness: 4, value: 5)
+review12 = Review.create!(author_id: tony.id, listing_id: listing2.id, body: 'Awesome place!',
                         accuracy: 5, location: 2, communication: 1, check_in: 5, cleanliness: 4, value: 5)

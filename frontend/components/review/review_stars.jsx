@@ -10,24 +10,24 @@ class ReviewStars extends React.Component {
       <div className="each-review-stars-container">
         <div className="average-reviews-container">
           <p>{reviewNum} Reviews</p>
-          <div className="stars-average">...average stars</div>
+          <div className="stars-average">{this.toStars(this.calculateFinalStars())}</div>
         </div>
 
         <div className="divide-line" />
 
         <ul className="stars-details-container">
           <li><p>Accuracy</p>
-          {this.parseDetail('accuracy')}</li>
+          {this.toStars(this.parseDetail('accuracy'))}</li>
           <li><p>Location</p>
-          {this.parseDetail('location')}</li>
+          {this.toStars(this.parseDetail('location'))}</li>
           <li><p>Communication</p>
-          {this.parseDetail('communication')}</li>
+          {this.toStars(this.parseDetail('communication'))}</li>
           <li><p>Check In</p>
-          {this.parseDetail('checkIn')}</li>
+          {this.toStars(this.parseDetail('checkIn'))}</li>
           <li><p>Cleanliness</p>
-          {this.parseDetail('cleanliness')}</li>
+          {this.toStars(this.parseDetail('cleanliness'))}</li>
           <li><p>Value</p>
-          {this.parseDetail('value')}</li>
+          {this.toStars(this.parseDetail('value'))}</li>
         </ul>
       <div className="divide-line" />
       </div>
@@ -38,11 +38,18 @@ class ReviewStars extends React.Component {
 
   // }
 
+  calculateFinalStars() {
+    const result = (this.parseDetail('accuracy') + this.parseDetail('location') + 
+      this.parseDetail('communication') + this.parseDetail('checkIn') +
+      this.parseDetail('cleanliness') + this.parseDetail('value')) / 6
+    return result.toFixed(2);
+  }
+
   parseDetail(category) {
     const reviewsArray = Object.values(this.props.reviews);
     const allRatings = reviewsArray.map(review => review[category]);
     const averageRating = parseInt(this.calculateAverage(allRatings));
-    return this.toStars(averageRating);
+    return averageRating;
   }
 
   calculateAverage(ratings) {

@@ -1,7 +1,22 @@
 class Api::ListingsController < ApplicationController
   def index
-    @listings = Listing.all
-    render :index
+    if params[:city].is_a?(Array)
+      @listings_hash = {}
+      params[:city].each do |city|
+        @listings_hash[city] = Listing.where(city: city)
+      end 
+
+      render :homepage_listings
+    # elsif params[:city]
+    #   @listings = Listing.where(city: params[:city])
+
+    #   render :index
+    else
+      @listings = Listing.all
+
+      render :index
+    end
+
   end
 
   def show

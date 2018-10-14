@@ -16,7 +16,11 @@ const reviewsReducer = (state = {}, action) => {
       // not sure!
       // return Object.assign({}, state, action.listing.reviews);
       // debugger
-      return action.listing.reviews;
+      if (action.listing.reviews) {
+        return action.listing.reviews;
+      } else {
+        return state;
+      }     
     default:
       return state;
   }

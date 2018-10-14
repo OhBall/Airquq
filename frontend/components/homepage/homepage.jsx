@@ -15,14 +15,18 @@ class Homepage extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchListings();
+    this.props.fetchHomepageListings(['Los Angeles', 'San Francisco', 'Los Angeles']);
   }
 
   render() {
-    
-    if (this.state.loading) {
+    if (this.state.loading || !this.props.listings) {
       return <DotLoading state={this.state} />;
     } else {    
+
+      const listings1 = Object.values(this.props.listings['los Angeles']).slice(0, 5);
+      const listings2 = Object.values(this.props.listings['san Francisco']).slice(0, 5);
+      const listings3 = Object.values(this.props.listings['los Angeles']).slice(0, 5)
+      
       return (
         <div className="homepage-container">
           <div className="homepage-top-part">
@@ -33,12 +37,12 @@ class Homepage extends React.Component {
           <ul className="homepage-item-container">
             <HomepageItems img={window.images.page3} num="200+" city="San Francisco" description="Browse verified homes with artful style, in a city that wows from beach to land."/>
             <HomepageItems img={window.images.page1} num="330+" city="New York" description="Discover Victorian flats, SoMa lofts, and more verified homes in a city where invention meets counterculture."/>
-            <HomepageItems img={window.images.page2} num="270+" city="Seattle" description="Experience the modern elegance of verified homes in this ancient and ever-evolving metropolis."/>
+            <HomepageItems img={window.images.page2} num="270+" city="Los Angeles" description="Experience the modern elegance of verified homes in this ancient and ever-evolving metropolis."/>
           </ul>
           </div>
-          <ListingIndex listings={this.props.listings} city="San Francisco" img={window.images.home3}/>
-          <ListingIndex listings={this.props.listings} city="New York" img={window.images.home2}/>
-          <ListingIndex listings={this.props.listings} city="Seattle" img={window.images.home5} />
+          <ListingIndex listings={listings1} city="Los Angeles" img={window.images.home3}/>
+          <ListingIndex listings={listings2} city="San Francisco" img={window.images.home2}/>
+          <ListingIndex listings={listings3} city="Los Angeles" img={window.images.home5} />
         </div>
       )
     }

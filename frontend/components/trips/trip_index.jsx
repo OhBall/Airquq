@@ -15,23 +15,22 @@ class TripIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchBookings();
+    this.props.fetchTrips();
 
   }
 
   render() {
 
-    if (!this.props.trips || this.props.trips.length === 0 || !this.props.trips[this.props.trips.length-1].listing || this.state.loading) {
+    if (!this.props.trips || this.state.loading) {
       return <DotLoading state={this.state} />;
     } else {
       // debugger
-      const trips = this.props.trips.map(booking => (
-        <TripIndexItem key={booking.id} trip={booking} />
+      const trips = this.props.trips.map(trip => (
+        <TripIndexItem key={trip.id} trip={trip} />
       ));
-  
       return(
         <div>
-          <h1>Trips index page</h1>
+          <p className="trips-index-title">Upcoming Trips</p>
           <div className="all-trip-items">
             {trips}
           </div>

@@ -1,13 +1,19 @@
 import { connect } from 'react-redux';
-import { fetchListings } from '../../actions/listing_actions';
+import { fetchHomepageListings } from '../../actions/listing_actions';
 import Homepage from './homepage';
 
-const mapStateToProps = state => ({
-  listings: Object.values(state.entities.listings)
-});
+const mapStateToProps = state => {
+  if (state.entities.listings.homepage) {
+    return ({
+      listings: state.entities.listings.homepage
+    });
+  } else {
+    return {};
+  }
+};
 
 const mapDipatchToProps = dispatch => ({
-  fetchListings: () => dispatch(fetchListings())
+  fetchHomepageListings: cities => dispatch(fetchHomepageListings(cities))
 });
 
 export default connect(mapStateToProps, mapDipatchToProps)(Homepage);

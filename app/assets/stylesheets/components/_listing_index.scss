@@ -22,9 +22,10 @@
   // justify-content: space-between;
   // flex-wrap: wrap;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px [col-start]);
+  // grid-template-columns: repeat(auto-fit, 230px [col-start]);
+  grid-template-columns: repeat(auto-fit, 19% [col-start]);
   grid-column-gap: 15px;
-  // justify-content: space-evenly;
+  justify-content: space-between;
   // grid-gap: 2%;
   // grid-template-columns: repeat(5, 18%);
 }

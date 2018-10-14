@@ -5,9 +5,8 @@ import ReviewStars from './review_stars';
 class ReviewIndex extends React.Component {
 
   displayReviews(reviews, reviewNum) {
-    const user = 'abc';
     return reviews.map(review => (
-      <ReviewText key={review.id} review={review} user={user}/>
+      <ReviewText key={review.id} review={review} />
     ))
   }
 
