@@ -1,4 +1,5 @@
 import React from 'react';
+import ShowStars from './show_stars';
 
 class ReviewStars extends React.Component {
     
@@ -10,24 +11,24 @@ class ReviewStars extends React.Component {
       <div className="each-review-stars-container">
         <div className="average-reviews-container">
           <p>{reviewNum} Reviews</p>
-          <div className="stars-average">{this.toStars(this.calculateFinalStars())}</div>
+          <ShowStars starNum={this.calculateFinalStars()} />
         </div>
 
         <div className="divide-line" />
 
         <ul className="stars-details-container">
           <li><p>Accuracy</p>
-          {this.toStars(this.parseDetail('accuracy'))}</li>
+          <ShowStars starNum={this.parseDetail('accuracy')} /></li>
           <li><p>Location</p>
-          {this.toStars(this.parseDetail('location'))}</li>
+          <ShowStars starNum={this.parseDetail('location')} /></li>
           <li><p>Communication</p>
-          {this.toStars(this.parseDetail('communication'))}</li>
+            <ShowStars starNum={this.parseDetail('communication')} /></li>
           <li><p>Check In</p>
-          {this.toStars(this.parseDetail('checkIn'))}</li>
+            <ShowStars starNum={this.parseDetail('checkIn')} /></li>
           <li><p>Cleanliness</p>
-          {this.toStars(this.parseDetail('cleanliness'))}</li>
+            <ShowStars starNum={this.parseDetail('cleanliness')} /></li>
           <li><p>Value</p>
-          {this.toStars(this.parseDetail('value'))}</li>
+            <ShowStars starNum={this.parseDetail('value')} /></li>
         </ul>
       <div className="divide-line" />
       </div>
@@ -37,7 +38,6 @@ class ReviewStars extends React.Component {
   // parseSumAverage() {
 
   // }
-
   calculateFinalStars() {
     const result = (this.parseDetail('accuracy') + this.parseDetail('location') + 
       this.parseDetail('communication') + this.parseDetail('checkIn') +
@@ -56,98 +56,6 @@ class ReviewStars extends React.Component {
     const sum = ratings.reduce((acc, el) => acc + el, 0);
     const average = (sum / ratings.length).toFixed(2);
     return average;
-  }
-
-  toStars(rating) {
-    const solidStar = <i className="far fa-star solid-star"></i>;
-    const emptyStar = <i className="far fa-star empty-star"></i>;
-    const halfStar = <i className="fas fa-star-half-alt"></i>;
-
-    // const result = []
-    // const solidStarNum = Math.floor(rating);
-    // const remainder = (rating - solidStarNum) > 0.25 ? rating - solidStarNum : 0;
-
-    // for (let i = 0; i < 5; i++) {
-    //   if (i < solidStarNum || remainder > 0.75) {
-    //     result.push(solidStar)
-    //   } else if (remainder > 0.25) {
-    //     result.push(halfStar)
-    //   } else {
-    //     result.push(emptyStar)
-    //   };
-    // }
-
-    // return (
-    //   <div className="individual-stars-container">
-    //     {result}
-    //   </div>
-    // )
-
-    if (rating <= 0.25) {
-      return (
-        <div className="individual-stars-container">
-          {emptyStar}{emptyStar}{emptyStar}{emptyStar}{emptyStar}
-        </div>
-      )
-    } else if (rating > 0.25 && rating <= 0.75) {
-      return (
-        <div className="individual-stars-container">
-          {halfStar}{emptyStar}{emptyStar}{emptyStar}{emptyStar}
-        </div>
-      )
-    } else if (rating > 0.75 && rating <= 1.25) {
-      return (
-        <div className="individual-stars-container">
-          {solidStar}{emptyStar}{emptyStar}{emptyStar}{emptyStar}
-        </div>
-      )
-    } else if (rating > 1.25 && rating <= 1.75) {
-      return (
-        <div className="individual-stars-container">
-          {solidStar}{halfStar}{emptyStar}{emptyStar}{emptyStar}
-        </div>
-      )
-    } else if (rating > 1.75 && rating <= 2.25) {
-      return (
-        <div className="individual-stars-container">
-          {solidStar}{solidStar}{emptyStar}{emptyStar}{emptyStar}
-        </div>
-      )
-    } else if (rating > 2.25 && rating <= 2.75) {
-      return (
-        <div className="individual-stars-container">
-          {solidStar}{solidStar}{halfStar}{emptyStar}{emptyStar}
-        </div>
-      )
-    } else if (rating > 2.75 && rating <= 3.25) {
-      return (
-        <div className="individual-stars-container">
-          {solidStar}{solidStar}{solidStar}{emptyStar}{emptyStar}
-        </div>
-      )
-    } else if (rating > 3.25 && rating <= 3.75) {
-      return (
-        <div className="individual-stars-container">
-          {solidStar}{solidStar}{solidStar}{halfStar}{emptyStar}
-        </div>
-      )
-    } else if (rating > 3.75 && rating <= 4.25) {
-      return (<div className="individual-stars-container">
-        {solidStar}{solidStar}{solidStar}{solidStar}{emptyStar}
-      </div>)
-    } else if (rating > 4.25 && rating <= 4, 75) {
-      return (
-        <div className="individual-stars-container">
-          {solidStar}{solidStar}{solidStar}{solidStar}{halfStar}
-        </div>
-      )
-    } else if (rating > 4.75) {
-      return (
-        <div className="individual-stars-container">
-          {solidStar}{solidStar}{solidStar}{solidStar}{solidStar}
-        </div>
-      )
-    }
   }
 }
 
