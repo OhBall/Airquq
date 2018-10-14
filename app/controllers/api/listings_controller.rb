@@ -16,9 +16,18 @@ class Api::ListingsController < ApplicationController
 
       render :index
     end
-
   end
 
+  def create
+    listing = Listing.new(listing_params)
+
+    if listing.save
+      render json: { message: "success" }
+    else
+      render json: post.errors.full_messages
+    end 
+  end 
+  
   def show
     @listing = Listing.includes(:reviews, reviews: :author).find(params[:id])
     render :show
