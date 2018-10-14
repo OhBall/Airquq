@@ -3,6 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import LogoutFormContainer from '../session_form/logout_form_container';
 import { clearErrors } from '../../actions/session_actions';
 
 function Modal({ modal, closeModal }) {
@@ -17,6 +18,16 @@ function Modal({ modal, closeModal }) {
     case 'signup':
       component = <SignupFormContainer />;
       break;
+    case 'logout':
+      component = <LogoutFormContainer />;
+      return (
+        <div id='modal' onClick={closeModal}>
+          <div onClick={e => e.stopPropagation()}>
+            {component}
+            <div onClick={closeModal} className="logout-modal-screen" />
+          </div>
+        </div>
+      )
     default:
       return null;
   }

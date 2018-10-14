@@ -88,7 +88,7 @@ class BookingForm extends React.Component {
           />
 
           <p>Guests</p>
-            <input className="guest-number" type="number" min="1" max={listing.bedNum * 2} onChange={this.handleGuestInput} />
+            <input className="guest-number" type="number" min="1" max={listing.bedNum * 2} defaultValue="1" onChange={this.handleGuestInput} />
 
           <div className="divide-line" />
 

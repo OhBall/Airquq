@@ -2,12 +2,11 @@ import React from 'react';
 import airquq_logo from '../../../app/assets/images/airquq_logo.png';
 import { Link } from 'react-router-dom';
 
-const LoggedIn = ({ currentUser, logout }) => (
+const LoggedIn = ({ currentUser, openModal }) => (
   <ul className='nav-right'>
-    <p>You're logged in.</p>
+    <p>Hello, {currentUser.firstName}</p>
     <Link to="/trips"><li>Trips</li></Link>
-    <li onClick={ logout }>Log Out</li>
-    <Link to="/trips"><img src={currentUser.photoUrl} /></Link>
+    <img src={currentUser.photoUrl} onClick={() => openModal('logout')}/>
   </ul>
 );
 
@@ -23,7 +22,7 @@ const Greeting = ({ currentUser, openModal, logout }) => {
 
   if (currentUser) {
     var component = (
-      <LoggedIn logout={logout} currentUser={currentUser} />
+      <LoggedIn currentUser={currentUser} openModal={openModal} />
     );
   } else {
     var component = <NotLoggedIn openModal={openModal} />;

@@ -8,6 +8,16 @@
   z-index: 1;
 }
 
+.logout-modal-screen {
+  position: fixed;
+  background: transparent;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
 [class*="session-form"] {
   background-color: white;
   position: absolute;
@@ -75,6 +85,7 @@
 
 .session-option-button {
   color: $airbnb-blue;
+  font-weight: bold;
   display: inline;
 }
 
@@ -95,4 +106,33 @@
   margin: 10px;
   color: $airbnb-orange;
   margin-bottom: 25px;
+}
+
+// logout
+
+.logout-modal {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 81px;
+  width: 180px;
+  background-color: white;
+  text-align: center;
+  padding-top: 14px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+  z-index: 2;
+}
+
+.logout-modal p {
+  border-bottom: 1px solid $lightest-grey;
+  height: 40px;
+}
+
+.logout-modal p:hover {
+  border-bottom: 1px solid $dark-grey;
+  height: 40px;
 }
