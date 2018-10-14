@@ -4,7 +4,8 @@
   box-sizing: border-box;
   width: 370px;
   height: 460px;
-  position: absolute;
+  position: sticky;
+  top: 110px;
 }
 
 .price-container {
@@ -100,12 +101,4 @@
 .info-under-form-container img {
   width: 80px;
   margin-left: 20px;
-}
-
-// place holder
-
-.thanks {
-  font-weight: 700;
-  color: $airbnb-orange;
-  margin-top: 20px;
 }

@@ -29,7 +29,7 @@ class Api::ListingsController < ApplicationController
   end 
   
   def show
-    @listing = Listing.includes(:reviews, reviews: :author).find(params[:id])
+    @listing = Listing.includes(:host, :reviews, reviews: :author).find(params[:id])
     render :show
   end
 

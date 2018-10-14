@@ -33,6 +33,10 @@ class User < ApplicationRecord
   foreign_key: :host_id,
   class_name: :Listing
 
+  has_many :received_reviews,
+  through: :listings,
+  source: :reviews
+
   has_one_attached :profile_photo
 
   def self.find_by_credentials(email, password)
@@ -58,4 +62,8 @@ class User < ApplicationRecord
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64
   end
+
+  def num_received_reviews
+    self.received_reviews.length
+  end 
 end

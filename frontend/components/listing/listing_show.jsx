@@ -5,6 +5,8 @@ import PhotoDisplay from './photo_display';
 import CreateBookingFormContainer from '../booking/create_booking_form_container';
 import ReviewIndex from '../review/review_index';
 import DotLoading from '../dot_loading';
+import ListingMap from './listing_map';
+import HostInfo from './host_info';
 
 class ListingShow extends React.Component {
 
@@ -48,10 +50,17 @@ class ListingShow extends React.Component {
                   <p>HOME HIGHLIGHTS</p>
                   {listing.description}
                 </div>
-                <div><Amenities listing={listing} /></div>
+                <Amenities listing={listing} />
+                <div className="divide-line" />
+                <HostInfo listing={listing} />
               </div>
 
               <div className="divide-line" />
+
+              <div className="neighborhood">
+                <p>The Neighborhood</p>
+                <ListingMap listing={listing} />
+              </div>
 
               <div className="review-index-container">
                 <ReviewIndex reviews={reviews} />
