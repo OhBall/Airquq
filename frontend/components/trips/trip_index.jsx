@@ -24,7 +24,6 @@ class TripIndex extends React.Component {
     if (!this.props.trips || this.state.loading) {
       return <DotLoading state={this.state} />;
     } else {
-      // debugger
       const trips = this.props.trips.map(trip => (
         <TripIndexItem key={trip.id} trip={trip} deleteTrip={this.props.deleteTrip} />
       ));

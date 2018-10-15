@@ -7,15 +7,15 @@ class Api::ListingsController < ApplicationController
       end 
 
       render :homepage_listings
-    # elsif params[:city]
-    #   @listings = Listing.where(city: params[:city])
-
-    #   render :index
     else
-      @listings = Listing.all
-
+      @listings = bounds ? Listing.in_bounds(bounds) : Listing.all 
       render :index
     end
+  end
+    
+  def show
+    @listing = Listing.includes(:host, :reviews, reviews: :author).find(params[:id])
+    render :show
   end
 
   def create
@@ -27,11 +27,6 @@ class Api::ListingsController < ApplicationController
       render json: post.errors.full_messages
     end 
   end 
-  
-  def show
-    @listing = Listing.includes(:host, :reviews, reviews: :author).find(params[:id])
-    render :show
-  end
 
   private
   
@@ -42,5 +37,9 @@ class Api::ListingsController < ApplicationController
               :essentials, :wifi, :tv, :washer, :kitchen, 
               :free_parking, :hair_dryer, :shampoo, :address, 
               :city, :state, :country, :zipcode, :lat, :lng, photos:[])
+  end 
+
+  def bounds 
+    params[:bounds]
   end 
 end

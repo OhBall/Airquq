@@ -8,7 +8,7 @@ const listingsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_LISTINGS:
-      return Object.assign({}, state, action.listings);
+      return action.listings;
     case RECEIVE_HOMEPAGE_LISTINGS:
       let newState = Object.assign({}, state);
       newState.homepage = action.homepageListings;

@@ -1,0 +1,45 @@
+// whole page
+.search-index-container {
+  height: 100%;
+}
+
+// result and map
+.search-results-and-map {
+  display: flex;
+  margin-top: 25px;
+  margin-left:50px;
+  height: 100vh;
+}
+
+// reuslt
+.search-results-section {
+  width: 64%
+}
+
+.search-results-section h3 {
+  margin-top: 0;
+}
+
+// map
+.map-container {
+  height: 100%;
+}
+
+#search-map {
+  height: 80%;
+  width: 500px;
+  z-index: 1;
+  position: sticky; //not working?
+  top: 0px;
+}
+
+// filter bar
+
+.filterbar-container {
+  border-bottom: 2px solid $lightest-grey;
+  height: 60px;
+  position: sticky;
+  top: 81px;
+  background-color: white;
+  z-index: 2;
+}

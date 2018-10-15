@@ -1,16 +1,16 @@
 import { combineReducers } from 'redux';
-import usersReducer from './users_reducer';
-import listingsReducer from './listings_reducer';
-import bookingsReducer from './bookings_reducer';
-import reviewsReducer from './reviews_reducer';
-import tripsReducer from './trips_reducer';
+import users from './users_reducer';
+import listings from './listings_reducer';
+import bookings from './bookings_reducer';
+import reviews from './reviews_reducer';
+import trips from './trips_reducer';
 
 const entitiesReducer = combineReducers({
-  users: usersReducer,
-  listings: listingsReducer,
-  bookings: bookingsReducer,
-  reviews: reviewsReducer,
-  trips: tripsReducer
+  users,
+  listings,
+  bookings,
+  reviews,
+  trips
 })
 
 export default entitiesReducer;

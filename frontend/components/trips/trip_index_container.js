@@ -3,7 +3,6 @@ import TripIndex from './trip_index';
 import { fetchTrips, deleteTrip } from '../../actions/booking_actions';
 
 const mapStateToProps = state => {
-  // debugger
   return ({
   trips: Object.values(state.entities.trips),
   });
