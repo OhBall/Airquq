@@ -19,12 +19,11 @@ class Splash extends React.Component {
       return (
         <div className="splash-container">
           <SplashNav />
-        <div id="splash-search-container">
-          <SplashSearchBar />
-          <p id="welcome-message">Book unique homes around the world.</p>
-        </div>
-          <img src={window.images.splash} />
-        </div>
+          <div id="splash-search-container">
+            <p id="welcome-message">Book Unique homes around the world.</p>
+            <SplashSearchBar />
+          </div>
+         </div>
       )
     }
   }

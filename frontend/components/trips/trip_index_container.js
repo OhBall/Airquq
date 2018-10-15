@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import TripIndex from './trip_index';
-import { fetchTrips } from '../../actions/booking_actions';
+import { fetchTrips, deleteTrip } from '../../actions/booking_actions';
 
 const mapStateToProps = state => {
   // debugger
@@ -10,9 +10,9 @@ const mapStateToProps = state => {
 }
 
 
-
 const mapDispatchToProps = dispatch => ({
-  fetchTrips: () => dispatch(fetchTrips())
+  fetchTrips: () => dispatch(fetchTrips()),
+  deleteTrip: bookingId => dispatch(deleteTrip(bookingId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TripIndex);

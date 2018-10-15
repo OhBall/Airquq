@@ -38,7 +38,7 @@ class Booking < ApplicationRecord
   end 
 
   def comfirm_guest_num
-    return if self.guest_num >= 1 && self.guest_num < self.listing.bed_num * 2
+    return if self.guest_num >= 1 && self.guest_num <= self.listing.bed_num * 2
     errors[:Please] << 'choose a valid guest number'
   end 
 

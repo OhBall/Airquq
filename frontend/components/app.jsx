@@ -23,13 +23,13 @@ const App = () => (
     <Modal />
     <Route path="/(listings|trips)" component={NavbarContainer} />
     <header>
-      {/* <Switch> */}
+      <Switch>
         <Route exact path="/listings/:listingId" component={ListingShowContainer} />
         <Route exact path="/trips" component={TripIndexContainer} />
         <Route exact path="/listings" component={HomepageContainer} />
         <Route exact path="/" component={Splash} />
-        {/* <Redirect to="/" /> */}
-      {/* </Switch> */}
+        <Redirect to="/listings" />
+      </Switch>
     </header>
   </div>
 );

@@ -1,12 +1,6 @@
 .splash-container {
-
-    /* The image used */
   background-image: url("splash.jpg");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
+  height: 100vh; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -88,7 +82,7 @@
   padding-left: 60px;
   box-sizing: border-box;
   font-size: 19px;
-  width: 800px;
+  width: 48%;
   height: 70px;
   font-family: Open Sans;
   font-weight: 700;

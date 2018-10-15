@@ -62,16 +62,16 @@ listing15 = Listing.create!(name: 'Joshua Tree House', host_id: john.id, descrip
                           address: '2304 Tree Circle', city: 'Los Angeles', state: 'California', country: 'USA', zipcode: '90001', lat: 34.023506, lng: -118.263150)                          
 
 booking1 = Booking.create!(listing_id: listing1.id, guest_id: danny.id, checkin_date: Date.parse('2018-11-12'), checkout_date: Date.parse('2018-11-15'), guest_num: 2)
-booking2 = Booking.create!(listing_id: listing2.id, guest_id: rika.id, checkin_date: Date.parse('2018-12-12'), checkout_date: Date.parse('2018-12-15'), guest_num: 6)
+booking2 = Booking.create!(listing_id: listing2.id, guest_id: rika.id, checkin_date: Date.parse('2018-12-12'), checkout_date: Date.parse('2018-12-15'), guest_num: 2)
 booking3 = Booking.create!(listing_id: listing3.id, guest_id: tony.id, checkin_date: Date.parse('2019-10-26'), checkout_date: Date.parse('2019-10-28'), guest_num: 2)
 booking4 = Booking.create!(listing_id: listing2.id, guest_id: dirk.id, checkin_date: Date.parse('2018-11-03'), checkout_date: Date.parse('2018-11-09'), guest_num: 1)
-booking5 = Booking.create!(listing_id: listing3.id, guest_id: rika.id, checkin_date: Date.parse('2018-12-05'), checkout_date: Date.parse('2018-12-08'), guest_num: 4)
+booking5 = Booking.create!(listing_id: listing3.id, guest_id: rika.id, checkin_date: Date.parse('2018-12-05'), checkout_date: Date.parse('2018-12-08'), guest_num: 2)
 
 booking6 = Booking.create!(listing_id: listing1.id, guest_id: demo.id, checkin_date: Date.parse('2018-10-23'), checkout_date: Date.parse('2018-10-26'), guest_num: 1)
 booking7 = Booking.create!(listing_id: listing2.id, guest_id: demo.id, checkin_date: Date.parse('2018-10-26'), checkout_date: Date.parse('2018-10-31'), guest_num: 2)
-booking8 = Booking.create!(listing_id: listing3.id, guest_id: demo.id, checkin_date: Date.parse('2018-11-05'), checkout_date: Date.parse('2018-11-09'), guest_num: 3)
+booking8 = Booking.create!(listing_id: listing3.id, guest_id: demo.id, checkin_date: Date.parse('2018-11-05'), checkout_date: Date.parse('2018-11-09'), guest_num: 2)
 booking9 = Booking.create!(listing_id: listing4.id, guest_id: demo.id, checkin_date: Date.parse('2018-11-13'), checkout_date: Date.parse('2018-11-18'), guest_num: 1)
-booking10 = Booking.create!(listing_id: listing5.id, guest_id: demo.id, checkin_date: Date.parse('2018-11-20'), checkout_date: Date.parse('2018-11-25'), guest_num: 6)
+booking10 = Booking.create!(listing_id: listing5.id, guest_id: demo.id, checkin_date: Date.parse('2018-11-20'), checkout_date: Date.parse('2018-11-25'), guest_num: 2)
 
 review1 = Review.create!(author_id: danny.id, listing_id: listing1.id, body: 'We loved our time here in the mountains. It’s a charming spot with amazing views. I wish we could have stayed longer.',
                         accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 5, value: 4)

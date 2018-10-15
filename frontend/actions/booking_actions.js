@@ -2,7 +2,7 @@ import * as APIUtil from '../util/booking_api_util';
 
 export const RECEIVE_TRIPS = 'RECEIVE_TRIPS';
 export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
-export const REMOVE_BOOKINGS = 'REMOVE_BOOKINGS';
+export const REMOVE_TRIP = 'REMOVE_TRIP';
 
 export const RECEIVE_BOOKING_ERRORS = 'RECEIVE_BOOKING_ERRORS';
 export const CLEAR_BOOKING_ERRORS = 'CLEAR_BOOKING_ERRORS';
@@ -12,9 +12,9 @@ const receiveBooking = booking => ({
   booking
 });
 
-const removeBooking = bookingId => ({
-  type: REMOVE_BOOKINGS,
-  bookingId
+const removeTrip = tripId => ({
+  type: REMOVE_TRIP,
+  tripId
 });
 
 // for errors
@@ -32,11 +32,6 @@ export const clearBookingErrors = () => {
   };
 };
 
-// export const fetchBookings = () => dispatch => (
-//   APIUtil.fetchBookings()
-//     .then(bookings => dispatch(receiveBookings(bookings)))
-// )
-
 export const fetchBooking = bookingId => dispatch => (
   APIUtil.fetchBooking(bookingId)
     .then(booking => dispatch(receiveBooking(booking)))
@@ -47,19 +42,6 @@ export const createBooking = booking => dispatch => (
     .then(booking => dispatch(receiveBooking(booking)),
           err => dispatch(receiveBookingErrors(err.responseJSON)))
 )
-
-export const updateBooking = booking => dispatch => (
-  APIUtil.updateBooking(booking)
-    .then(booking => dispatch(receiveBooking(booking)),
-      err => dispatch(receiveBookingErrors(err.responseJSON)))
-)
-
-export const deleteBooking = bookingId => dispatch => (
-  APIUtil.deleteBooking(bookingId)
-    .then(post => dispatch(removeBooking(bookingId)))
-)
-
-
 
 // For trips index page
 
@@ -73,3 +55,13 @@ export const fetchTrips = () => dispatch => (
     .then(trips => dispatch(receiveTrips(trips)))
 )
 
+export const updateBooking = booking => dispatch => (
+  APIUtil.updateBooking(booking)
+    .then(booking => dispatch(receiveBooking(booking)),
+      err => dispatch(receiveBookingErrors(err.responseJSON)))
+)
+
+export const deleteTrip = tripId => dispatch => {
+  return (APIUtil.deleteBooking(tripId)
+    .then(() => dispatch(removeTrip(tripId))))
+}

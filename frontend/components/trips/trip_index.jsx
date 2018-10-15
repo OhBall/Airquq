@@ -26,11 +26,11 @@ class TripIndex extends React.Component {
     } else {
       // debugger
       const trips = this.props.trips.map(trip => (
-        <TripIndexItem key={trip.id} trip={trip} />
+        <TripIndexItem key={trip.id} trip={trip} deleteTrip={this.props.deleteTrip} />
       ));
       return(
         <div>
-          <p className="trips-index-title">Upcoming Trips</p>
+          <p className="trips-index-title">Your Trips</p>
           <div className="all-trip-items">
             {trips}
           </div>

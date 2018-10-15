@@ -14,10 +14,11 @@ class SearchBar extends React.Component {
   }
 
   componentDidMount() {
-    const input = document.getElementsByClassName("main-search-bar")[0];
+    const input = document.getElementsByClassName("splash-search-bar")[0];
     const autocomplete = new google.maps.places.Autocomplete(input);
     google.maps.event.addDomListener(window, "load", autocomplete);
     let address;
+    debugger
     autocomplete.addListener("place_changed", () => {
       if (!autocomplete.getPlace().formatted_address) {
         address = autocomplete.getPlace().name;
