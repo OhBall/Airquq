@@ -22,12 +22,12 @@ const App = () => (
     <Modal />
     <NavbarContainer />
     <header>
-      <Switch>
+      {/* <Switch> */}
         <Route exact path="/listings/:listingId" component={ListingShowContainer} />
         <Route exact path="/trips" component={TripIndexContainer} />
-        <Route exact path="/" component={HomepageContainer} />
-        <Redirect to="/" />
-      </Switch>
+        <Route path="/" component={HomepageContainer} />
+        {/* <Redirect to="/" /> */}
+      {/* </Switch> */}
     </header>
   </div>
 );

@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -34,7 +36,22 @@ class SearchBar extends React.Component {
   }
 
   handleSubmit(e) {
+    const geocoder = new google.maps.Geocoder();
 
+    geocoder.geocode({ address: this.state.address }, (results, status) => {
+      if (status === google.maps.GeocoderStatus.OK) {
+        const lat = results[0].geometry.location.lat();
+        const lng = results[0].geometry.location.lng();
+
+        this.props.history.push(`/listings?lat=${lat}&lng=${lng}`);
+      } else {
+        this.props.history.push(`/listings?lat=34.019956&lng=-118.824270`);
+      }
+    });
+
+    if(e) {
+      e.preventDefault();
+    } 
   }
 
   handleInput(e) {
@@ -42,18 +59,25 @@ class SearchBar extends React.Component {
   }  
 
   render() {
+    const cities = ['Los Angeles', 'San Francisco', 'New York', 'Seattle'];
+    const randomCity = cities[Math.floor(Math.random() * cities.length)];
+
     return(
       <div>
        <form onSubmit={this.handleSubmit}>
          <i className="fas fa-search"></i>
-          <input className="main-search-bar" type="text" onChange={this.handleInput} value={this.state.address} placeholder='Try "San Francisco"' onClick={() => this.props.openModal('search')} />
+          <input className="main-search-bar" type="text" onChange={this.handleInput} value={this.state.address} placeholder={`Try "${randomCity}"`} onClick={() => this.props.openModal('search')} />
         </form>
       </div>
     )
   }
 }
 
+const mapStateToProps = state => ({});
 
+const mapDispatchToProps = dispatch => ({});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchBar));
 
 
 // class SearchBar extends React.Component {
@@ -67,4 +91,3 @@ class SearchBar extends React.Component {
 //   }
 // }
 
-export default SearchBar;
