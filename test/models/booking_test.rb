@@ -9,6 +9,7 @@
 #  checkout_date :date             not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  guest_num     :integer          not null
 #
 
 require 'test_helper'

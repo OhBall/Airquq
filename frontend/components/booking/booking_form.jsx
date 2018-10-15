@@ -15,26 +15,21 @@ class BookingForm extends React.Component {
       checkout_date: null,
       focusedInput: null,
       loading: false,
-      guest_num: 0
+      guest_num: 1,
+      fireRedirect: false
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGuestInput = this.handleGuestInput.bind(this);
-
   }
 
   handleGuestInput(e) {
     this.setState({ guest_num: parseInt(e.currentTarget.value) });
   }
 
-  // will change to redirect after finishing trips page
-  // displayThanks() {
-  //   if (this.thanks) {
-  //     return (<p className="thanks"> Thank you for your booking! </p>)
-  //   } else {
-  //     return null;
-  //   }
-  // }
+  componentDidMount() {
+    this.props.clearBookingErrors();
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -48,15 +43,15 @@ class BookingForm extends React.Component {
       guest_num: this.state.guest_num,
       listing_id: parseInt(this.props.match.params.listingId)
     };
-    // debugger
     
     setTimeout(() => this.setState({ loading: false }), 1000);
     this.setState({ loading: true });
 
 
     this.props.processForm(booking).then(
-      setTimeout(() => this.props.history.push("/trips"), 1000));
-    // add .then(go-to-booking-index-page) later
+      () => this.setState({ fireRedirect: true }),
+      () => this.setState({ fireRedirect: false })
+    );
   }
 
   isDayBooked(day) {
@@ -66,11 +61,6 @@ class BookingForm extends React.Component {
   } 
 
   renderErrors() {
-    debugger
-    if (this.props.errors.length === 0) {
-      return null;
-    }
-    
     return (
       <ul className="bookings-errors-list">
         {this.props.errors.map((error, i) => (
@@ -84,7 +74,7 @@ class BookingForm extends React.Component {
 
   render() {
     const listing = this.props.listing;
-    
+    console.log(this.state.fireRedirect);
     if (this.state.loading) {
       return <DotLoading state={this.state} />;
     } else if (!listing){
@@ -134,6 +124,8 @@ class BookingForm extends React.Component {
           </div>
           <img src={bulb} />
         </div>
+
+        {this.state.fireRedirect && this.props.history.push("/trips")}
       </div>
     )
     }

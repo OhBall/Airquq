@@ -3,7 +3,6 @@
   padding: 25px;
   box-sizing: border-box;
   width: 370px;
-  height: 460px;
   position: sticky;
   top: 110px;
 }
@@ -101,4 +100,12 @@
 .info-under-form-container img {
   width: 80px;
   margin-left: 20px;
+}
+
+// errors
+
+.bookings-errors-list li {
+  color: $airbnb-orange;
+  line-height: 1.5;
+  font-weight: 600;
 }
