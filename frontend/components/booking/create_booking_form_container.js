@@ -4,7 +4,8 @@ import BookingForm from './booking_form';
 import { openModal } from '../../actions/modal_actions';
 
 const MapStateToProps = (state) => ({
-  currentUserId: state.session.id
+  currentUserId: state.session.id,
+  errors: state.errors.bookings
 });
 
 const MapDispatchToProps = dispatch => ({

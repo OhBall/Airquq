@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { randomBytes } from 'crypto';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -22,11 +21,11 @@ class SearchBar extends React.Component {
     autocomplete.addListener("place_changed", () => {
       if (!autocomplete.getPlace().formatted_address) {
         address = autocomplete.getPlace().name;
-        this.setState({address});
+        this.setState({ address });
         this.handleSubmit();
       } else {
         address = autocomplete.getPlace().formatted_address;
-        this.setState({address});
+        this.setState({ address });
         this.handleSubmit();
       }
     })
@@ -50,23 +49,25 @@ class SearchBar extends React.Component {
       }
     });
 
-    if(e) {
+    if (e) {
       e.preventDefault();
-    } 
+    }
   }
 
   handleInput(e) {
     this.setState({ address: e.currentTarget.value })
-  }  
+  }
 
   render() {
     const cities = ['Los Angeles', 'San Francisco', 'New York', 'Seattle'];
     const randomCity = cities[Math.floor(Math.random() * cities.length)];
-    return(
-      <div>
-       <form onSubmit={this.handleSubmit}>
-         <i className="fas fa-search"></i>
-          <input className="main-search-bar" type="text" onChange={this.handleInput} value={this.state.address} placeholder={`try "${randomCity}"`} onClick={() => this.props.openModal('search')} />
+
+    return (
+      <div className="splash-search">
+        <form onSubmit={this.handleSubmit}>
+          <i className="fas fa-search"></i>
+          <input className="splash-search-bar" type="text" onChange={this.handleInput} value={this.state.address} placeholder={`Try "${randomCity}"`} onClick={() => this.props.openModal('search')} />
+          <p id="splash-nav-bar-button" onClick={this.handleSubmit}>Search</p>
         </form>
       </div>
     )

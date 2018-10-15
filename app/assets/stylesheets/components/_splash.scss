@@ -1,0 +1,149 @@
+.splash-container {
+
+    /* The image used */
+  background-image: url("splash.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+// nav
+
+.splash-navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  top: 0px;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.splash-nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#splash-logo-container img {
+  width: 30px;
+  height: 30px;
+}
+
+#splash-logo-container {
+  padding-left: 24px;
+  padding-right: 15px;
+  width: 50px;
+}
+
+.splash-nav-right {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: $dark-grey;
+}
+
+.splash-nav-right li, .splash-nav-right p {
+  height: 80px;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  padding-top: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.splash-nav-right p {
+  cursor: default;
+}
+
+.splash-nav-right li:hover {
+  border-bottom: 3px solid #ccc;
+}
+
+.splash-nav-right img {
+  margin-right: 30px;
+  margin-left: 25px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+}
+
+.splash-search-bar {
+  background-color: white;
+  position: absolute;
+  left: 27%;
+  top: 310px;;
+  padding: 15px;
+  padding-left: 60px;
+  box-sizing: border-box;
+  font-size: 19px;
+  width: 800px;
+  height: 70px;
+  font-family: Open Sans;
+  font-weight: 700;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  // box-shadow: 2px 2px 6px #ccc;
+  z-index: 1;
+}
+
+
+
+// parent
+
+#splash-search-container {
+  position: relative;
+}
+
+
+
+.splash-search i {
+  position: absolute;
+  font-size: 27px;
+  left: 28%;
+  top: 333px;;
+  z-index: 2;
+}
+
+
+// text
+
+#welcome-message {
+  position: absolute;
+  left: 27%;
+  top: 240px;;
+  color: white;
+  font-size: 35px;
+  font-family: ircular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+
+// button
+
+#splash-nav-bar-button {
+  position: absolute;
+  left: 68%;
+  top: 319px;;
+  background-color: $airbnb-orange;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 70px;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 17px;
+  z-index:2;
+}

@@ -15,17 +15,19 @@ import NavbarContainer from './navbar/navbar_container';
 import HomepageContainer from './homepage/homepage_container';
 import ListingShowContainer from './listing/listing_show_container';
 import TripIndexContainer from './trips/trip_index_container';
+import Splash from './homepage/splash';
 import { ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
     <Modal />
-    <NavbarContainer />
+    <Route path="/(listings|trips)" component={NavbarContainer} />
     <header>
       {/* <Switch> */}
         <Route exact path="/listings/:listingId" component={ListingShowContainer} />
         <Route exact path="/trips" component={TripIndexContainer} />
-        <Route path="/" component={HomepageContainer} />
+        <Route exact path="/listings" component={HomepageContainer} />
+        <Route exact path="/" component={Splash} />
         {/* <Redirect to="/" /> */}
       {/* </Switch> */}
     </header>

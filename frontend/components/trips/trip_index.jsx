@@ -7,11 +7,11 @@ class TripIndex extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false
+      loading: true
 
     }
 
-    // setTimeout(() => this.setState({ loading: false }), 1500);
+    setTimeout(() => this.setState({ loading: false }), 1500);
   }
 
   componentDidMount() {

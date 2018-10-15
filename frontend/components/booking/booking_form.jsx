@@ -20,6 +20,7 @@ class BookingForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGuestInput = this.handleGuestInput.bind(this);
+
   }
 
   handleGuestInput(e) {
@@ -49,13 +50,12 @@ class BookingForm extends React.Component {
     };
     // debugger
     
-    // setTimeout(() => this.setState({ loading: false }), 1000);
-    // this.setState({ loading: true });
+    setTimeout(() => this.setState({ loading: false }), 1000);
+    this.setState({ loading: true });
 
 
     this.props.processForm(booking).then(
-      this.props.history.push("/trips"), this.props.fet
-      );
+      setTimeout(() => this.props.history.push("/trips"), 1000));
     // add .then(go-to-booking-index-page) later
   }
 
@@ -64,6 +64,23 @@ class BookingForm extends React.Component {
     const dates = this.props.listing.bookedDates.map(date => moment(date).format('YYYY-MM-DD'));
     return dates.includes(formattedDay);
   } 
+
+  renderErrors() {
+    debugger
+    if (this.props.errors.length === 0) {
+      return null;
+    }
+    
+    return (
+      <ul className="bookings-errors-list">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
   render() {
     const listing = this.props.listing;
@@ -83,6 +100,7 @@ class BookingForm extends React.Component {
         <div className="divide-line" />
 
         <form className="booking-form">
+          {this.renderErrors()}
           <p>Dates</p>
 
 

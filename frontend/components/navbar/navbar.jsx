@@ -33,7 +33,7 @@ const Navbar = ({ currentUser, openModal, logout }) => {
     <nav className='navbar'>
       <div className='nav-left'>
         
-        <Link to="/">
+        <Link to="/listings">
           <div id='logo-container'><img src={airquq_logo} /></div>
         </Link>
         
