@@ -1,16 +1,15 @@
 import { connect } from 'react-redux';
 import { createBooking } from '../../actions/booking_actions';
 import BookingForm from './booking_form';
+import { openModal } from '../../actions/modal_actions';
 
-const MapStateToProps = (state, ownProps) => {
-  // return ({
-  //   booking: { checkin_date: null, checkout_date: null, guest_num: null, listing_id: ownProps.listing.id}
-  // })
-  return null;
-};
-
-const MapDispatchToProps = dispatch => ({
-  processForm: booking => dispatch(createBooking(booking))
+const MapStateToProps = (state) => ({
+  currentUserId: state.session.id
 });
 
-export default connect(null, MapDispatchToProps)(BookingForm);
+const MapDispatchToProps = dispatch => ({
+  processForm: booking => dispatch(createBooking(booking)),
+  openModal: modal => dispatch(openModal(modal))
+});
+
+export default connect(MapStateToProps, MapDispatchToProps)(BookingForm);

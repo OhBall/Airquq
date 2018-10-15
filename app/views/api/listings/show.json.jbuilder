@@ -7,6 +7,8 @@ json.host do
   json.review_num @listing.host.num_received_reviews
 end 
 
+json.booked_dates @listing.booked_dates
+
 if @listing.reviews.length != 0
   json.reviews do 
     @listing.reviews.each do |review|

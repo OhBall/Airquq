@@ -7,6 +7,8 @@ import ReviewIndex from '../review/review_index';
 import DotLoading from '../dot_loading';
 import ListingMap from './listing_map';
 import HostInfo from './host_info';
+import moment from 'moment';
+import { DayPickerRangeController } from 'react-dates';
 
 class ListingShow extends React.Component {
 
@@ -29,6 +31,12 @@ class ListingShow extends React.Component {
       this.props.fetchListing(nextProps.match.params.listingId)
     }
   }
+
+  isDayBooked(day) {
+    const formattedDay = day.format('YYYY-MM-DD');
+    const dates = this.props.listing.bookedDates.map(date => moment(date).format('YYYY-MM-DD'));
+    return dates.includes(formattedDay);
+  } 
 
   render() {
     // const listing = this.props.listing;
@@ -53,6 +61,24 @@ class ListingShow extends React.Component {
                 <Amenities listing={listing} />
                 <div className="divide-line" />
                 <HostInfo listing={listing} />
+              </div>
+
+              <div className="divide-line" />
+
+              <div className="availability-calendar-container">
+                <h3>Availability</h3>
+                <div className="availability-calendar">
+                  <DayPickerRangeController
+                    startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                    endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                    onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                    focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                    onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                    hideKeyboardShortcutsPanel={true}
+                    isDayBlocked={day => this.isDayBooked(day)}
+                    numberOfMonths={2}
+                  />
+                </div>
               </div>
 
               <div className="divide-line" />

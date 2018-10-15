@@ -45,7 +45,25 @@ class Listing < ApplicationRecord
   foreign_key: :host_id,
   class_name: :User
 
+  has_many :bookings
+
   has_many_attached :photos
+
+  def booked_dates
+    result = []
+    
+    self.bookings.each do |booking|
+      start = booking.checkin_date
+      stop = booking.checkout_date
+
+      while start < stop
+        result << start
+        start += 1
+      end 
+    end 
+
+    result
+  end 
 
   # def calculate_value 
 

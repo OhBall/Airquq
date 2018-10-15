@@ -4,6 +4,8 @@ import DotLoading from '../dot_loading';
 import { withRouter } from 'react-router-dom'
 // import DateRangePicker from 'react-dates/lib/components/DateRangePicker';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+import momentPropTypes from 'react-moment-proptypes';
+import moment from 'moment';
 
 class BookingForm extends React.Component {
   constructor(props) {
@@ -35,6 +37,10 @@ class BookingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
+    if (!this.props.currentUserId) {
+      this.props.openModal('login');
+    }
     const booking = {
       checkin_date: this.state.checkin_date._d,
       checkout_date: this.state.checkout_date._d,
@@ -52,6 +58,12 @@ class BookingForm extends React.Component {
       );
     // add .then(go-to-booking-index-page) later
   }
+
+  isDayBooked(day) {
+    const formattedDay = day.format('YYYY-MM-DD');
+    const dates = this.props.listing.bookedDates.map(date => moment(date).format('YYYY-MM-DD'));
+    return dates.includes(formattedDay);
+  } 
 
   render() {
     const listing = this.props.listing;
@@ -85,6 +97,8 @@ class BookingForm extends React.Component {
             startDatePlaceholderText="Check In"
             endDatePlaceholderText="Check Out"
             showClearDates={true}
+            hideKeyboardShortcutsPanel={true}
+            isDayBlocked={day => this.isDayBooked(day)}
           />
 
           <p>Guests</p>
