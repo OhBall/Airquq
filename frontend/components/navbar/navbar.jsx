@@ -1,5 +1,6 @@
 import React from 'react';
 import airquq_logo from '../../../app/assets/images/airquq_logo.png';
+import SearchBar from './search_bar';
 import { Link } from 'react-router-dom';
 
 const LoggedIn = ({ currentUser, openModal }) => (
@@ -18,7 +19,7 @@ const NotLoggedIn = ({ openModal }) => {
   </ul>)
 };
 
-const Greeting = ({ currentUser, openModal, logout }) => {
+const Navbar = ({ currentUser, openModal, logout }) => {
 
   if (currentUser) {
     var component = (
@@ -37,10 +38,7 @@ const Greeting = ({ currentUser, openModal, logout }) => {
         </Link>
         
         <div id='nav-search' className='shadow'>
-          <label>
-            <i className="fas fa-search"></i>
-            <input type="text" placeholder='Try "San Francisco"' />
-          </label>
+          <SearchBar openModal={openModal} />
         </div>
       </div> 
       {component}
@@ -51,4 +49,4 @@ const Greeting = ({ currentUser, openModal, logout }) => {
 };
 
 
-export default Greeting;
+export default Navbar;

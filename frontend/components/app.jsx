@@ -11,7 +11,7 @@ import {
 } from 'react-router-dom';
 
 import Modal from './modal/modal';
-import NavbarContainer from './greeting/navbar_container';
+import NavbarContainer from './navbar/navbar_container';
 import HomepageContainer from './homepage/homepage_container';
 import ListingShowContainer from './listing/listing_show_container';
 import TripIndexContainer from './trips/trip_index_container';
@@ -22,9 +22,12 @@ const App = () => (
     <Modal />
     <NavbarContainer />
     <header>
-      <Route exact path="/" component={HomepageContainer} />
-      <Route path="/listings/:listingId" component={ListingShowContainer} />
-      <Route path="/trips" component={TripIndexContainer} />
+      <Switch>
+        <Route exact path="/listings/:listingId" component={ListingShowContainer} />
+        <Route exact path="/trips" component={TripIndexContainer} />
+        <Route exact path="/" component={HomepageContainer} />
+        <Redirect to="/" />
+      </Switch>
     </header>
   </div>
 );
