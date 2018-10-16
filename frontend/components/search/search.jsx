@@ -3,7 +3,7 @@ import SearchResultIndex from './search_result_index';
 import SearchMap from './search_map';
 import Filterbar from './filterbar.jsx'
 import CountUp from 'react-countup';
-// import { withRouter } from 'react-router-dom';
+import Footer from '../navbar/footer';
 
 class Search extends React.Component {
 
@@ -49,6 +49,7 @@ class Search extends React.Component {
             <SearchMap listings={listings} updateFilter={updateFilter} />
           </div>
         </div>
+        <Footer />
       </div>
     )
   }

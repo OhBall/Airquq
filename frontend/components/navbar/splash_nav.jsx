@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
-import airquq_logo from '../../../app/assets/images/airquq_logo.png';
 import { Link } from 'react-router-dom';
 
 const LoggedIn = ({ currentUser, openModal }) => (
@@ -36,7 +35,7 @@ const Navbar = ({ currentUser, openModal, logout }) => {
       <div className='splash-nav-left'>
 
         <Link to="/listings">
-          <div id='splash-logo-container'><img src={airquq_logo} /></div>
+          <div id='splash-logo-container'><img src={window.images.whitelogo} /></div>
         </Link>
 
       </div>

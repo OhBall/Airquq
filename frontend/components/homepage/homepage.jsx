@@ -3,6 +3,7 @@ import ListingIndex from '../listing/listing_index';
 import HomepageItems from './homepage_items';
 import DotLoading from '../dot_loading';
 import { Link } from 'react-router-dom';
+import Footer from '../navbar/footer';
 
 class Homepage extends React.Component {
 
@@ -44,6 +45,7 @@ class Homepage extends React.Component {
           <ListingIndex listings={listings1} city="Los Angeles" />
           <ListingIndex listings={listings2} city="San Francisco" />
           <ListingIndex listings={listings3} city="Los Angeles" />
+          <Footer />
         </div>
       )
     }

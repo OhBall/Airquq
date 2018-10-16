@@ -1,6 +1,7 @@
 import React from 'react';
 import TripIndexItem from './trip_index_items';
 import DotLoading from '../dot_loading';
+import Footer from '../navbar/footer';
 
 class TripIndex extends React.Component {
 
@@ -40,6 +41,8 @@ class TripIndex extends React.Component {
           <div className="all-trip-items">
             {trips}
           </div>
+          <div id="margin-in-trips-index" />
+          <Footer />
         </div>
       )
     }

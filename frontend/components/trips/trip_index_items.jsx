@@ -1,6 +1,7 @@
 import React from 'react';
 import DotLoading from '../dot_loading';
 import Carousel from 'nuka-carousel';
+import { Link } from 'react-router-dom';
 
 class TripIndexItem extends React.Component {
 
