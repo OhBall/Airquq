@@ -3,9 +3,9 @@ import { fetchHomepageListings } from '../../actions/listing_actions';
 import Homepage from './homepage';
 
 const mapStateToProps = state => {
-  if (state.entities.listings.homepage) {
+  if (state.entities.homepage) {
     return ({
-      listings: state.entities.listings.homepage
+      listings: state.entities.homepage
     });
   } else {
     return {};

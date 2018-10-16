@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ListingIndexItem = ({ listing, img }) => {
+  if (!listing) {
+    return <div />
+  }
+
+  debugger
   return (
     <div className="listing-details-container">
       <Link to={`/listings/${listing.id}`}><img src={img} /></Link>

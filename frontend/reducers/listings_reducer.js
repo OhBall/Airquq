@@ -1,6 +1,5 @@
 import {
   RECEIVE_LISTINGS,
-  RECEIVE_HOMEPAGE_LISTINGS,
   RECEIVE_LISTING
 } from '../actions/listing_actions';
 
@@ -9,10 +8,10 @@ const listingsReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_LISTINGS:
       return action.listings;
-    case RECEIVE_HOMEPAGE_LISTINGS:
-      let newState = Object.assign({}, state);
-      newState.homepage = action.homepageListings;
-      return newState;
+    // case RECEIVE_HOMEPAGE_LISTINGS:
+    //   let newState = Object.assign({}, state);
+    //   newState.homepage = action.homepageListings;
+    //   return newState;
     case RECEIVE_LISTING:
       return Object.assign({}, state, { [action.listing.id]: action.listing });
     default:

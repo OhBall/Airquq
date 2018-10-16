@@ -4,13 +4,15 @@ import listings from './listings_reducer';
 import bookings from './bookings_reducer';
 import reviews from './reviews_reducer';
 import trips from './trips_reducer';
+import homepage from './homepage_reducer';
 
 const entitiesReducer = combineReducers({
   users,
   listings,
   bookings,
   reviews,
-  trips
+  trips,
+  homepage
 })
 
 export default entitiesReducer;
