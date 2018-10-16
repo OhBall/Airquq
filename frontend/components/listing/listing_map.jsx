@@ -10,10 +10,21 @@ class ListingMap extends React.Component {
     }
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-    this.marker = new google.maps.Marker({
-      position: { lat, lng },
-      map: this.map,
-      title: "listing"
+    // this.marker = new google.maps.Marker({
+    //   position: { lat, lng },
+    //   map: this.map,
+    //   title: "listing"
+    // })
+
+    this.marker = new google.maps.Circle({
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.35,
+      map: map,
+      center: citymap[city].center,
+      radius: Math.sqrt(citymap[city].population) * 100
     })
   }
 

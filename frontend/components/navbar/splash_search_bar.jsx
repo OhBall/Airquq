@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
@@ -45,7 +44,7 @@ class SearchBar extends React.Component {
 
         this.props.history.push(`/search?lat=${lat}&lng=${lng}`);
       } else {
-        this.props.history.push(`/search?lat=34.019956&lng=-118.824270`);
+        this.props.history.push(`/search?lat=37.7749&lng=-122.4194`);
       }
     });
 
@@ -66,7 +65,12 @@ class SearchBar extends React.Component {
       <div className="splash-search">
         <form onSubmit={this.handleSubmit}>
           <i className="fas fa-search"></i>
-          <input className="splash-search-bar" type="text" onChange={this.handleInput} value={this.state.address} placeholder={`Try "${randomCity}"`} onClick={() => this.props.openModal('search')} />
+
+          <input className="splash-search-bar" 
+            type="text" onChange={this.handleInput} 
+            value={this.state.address} placeholder={`Try "${randomCity}"`} 
+          />
+
           <p id="splash-nav-bar-button" onClick={this.handleSubmit}>Search</p>
         </form>
       </div>
@@ -74,21 +78,4 @@ class SearchBar extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({});
-
-const mapDispatchToProps = dispatch => ({});
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchBar));
-
-
-// class SearchBar extends React.Component {
-//   render() {
-//     return (
-//       <label>
-//         <i className="fas fa-search"></i>
-//         <input type="text" placeholder='Try "San Francisco"' onClick={() => this.props.openModal('search')} />
-//       </label>
-//     )
-//   }
-// }
-
+export default withRouter(SearchBar);

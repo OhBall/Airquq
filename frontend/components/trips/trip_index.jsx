@@ -23,6 +23,13 @@ class TripIndex extends React.Component {
 
     if (!this.props.trips || this.state.loading) {
       return <DotLoading state={this.state} />;
+    } else if (this.props.trips.length === 0) {
+      return (
+        <div className="no-trip">
+          <h3>Explore Airquq to plan your next trip</h3>
+          <img src={window.images.notrip}/>
+        </div>
+      )
     } else {
       const trips = this.props.trips.map(trip => (
         <TripIndexItem key={trip.id} trip={trip} deleteTrip={this.props.deleteTrip} />

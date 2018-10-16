@@ -1,7 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { randomBytes } from 'crypto';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -46,7 +44,7 @@ class SearchBar extends React.Component {
 
         this.props.history.push(`/search?lat=${lat}&lng=${lng}`);
       } else {
-        this.props.history.push(`/search?lat=34.019956&lng=-118.824270`);
+        this.props.history.push(`/search?lat=37.7749&lng=-122.4194`);
       }
     });
 
@@ -66,28 +64,15 @@ class SearchBar extends React.Component {
       <div>
        <form onSubmit={this.handleSubmit}>
          <i className="fas fa-search"></i>
-          <input className="main-search-bar" type="text" onChange={this.handleInput} value={this.state.address} placeholder={`try "${randomCity}"`} onClick={() => this.props.openModal('search')} />
+          <input 
+            className="main-search-bar" type="text" 
+            value={this.state.address} placeholder={`try "${randomCity}"`} 
+            onChange={this.handleInput} 
+            onClick={() => this.props.openModal('search')} />
         </form>
       </div>
     )
   }
 }
 
-const mapStateToProps = state => ({});
-
-const mapDispatchToProps = dispatch => ({});
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchBar));
-
-
-// class SearchBar extends React.Component {
-//   render() {
-//     return (
-//       <label>
-//         <i className="fas fa-search"></i>
-//         <input type="text" placeholder='Try "San Francisco"' onClick={() => this.props.openModal('search')} />
-//       </label>
-//     )
-//   }
-// }
-
+export default withRouter(SearchBar);

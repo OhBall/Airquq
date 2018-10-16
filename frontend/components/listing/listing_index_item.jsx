@@ -6,7 +6,6 @@ const ListingIndexItem = ({ listing }) => {
     return <div />
   }
 
-  debugger
   return (
     <div className="listing-details-container">
       <Link to={`/listings/${listing.id}`}><img src={listing.photoUrl} /></Link>
