@@ -30,7 +30,7 @@ function Modal({ modal, closeModal }) {
         </div>
       )
     case 'search':
-        component = <SearchDropdown />
+        component = <SearchDropdown closeModal={closeModal} />
         return (
           <div id='modal' onClick={closeModal}>
             <div onClick={e => e.stopPropagation()}>

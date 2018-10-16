@@ -56,3 +56,23 @@
   background-color: white;
   z-index: 2;
 }
+
+.filterbar-container ul {
+  display: flex;
+  margin-top: 13px;
+  margin-left: 45px;
+}
+
+
+.filterbar-container ul li {
+  border: 1px solid $lightest-grey;
+  box-sizing: border-box;
+  padding: 13px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.filterbar-container ul li:hover {
+  background-color: $airbnb-blue;
+  color: white;
+}

@@ -1,6 +1,12 @@
 import React from 'react';
+import enhanceWithClickOutside from 'react-click-outside';
 
 class SearchDropdown extends React.Component {
+
+  handleClickOutside() {
+    this.props.closeModal();
+  }
+
   render() {
     return(
       <div className="search-dropdown-container">
@@ -16,4 +22,4 @@ class SearchDropdown extends React.Component {
   }
 }
 
-export default SearchDropdown;
+export default enhanceWithClickOutside(SearchDropdown);
