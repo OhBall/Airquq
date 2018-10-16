@@ -1,6 +1,7 @@
 import {
   RECEIVE_LISTINGS,
-  RECEIVE_LISTING
+  RECEIVE_LISTING,
+  REMOVE_LISTINGS
 } from '../actions/listing_actions';
 
 const listingsReducer = (state = {}, action) => {
@@ -14,6 +15,8 @@ const listingsReducer = (state = {}, action) => {
     //   return newState;
     case RECEIVE_LISTING:
       return Object.assign({}, state, { [action.listing.id]: action.listing });
+    case REMOVE_LISTINGS:
+      return {};
     default:
       return state;
   } 

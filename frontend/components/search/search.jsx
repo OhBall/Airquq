@@ -7,9 +7,24 @@ import CountUp from 'react-countup';
 
 class Search extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      rerender: false
+    }
+  }
+
   componentDidMount() {
   
     // this.props.fetchListings();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    // debugger
+    if (this.props.location.search !== nextProps.location.search) {
+      // this.props.fetchListings()
+      this.props.removeListings();
+    }
   }
 
   render() {

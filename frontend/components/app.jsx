@@ -28,7 +28,7 @@ const App = () => (
         <Route exact path="/listings/:listingId" component={ListingShowContainer} />
         <Route exact path="/trips" component={TripIndexContainer} />
         <Route exact path="/listings" component={HomepageContainer} />
-        <Route exact path="/search" component={SearchContainer} />
+        <Route path="/search" component={SearchContainer} />
         <Route exact path="/" component={Splash} />
         <Redirect to="/listings" />
       </Switch>

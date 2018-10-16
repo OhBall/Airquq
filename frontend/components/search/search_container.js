@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import SearchIndex from './search';
 
-import { fetchListings } from '../../actions/listing_actions';
+import { fetchListings, removeListings } from '../../actions/listing_actions';
 import { updateFilter } from '../../actions/filter_actions';
 
 const MapStateToProps = state => ({
@@ -10,7 +10,8 @@ const MapStateToProps = state => ({
 
 const MapDispatchToProps = dispatch => ({
   fetchListings: (filter) => dispatch(fetchListings(filter)),
-  updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
+  updateFilter: (filter, value) => dispatch(updateFilter(filter, value)), 
+  removeListings: () => dispatch(removeListings())
 });
 
 export default connect(MapStateToProps, MapDispatchToProps)(SearchIndex);

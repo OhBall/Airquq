@@ -35,6 +35,8 @@ class SearchBar extends React.Component {
   }
 
   handleSubmit(e) {
+    // e.preventDefault();
+
     const geocoder = new google.maps.Geocoder();
 
     geocoder.geocode({ address: this.state.address }, (results, status) => {
@@ -47,10 +49,6 @@ class SearchBar extends React.Component {
         this.props.history.push(`/search?lat=37.7749&lng=-122.4194`);
       }
     });
-
-    if(e) {
-      e.preventDefault();
-    } 
   }
 
   handleInput(e) {

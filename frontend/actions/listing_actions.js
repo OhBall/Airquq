@@ -3,6 +3,7 @@ import * as APIUtil from '../util/listing_api_util';
 export const RECEIVE_LISTINGS = 'RECEIVE_LISTINGS';
 export const RECEIVE_HOMEPAGE_LISTINGS = 'RECEIVE_CITY_LISTINGS';
 export const RECEIVE_LISTING = 'RECEIVE_LISTING';
+export const REMOVE_LISTINGS = 'REMOVE_LISTINGS'
 
 const receiveListings = listings => ({
   type: RECEIVE_LISTINGS,
@@ -19,6 +20,10 @@ const receiveListing = listing => ({
   listing
 });
 
+export const removeListings = () => ({
+  type: REMOVE_LISTINGS
+})
+
 export const fetchListings = filters => dispatch => (
   APIUtil.fetchListings(filters)
     .then(listings => dispatch(receiveListings(listings)))
@@ -34,3 +39,6 @@ export const fetchHomepageListings = cities => dispatch => (
     .then(homepageListings => dispatch(receiveHomepageListings(homepageListings)))
 );
 
+// export const removeListingsFromStore = () => dispatch => (
+//   () => dispatch(removeListings())
+// )
