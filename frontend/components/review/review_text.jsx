@@ -3,7 +3,7 @@ import React from 'react';
 const ReviewText = ({ review }) => {
   return(
     <div className="text-review-container">
-      <img src={window.images.profile} />
+      <img src={review.author.photoUrl} />
       <div className="review-body">
         <div className="review-first-line">
           <p className="review-author-name">{review.author.firstName} ·</p>

@@ -36,7 +36,8 @@ class Api::ListingsController < ApplicationController
               :bed_num, :bath_num, :air_conditioning, :heating, 
               :essentials, :wifi, :tv, :washer, :kitchen, 
               :free_parking, :hair_dryer, :shampoo, :address, 
-              :city, :state, :country, :zipcode, :lat, :lng, photos:[])
+              :city, :state, :country, :zipcode, :lat, :lng, :photo)
+    # photos:[]
   end 
 
   def bounds 

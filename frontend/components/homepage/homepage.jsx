@@ -41,9 +41,9 @@ class Homepage extends React.Component {
             <Link to="/search?lat=34.0522342&lng=-118.2436849"> <HomepageItems img={window.images.page2} num="270+" city="Los Angeles" description="Experience the modern elegance of verified homes in this ancient and ever-evolving metropolis." /></Link>
           </ul>
           </div>
-          <ListingIndex listings={listings1} city="Los Angeles" img={window.images.home3}/>
-          <ListingIndex listings={listings2} city="San Francisco" img={window.images.home2}/>
-          <ListingIndex listings={listings3} city="Los Angeles" img={window.images.home5} />
+          <ListingIndex listings={listings1} city="Los Angeles" />
+          <ListingIndex listings={listings2} city="San Francisco" />
+          <ListingIndex listings={listings3} city="Los Angeles" />
         </div>
       )
     }

@@ -107,7 +107,6 @@ class BookingForm extends React.Component {
             showClearDates={true}
             hideKeyboardShortcutsPanel={true}
             isDayBlocked={day => this.isDayBooked(day)}
-            id="date-range-picker"
           />
 
           <p>Guests</p>

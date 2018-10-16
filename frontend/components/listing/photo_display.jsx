@@ -1,9 +1,9 @@
 import React from 'react';
 
-const PhotoDisplay = ({ img }) => {
+const PhotoDisplay = ({ listing }) => {
   return(
     <div className="listing-show-photo-container">
-      <img src={img} />
+      <img src={listing.photoUrl} />
     </div>
   )
 };

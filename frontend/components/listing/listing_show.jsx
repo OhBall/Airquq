@@ -47,7 +47,7 @@ class ListingShow extends React.Component {
     } else {
       return (
         <div className="listing-show-page">
-          <div><PhotoDisplay img={window.images.show1} /></div>
+          <div><PhotoDisplay listing={listing} /></div>
           <div className="listing-show-all-info">
             <div className="listing-show-left">
               <div className="all-info-container">

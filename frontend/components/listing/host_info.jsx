@@ -11,7 +11,7 @@ const HostInfo = ({ listing }) => {
         <p><i className="host-start fas fa-star"></i>{listing.host.reviewNum} reviews</p>
       </div>
 
-      <img className="host-info-img" src={window.images.profile} />
+      <img className="host-info-img" src={listing.host.photoUrl} />
     </div>
   )
 };

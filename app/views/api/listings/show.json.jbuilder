@@ -2,6 +2,8 @@ json.extract! @listing, :id, :name, :description, :price, :bed_num, :bath_num, :
                        :air_conditioning, :heating, :essentials, :wifi, :tv, :washer, :kitchen, :free_parking,
                        :hair_dryer, :shampoo, :address, :city, :state, :country, :zipcode, :lat, :lng
 
+json.photoUrl url_for(@listing.photo)
+
 json.host do
   json.partial! 'api/users/user', user: @listing.host
   json.review_num @listing.host.num_received_reviews

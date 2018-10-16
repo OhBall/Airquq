@@ -47,7 +47,8 @@ class Listing < ApplicationRecord
 
   has_many :bookings
 
-  has_many_attached :photos
+  has_one_attached :photo
+  # has_many_attached :photos
 
   def booked_dates
     result = []
