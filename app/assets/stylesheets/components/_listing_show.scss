@@ -3,6 +3,7 @@
   width: 80%;
   margin: auto;
   margin-top: 30px;
+  margin-left: 200px;
 }
 
 .listing-show-all-info h3 {
@@ -20,7 +21,6 @@
 
 .all-info-container {
   width: 100%;
-  margin-left: 70px;
 }
 
 // name
@@ -129,8 +129,10 @@
 
 .listing-show-left, .listing-show-middle, .listing-show-right {
   width: 100%;
-    overflow: hidden;
-  // height: 100%;
+}
+
+.listing-show-left {
+  overflow: hidden;
 }
 
 .listing-show-left img, .listing-show-middle img, .listing-show-right img {

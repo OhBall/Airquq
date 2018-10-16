@@ -26,13 +26,13 @@ class TripIndexItem extends React.Component {
       const { host, listing } = this.props.trip;
       return (
         <div className="trip-index-item-container">
-          <Carousel>
+          <Link to={`/listings/${listing.id}`}><Carousel>
             <img src={listing.photoUrls[0]} />
             <img src={listing.photoUrls[1]} />
             <img src={listing.photoUrls[2]} />
             <img src={listing.photoUrls[3]} />
             <img src={listing.photoUrls[4]} />
-          </Carousel>
+          </Carousel></Link>
 
           {/* <img src={listing.photoUrls[0]} /> */}
           <h3>{listing.city}</h3>

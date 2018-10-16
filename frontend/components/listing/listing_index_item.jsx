@@ -10,12 +10,12 @@ const ListingIndexItem = ({ listing }) => {
   return (
     <div className="listing-details-container">
       {/* <Link to={`/listings/${listing.id}`}><img src={listing.photoUrls[0]} /></Link> */}
-      <Carousel>
+      <Link to={`/listings/${listing.id}`}><Carousel>
         <img src={listing.photoUrls[0]} />
         <img src={listing.photoUrls[1]} />
         <img src={listing.photoUrls[2]} />
         <img src={listing.photoUrls[3]} />
-      </Carousel>
+      </Carousel></Link>
 
       <div className="listing-details-text">
         <div id="listing-city">{ listing.city.toUpperCase() }</div>
