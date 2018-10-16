@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'faker'
-
 User.destroy_all
 Listing.destroy_all
 Booking.destroy_all
@@ -35,13 +33,25 @@ stephanie.profile_photo.attach(io: File.open('app/assets/images/7.png'), filenam
 derek.profile_photo.attach(io: File.open('app/assets/images/8.png'), filename: '8.png')
 
 
+# photos
+home1 = File.open('app/assets/images/h1-1.jpeg')
+home2 = File.open('app/assets/images/h2-1.jpeg')
+home3 = File.open('app/assets/images/h3-1.jpeg')
+home4 = File.open('app/assets/images/h4-1.jpeg')
+home5 = File.open('app/assets/images/h5-1.jpeg')
+
+inte1 = File.open('app/assets/images/in-1.jpeg')
+inte2 = File.open('app/assets/images/in-2.jpeg')
+inte3 = File.open('app/assets/images/in-3.jpeg')
+inte4 = File.open('app/assets/images/in-4.jpeg')
+
 # LA
 
 la_listing1 = Listing.create!(name: 'La casa', host_id: rika.id, description: 'A cottage made up of stone and timber built on two storeys, with a large living room, glass window, a couch for two people and a bathroom with sauna; on the second storey there is a double bedroom. Outdoors, there is a large garden with a porch equipped with BBQ and a wooden table. The site is located on the pleasant hills between Bellegra and Olevano Romano. We have currently added two beds, set up in a wonderful Indian teepe available for two extra guests in addition to the four ones.',
-                          price: 309, room_num: 2, bed_num: 2, bath_num: 1, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: true, hair_dryer: false, shampoo: false, 
+                          price: 309, room_num: 2, bed_num: 2, bath_num: 1, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: true, hair_dryer: false, shampoo: false,
                           address: '100 Sea Ln', city: 'Los Angeles', state: 'California', country: 'USA', zipcode: '90001', lat: 33.997284, lng: -118.210399)
 la_listing2 = Listing.create!(name: 'Joshua Tree House', host_id: john.id, description: '*This cabin was featured in the New York Times in January, 2017. * A magical homesteader cabin embedded in 5 acres of unfenced Joshua Tree desert wilderness, 12 minutes from downtown Joshua Tree. Experience peace, quiet, wildlife and STARS—on the grid but off the pavement.',
-                          price: 109, room_num: 5, bed_num: 6, bath_num: 3, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true, 
+                          price: 109, room_num: 5, bed_num: 6, bath_num: 3, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true,
                           address: '2304 Tree Circle', city: 'Los Angeles', state: 'California', country: 'USA', zipcode: '90001', lat: 34.094660, lng: -118.358388)
 la_listing3 = Listing.create!(name: 'Sunny apartment near metro station', host_id: dirk.id, description: 'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station Ober-St. Veit. The aparrment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
                           price: 59, room_num: 2, bed_num: 2, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
@@ -53,11 +63,57 @@ la_listing5 = Listing.create!(name: 'Sunny, Modern room in East Village!', host_
                           price: 239, room_num: 4, bed_num: 3, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
                           address: '481 Culver Dr', city: 'Los Angeles', state: 'California', country: 'USA', zipcode: '94411', lat: 33.866937, lng: -118.367966)
 
-la_listing1.photo.attach(io: File.open('app/assets/images/h0-1.jpeg'), filename: 'h0-1.jpeg')
-la_listing2.photo.attach(io: File.open('app/assets/images/h1-1.jpeg'), filename: 'h1-1.jpeg')
-la_listing3.photo.attach(io: File.open('app/assets/images/h2-1.jpeg'), filename: 'h2-1.jpeg')
-la_listing4.photo.attach(io: File.open('app/assets/images/h3-1.jpeg'), filename: 'h3-1.jpeg')
-la_listing5.photo.attach(io: File.open('app/assets/images/h4-1.jpeg'), filename: 'h4-1.jpeg')
+la_listing1.photos.attach(io: home1, filename: 'home.jpeg')
+la_listing1.photos.attach(io: inte1, filename: 'home.jpeg')
+la_listing1.photos.attach(io: inte2, filename: 'home.jpeg')
+la_listing1.photos.attach(io: inte3, filename: 'home.jpeg')
+la_listing1.photos.attach(io: inte4, filename: 'home.jpeg')
+
+inte1 = File.open('app/assets/images/in-1.jpeg')
+inte2 = File.open('app/assets/images/in-2.jpeg')
+inte3 = File.open('app/assets/images/in-3.jpeg')
+inte4 = File.open('app/assets/images/in-4.jpeg')
+
+la_listing2.photos.attach(io: home2, filename: 'home.jpeg')
+la_listing2.photos.attach(io: inte1, filename: 'home.jpeg')
+la_listing2.photos.attach(io: inte2, filename: 'home.jpeg')
+la_listing2.photos.attach(io: inte3, filename: 'home.jpeg')
+la_listing2.photos.attach(io: inte4, filename: 'home.jpeg')
+
+inte1 = File.open('app/assets/images/in-1.jpeg')
+inte2 = File.open('app/assets/images/in-2.jpeg')
+inte3 = File.open('app/assets/images/in-3.jpeg')
+inte4 = File.open('app/assets/images/in-4.jpeg')
+
+la_listing3.photos.attach(io: home3, filename: 'home.jpeg')
+la_listing3.photos.attach(io: inte1, filename: 'home.jpeg')
+la_listing3.photos.attach(io: inte2, filename: 'home.jpeg')
+la_listing3.photos.attach(io: inte3, filename: 'home.jpeg')
+la_listing3.photos.attach(io: inte4, filename: 'home.jpeg')
+
+inte1 = File.open('app/assets/images/in-1.jpeg')
+inte2 = File.open('app/assets/images/in-2.jpeg')
+inte3 = File.open('app/assets/images/in-3.jpeg')
+inte4 = File.open('app/assets/images/in-4.jpeg')
+
+la_listing4.photos.attach(io: home4, filename: 'home.jpeg')
+la_listing4.photos.attach(io: inte1, filename: 'home.jpeg')
+la_listing4.photos.attach(io: inte2, filename: 'home.jpeg')
+la_listing4.photos.attach(io: inte3, filename: 'home.jpeg')
+la_listing4.photos.attach(io: inte4, filename: 'home.jpeg')
+
+inte1 = File.open('app/assets/images/in-1.jpeg')
+inte2 = File.open('app/assets/images/in-2.jpeg')
+inte3 = File.open('app/assets/images/in-3.jpeg')
+inte4 = File.open('app/assets/images/in-4.jpeg')
+
+la_listing5.photos.attach(io: home5, filename: 'home.jpeg')
+la_listing5.photos.attach(io: inte1, filename: 'home.jpeg')
+la_listing5.photos.attach(io: inte2, filename: 'home.jpeg')
+la_listing5.photos.attach(io: inte3, filename: 'home.jpeg')
+la_listing5.photos.attach(io: inte4, filename: 'home.jpeg')
+
+
 
 la_booking1 = Booking.create!(listing_id: la_listing1.id, guest_id: danny.id, checkin_date: Date.parse('2018-11-12'), checkout_date: Date.parse('2018-11-15'), guest_num: 2)
 la_booking2 = Booking.create!(listing_id: la_listing1.id, guest_id: demo.id, checkin_date: Date.parse('2018-10-23'), checkout_date: Date.parse('2018-10-26'), guest_num: 1)
@@ -101,14 +157,14 @@ la_review14 = Review.create!(author_id: danny.id, listing_id: la_listing5.id, bo
                         accuracy: 4, location: 5, communication: 5, check_in: 4, cleanliness: 5, value: 4)
 la_review15 = Review.create!(author_id: rika.id, listing_id: la_listing5.id, body: Faker::RickAndMorty.quote,
                         accuracy: 5, location: 5, communication: 3, check_in: 5, cleanliness: 2, value: 4)
-                        
+
 # SF
 
-sf_listing1 = Listing.create!(name: 'Stroll around Golden Gate Park at an Industrial-Chic Haven', host_id: rika.id, description: 'Relax around the fire pit on the private patio at this garden Craftsman studio. Smooth concrete, edison bulb lighting, and chunky furniture create an industrial look, while the open-plan layout keeps things relaxed and comfortable.',
-                          price: 309, room_num: 1, bed_num: 2, bath_num: 1, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: true, hair_dryer: false, shampoo: false, 
+sf_listing1 = Listing.create!(name: 'Stroll around Golden Gate Park', host_id: rika.id, description: 'Relax around the fire pit on the private patio at this garden Craftsman studio. Smooth concrete, edison bulb lighting, and chunky furniture create an industrial look, while the open-plan layout keeps things relaxed and comfortable.',
+                          price: 309, room_num: 1, bed_num: 2, bath_num: 1, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: true, hair_dryer: false, shampoo: false,
                           address: '100 Sea Ln', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '90001', lat: 37.758491, lng: -122.483950)
 sf_listing2 = Listing.create!(name: 'Garden Suite Private Bathrm GGPark', host_id: carly.id, description: 'New renovated Garden Suite with separated entrance, private Living room, private Bathroom',
-                          price: 109, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true, 
+                          price: 109, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true,
                           address: '2304 Tree Circle', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '90001', lat: 37.733487, lng: -122.418401)
 sf_listing3 = Listing.create!(name: 'Charming SF 1911 Studio', host_id: dirk.id, description: 'Private entry, sidewalk-level suite of living room, kitchen, bedroom and bath with artful touches in 1911 Edwardian. Close to beaches, GGate Park, GGate Bridge, groceries, cafes, restaurants on city-wide trolly line for memorable vacation/business/retreat. Easy drive to Marin.',
                           price: 59, room_num: 2, bed_num: 2, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
@@ -120,11 +176,65 @@ sf_listing5 = Listing.create!(name: 'Inlaw room w private bath', host_id: chris.
                           price: 239, room_num: 4, bed_num: 3, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
                           address: '481 Culver Dr', city: 'San Francisco', state: 'California', country: 'USA', zipcode: '94411', lat: 37.736445, lng: -122.387502)
 
-sf_listing1.photo.attach(io: File.open('app/assets/images/h5-1.jpeg'), filename: 'h5-1.jpeg')
-sf_listing2.photo.attach(io: File.open('app/assets/images/h6-1.jpeg'), filename: 'h6-1.jpeg')
-sf_listing3.photo.attach(io: File.open('app/assets/images/h7-1.jpeg'), filename: 'h7-1.jpeg')
-sf_listing4.photo.attach(io: File.open('app/assets/images/h8-1.jpeg'), filename: 'h8-1.jpeg')
-sf_listing5.photo.attach(io: File.open('app/assets/images/h9-1.jpeg'), filename: 'h9-1.jpeg')
+home1 = File.open('app/assets/images/h1-1.jpeg')
+home2 = File.open('app/assets/images/h2-1.jpeg')
+home3 = File.open('app/assets/images/h3-1.jpeg')
+home4 = File.open('app/assets/images/h4-1.jpeg')
+home5 = File.open('app/assets/images/h5-1.jpeg')
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+sf_listing1.photos.attach(io: home1, filename: 'home.jpeg')
+sf_listing1.photos.attach(io: inte5, filename: 'home.jpeg')
+sf_listing1.photos.attach(io: inte6, filename: 'home.jpeg')
+sf_listing1.photos.attach(io: inte7, filename: 'home.jpeg')
+sf_listing1.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+sf_listing2.photos.attach(io: home2, filename: 'home.jpeg')
+sf_listing2.photos.attach(io: inte5, filename: 'home.jpeg')
+sf_listing2.photos.attach(io: inte6, filename: 'home.jpeg')
+sf_listing2.photos.attach(io: inte7, filename: 'home.jpeg')
+sf_listing2.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+sf_listing3.photos.attach(io: home3, filename: 'home.jpeg')
+sf_listing3.photos.attach(io: inte5, filename: 'home.jpeg')
+sf_listing3.photos.attach(io: inte6, filename: 'home.jpeg')
+sf_listing3.photos.attach(io: inte7, filename: 'home.jpeg')
+sf_listing3.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+sf_listing4.photos.attach(io: home4, filename: 'home.jpeg')
+sf_listing4.photos.attach(io: inte5, filename: 'home.jpeg')
+sf_listing4.photos.attach(io: inte6, filename: 'home.jpeg')
+sf_listing4.photos.attach(io: inte7, filename: 'home.jpeg')
+sf_listing4.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+sf_listing5.photos.attach(io: home5, filename: 'home.jpeg')
+sf_listing5.photos.attach(io: inte5, filename: 'home.jpeg')
+sf_listing5.photos.attach(io: inte6, filename: 'home.jpeg')
+sf_listing5.photos.attach(io: inte7, filename: 'home.jpeg')
+sf_listing5.photos.attach(io: inte8, filename: 'home.jpeg')
 
 sf_booking1 = Booking.create!(listing_id: sf_listing1.id, guest_id: danny.id, checkin_date: Date.parse('2018-11-12'), checkout_date: Date.parse('2018-11-15'), guest_num: 2)
 sf_booking2 = Booking.create!(listing_id: sf_listing1.id, guest_id: demo.id, checkin_date: Date.parse('2018-10-23'), checkout_date: Date.parse('2018-10-26'), guest_num: 1)

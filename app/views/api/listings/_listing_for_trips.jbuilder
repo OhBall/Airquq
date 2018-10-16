@@ -1,2 +1,2 @@
 json.extract! listing, :id, :name, :city
-json.photoUrl url_for(listing.photo)
+json.photoUrls listing.photos.map { |photo| url_for(photo) }

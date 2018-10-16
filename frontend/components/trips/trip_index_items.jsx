@@ -1,5 +1,6 @@
 import React from 'react';
 import DotLoading from '../dot_loading';
+import Carousel from 'nuka-carousel';
 
 class TripIndexItem extends React.Component {
 
@@ -23,10 +24,17 @@ class TripIndexItem extends React.Component {
       return <DotLoading state={this.state} />;
     } else {
       const { host, listing } = this.props.trip;
-  
       return (
         <div className="trip-index-item-container">
-          <img src={listing.photoUrl} />
+          <Carousel>
+            <img src={listing.photoUrls[0]} />
+            <img src={listing.photoUrls[1]} />
+            <img src={listing.photoUrls[2]} />
+            <img src={listing.photoUrls[3]} />
+            <img src={listing.photoUrls[4]} />
+          </Carousel>
+
+          {/* <img src={listing.photoUrls[0]} /> */}
           <h3>{listing.city}</h3>
           <p>{this.props.trip.checkoutDate}</p>
           <p>Host: {host.firstName}</p>

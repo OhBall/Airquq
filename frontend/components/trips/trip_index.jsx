@@ -36,7 +36,7 @@ class TripIndex extends React.Component {
       ));
       return(
         <div>
-          <p className="trips-index-title">Your Trips</p>
+          <p className="trips-index-title">All Trips</p>
           <div className="all-trip-items">
             {trips}
           </div>

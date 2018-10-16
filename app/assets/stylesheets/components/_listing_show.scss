@@ -20,6 +20,7 @@
 
 .all-info-container {
   width: 100%;
+  margin-left: 70px;
 }
 
 // name
@@ -108,7 +109,12 @@
   z-index: 2;
   overflow: hidden;
   height: 650px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 }
+
+
 
 .listing-show-photo-container img {
   max-width: 100%;
@@ -121,12 +127,27 @@
   transform: scale(1.05);
 }
 
+.listing-show-left, .listing-show-middle, .listing-show-right {
+  width: 100%;
+    overflow: hidden;
+  // height: 100%;
+}
+
+.listing-show-left img, .listing-show-middle img, .listing-show-right img {
+  height: 100%
+}
+
+.middle-1, .middle-2, .right-1, .right-2 {
+  height: 50%;
+  overflow: hidden;
+}
+
 // Calendar
 
 .listing-show-right {
-  margin-top: px;
-  margin-left: 70px;
-  width: 35%;
+  // margin-top: px;
+  // margin-left: 70px;
+  // width: 35%;
   position: relative;
 }
 
