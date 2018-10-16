@@ -15,7 +15,6 @@ class MarkerManager {
     Object.keys(this.markers)
       .filter(listingId=> !listingsObj[listingId])
       .forEach((listingId) => this.removeMarker(this.markers[listingId]));
-    debugger
   }
 
   createMarkerFromListing(listing) {

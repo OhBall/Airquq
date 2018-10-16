@@ -2,6 +2,7 @@ import React from 'react';
 import SearchResultIndex from './search_result_index';
 import SearchMap from './search_map';
 import Filterbar from './filterbar.jsx'
+import CountUp from 'react-countup';
 // import { withRouter } from 'react-router-dom';
 
 class Search extends React.Component {
@@ -22,10 +23,10 @@ class Search extends React.Component {
         <Filterbar />
         <div className="search-results-and-map">
           <div className="search-results-section">
-            <h3>{listings.length} Airquq homes in this area</h3>
+            <h3><CountUp useEasing={true} start={0} end={listings.length} duration={3} delay={1}/> Airquq homes in this area</h3>
             <p>A selection of homes verified for quality and comfort</p>
             <div>
-              <SearchResultIndex />
+              <SearchResultIndex listings={this.props.listings} />
             </div>
           </div>
 
