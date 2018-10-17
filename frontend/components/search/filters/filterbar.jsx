@@ -1,5 +1,4 @@
 import React from 'react';
-import PriceFilterContainer from './price_filter_container';
 
 class Filterbar extends React.Component {
   render() {

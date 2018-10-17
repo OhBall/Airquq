@@ -44,8 +44,7 @@ class SearchMap extends React.Component {
     if (this.lat !== prevLat || this.lng !== prevLng) {
       const mapOptions = {
         center: {
-          lat: this.lat,efcfg asdrtyuiop[];plokjiASZDXFCGVHBJNKML,;.'/
-          '
+          lat: this.lat,
           lng: this.lng
         },
         zoom: 10

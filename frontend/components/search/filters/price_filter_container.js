@@ -9,4 +9,4 @@ const MapDispatchToProps = dispatch => ({
 
 });
 
-export default PriceFilterContainer;
+export connect(MapStateToProps, MapDispatchToProps)(PriceFilter);
