@@ -1,9 +1,8 @@
 import React from 'react';
 import SearchResultIndex from './search_result_index';
 import SearchMap from './search_map';
-import Filterbar from './filterbar.jsx'
+import Filterbar from './filters/filterbar.jsx'
 import CountUp from 'react-countup';
-import Footer from '../navbar/footer';
 
 class Search extends React.Component {
 
@@ -14,15 +13,8 @@ class Search extends React.Component {
     }
   }
 
-  componentDidMount() {
-  
-    // this.props.fetchListings();
-  }
-
   componentWillReceiveProps(nextProps) {
-    // debugger
     if (this.props.location.search !== nextProps.location.search) {
-      // this.props.fetchListings()
       this.props.removeListings();
     }
   }
@@ -35,7 +27,7 @@ class Search extends React.Component {
     const { listings, updateFilter } = this.props;
     return(
       <div className="search-index-container">
-        <Filterbar />
+        <Filterbar openModal={this.props.openModal} />
         <div className="search-results-and-map">
           <div className="search-results-section">
             <h3><CountUp useEasing={true} start={0} end={listings.length} duration={3} /> Airquq homes in this area</h3>

@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
 import SearchIndex from './search';
 
-import { fetchListings, removeListings } from '../../actions/listing_actions';
+import { removeListings } from '../../actions/listing_actions';
 import { updateFilter } from '../../actions/filter_actions';
+import { openModal } from '../../actions/modal_actions';
 
 const MapStateToProps = state => ({
   listings: Object.values(state.entities.listings)
 });
 
 const MapDispatchToProps = dispatch => ({
-  fetchListings: (filter) => dispatch(fetchListings(filter)),
   updateFilter: (filter, value) => dispatch(updateFilter(filter, value)), 
-  removeListings: () => dispatch(removeListings())
+  removeListings: () => dispatch(removeListings()),
+  openModal: () => dispatch(openModal)
 });
 
 export default connect(MapStateToProps, MapDispatchToProps)(SearchIndex);

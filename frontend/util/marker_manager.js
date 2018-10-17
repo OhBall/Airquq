@@ -27,7 +27,7 @@ class MarkerManager {
       scale: 1.05,
       strokeColor: "grey",
       labelOrigin: new google.maps.Point(0, -18),
-      strokeWeight: 0.6
+      strokeWeight: 1.5
     };
     
     this.markers[listing.id] = new google.maps.Marker({

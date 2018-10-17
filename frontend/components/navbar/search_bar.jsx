@@ -65,7 +65,7 @@ class SearchBar extends React.Component {
          <i className="fas fa-search"></i>
           <input 
             className="main-search-bar" type="text" 
-            value={this.state.address} placeholder={`try "${randomCity}"`} 
+            value={this.state.address} placeholder={`Try "${randomCity}"`} 
             onChange={this.handleInput} 
             onClick={() => this.props.openModal('search')} />
         </form>
