@@ -19,15 +19,15 @@ class Api::ListingsController < ApplicationController
         @listings = Listing.all 
       end 
 
-      @max_price, @average_price = 0, 0
-      @min_price = Float::INFINITY
-      @listings.each do |listing|
-        @min_price = listing.price if listing.price < @min_price
-        @max_price = listing.price if listing.price > @max_price
-        @average_price += listing.price
-      end
+      # @max_price, @average_price = 0, 0
+      # @min_price = Float::INFINITY
+      # @listings.each do |listing|
+      #   @min_price = listing.price if listing.price < @min_price
+      #   @max_price = listing.price if listing.price > @max_price
+      #   @average_price += listing.price
+      # end
 
-      @average_price = @average_price / @listings.length unless @listings.length == 0
+      # @average_price = @average_price / @listings.length unless @listings.length == 0
 
       render :index
     end

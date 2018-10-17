@@ -8,7 +8,6 @@ import DotLoading from '../dot_loading';
 import ListingMap from './listing_map';
 import HostInfo from './host_info';
 import moment from 'moment';
-import Footer from '../navbar/footer'
 import { DayPickerRangeController } from 'react-dates';
 
 class ListingShow extends React.Component {
@@ -99,7 +98,6 @@ class ListingShow extends React.Component {
             </div>
 
           </div>
-          <Footer />
         </div>
       )
     }
