@@ -31,10 +31,17 @@ class BookingForm extends React.Component {
     this.props.clearBookingErrors();
   }
 
+  // componentWillUnmount() {
+  //   this.props.clearBookingErrors();
+  // }
+
   handleSubmit(e) {
     e.preventDefault();
 
+    this.props.clearBookingErrors;
+
     if (!this.props.currentUserId) {
+      scrollTo(0, 0);
       this.props.openModal('login');
     }
     const booking = {

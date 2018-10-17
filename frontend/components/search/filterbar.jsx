@@ -7,10 +7,7 @@ class Filterbar extends React.Component {
         <ul>
           <li>Price</li>
           <li>Guests</li>
-          <li>Bedrooms</li>
-          <li>Bathrooms</li>
           <li>Ratings</li>
-          <li>Review Counts</li>
         </ul>
       </div>
     )

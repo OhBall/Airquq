@@ -31,6 +31,7 @@ carly.profile_photo.attach(io: File.open('app/assets/images/5.png'), filename: '
 chris.profile_photo.attach(io: File.open('app/assets/images/6.png'), filename: '6.png')
 stephanie.profile_photo.attach(io: File.open('app/assets/images/7.png'), filename: '7.png')
 derek.profile_photo.attach(io: File.open('app/assets/images/8.png'), filename: '8.png')
+tony.profile_photo.attach(io: File.open('app/assets/images/9.png'), filename: '9.png')
 
 
 # photos
@@ -278,4 +279,249 @@ sf_review13 = Review.create!(author_id: stephanie.id, listing_id: sf_listing5.id
 sf_review14 = Review.create!(author_id: danny.id, listing_id: sf_listing5.id, body: Faker::RickAndMorty.quote,
                         accuracy: 4, location: 5, communication: 5, check_in: 4, cleanliness: 5, value: 4)
 sf_review15 = Review.create!(author_id: rika.id, listing_id: sf_listing5.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 3, check_in: 5, cleanliness: 2, value: 4)
+
+
+# Seattle 
+
+sea_listing1 = Listing.create!(name: 'Cottage in the Heart of the City', host_id: rika.id, description: 'New cottage, cabin-like, in the heart of Seattle. Close to bus line, cruise ships, shops, restaurants, waterfront, parks, bike paths, stadiums, Space Needle. Our cottage offers a kitchen, w/d and queen bed among other amenities. Built green.',
+                          price: 89, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: true, hair_dryer: false, shampoo: false,
+                          address: '100 3rd St', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '90001', lat: 47.639955, lng: -122.371483)
+sea_listing2 = Listing.create!(name: 'Sky Cabin Apartment with Views', host_id: carly.id, description: 'Enjoy the serenity of our stunning apartment in the heart of Seattle, with fantastic views of the lake, Gasworks Park, and the Olympic Mountains. Vaulted ceilings, wood paneling, and mid-century decor make our space comfortable, warm, and peaceful.',
+                          price: 109, room_num: 4, bed_num: 2, bath_num: 3, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true,
+                          address: '2304 Aurora Rd', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '90001', lat: 47.673033, lng: -122.300123)
+sea_listing3 = Listing.create!(name: 'Vintage Loft with Historic Features in Vibrant Capitol Hill', host_id: dirk.id, description: 'Watch the sun rise from the private balcony or head up to the shared rooftop and admire the city views. This Capitol Hill loft melds a historic facade with a cozy, modern interior and industrial-chic details like the rustic, open-tread stairs.',
+                          price: 59, room_num: 1, bed_num: 2, bath_num: 2, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
+                          address: '621 Bellvue Blvd', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '94411', lat: 47.615999, lng: -122.171178)
+sea_listing4 = Listing.create!(name: 'Tiny House in Seattle', host_id: carly.id, description: 'Tipsy is a 180 square foot (including the loft) tiny house located in the heart of West Seattle, minutes away from restaurants, bars, coffee shops, boutiques, grocery stores, Sunday Farmer’s Market, etc. ',
+                          price: 105, room_num: 2, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
+                          address: '10 114th St', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '94411', lat: 47.663045, lng: -122.166984)
+sea_listing5 = Listing.create!(name: '"Little House" Living in Ballard', host_id: chris.id, description: 'Our Little House is easy walking distance from some of Seattle\'s best coffee, restaurants, markets and retail stores. The house, formerly a garage, was completely renovated in 2013. It sits behind our main house and includes shared access to a courtyard, outdoor seating and a BBQ grill.',
+                          price: 239, room_num: 4, bed_num: 3, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
+                          address: '481 Redwood Dr', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '94411', lat: 47.612373, lng: -122.324899)
+
+home1 = File.open('app/assets/images/h1-1.jpeg')
+home2 = File.open('app/assets/images/h2-1.jpeg')
+home3 = File.open('app/assets/images/h3-1.jpeg')
+home4 = File.open('app/assets/images/h4-1.jpeg')
+home5 = File.open('app/assets/images/h5-1.jpeg')
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+sea_listing1.photos.attach(io: home1, filename: 'home.jpeg')
+sea_listing1.photos.attach(io: inte5, filename: 'home.jpeg')
+sea_listing1.photos.attach(io: inte6, filename: 'home.jpeg')
+sea_listing1.photos.attach(io: inte7, filename: 'home.jpeg')
+sea_listing1.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+sea_listing2.photos.attach(io: home2, filename: 'home.jpeg')
+sea_listing2.photos.attach(io: inte5, filename: 'home.jpeg')
+sea_listing2.photos.attach(io: inte6, filename: 'home.jpeg')
+sea_listing2.photos.attach(io: inte7, filename: 'home.jpeg')
+sea_listing2.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+sea_listing3.photos.attach(io: home3, filename: 'home.jpeg')
+sea_listing3.photos.attach(io: inte5, filename: 'home.jpeg')
+sea_listing3.photos.attach(io: inte6, filename: 'home.jpeg')
+sea_listing3.photos.attach(io: inte7, filename: 'home.jpeg')
+sea_listing3.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+sea_listing4.photos.attach(io: home4, filename: 'home.jpeg')
+sea_listing4.photos.attach(io: inte5, filename: 'home.jpeg')
+sea_listing4.photos.attach(io: inte6, filename: 'home.jpeg')
+sea_listing4.photos.attach(io: inte7, filename: 'home.jpeg')
+sea_listing4.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+sea_listing5.photos.attach(io: home5, filename: 'home.jpeg')
+sea_listing5.photos.attach(io: inte5, filename: 'home.jpeg')
+sea_listing5.photos.attach(io: inte6, filename: 'home.jpeg')
+sea_listing5.photos.attach(io: inte7, filename: 'home.jpeg')
+sea_listing5.photos.attach(io: inte8, filename: 'home.jpeg')
+
+sea_booking1 = Booking.create!(listing_id: sea_listing1.id, guest_id: danny.id, checkin_date: Date.parse('2018-11-12'), checkout_date: Date.parse('2018-11-15'), guest_num: 2)
+sea_booking2 = Booking.create!(listing_id: sea_listing1.id, guest_id: demo.id, checkin_date: Date.parse('2018-10-23'), checkout_date: Date.parse('2018-10-26'), guest_num: 1)
+sea_booking3 = Booking.create!(listing_id: sea_listing2.id, guest_id: rika.id, checkin_date: Date.parse('2018-12-12'), checkout_date: Date.parse('2018-12-15'), guest_num: 2)
+sea_booking4 = Booking.create!(listing_id: sea_listing2.id, guest_id: dirk.id, checkin_date: Date.parse('2018-11-03'), checkout_date: Date.parse('2018-11-09'), guest_num: 1)
+sea_booking5 = Booking.create!(listing_id: sea_listing2.id, guest_id: demo.id, checkin_date: Date.parse('2018-10-26'), checkout_date: Date.parse('2018-10-31'), guest_num: 2)
+sea_booking6 = Booking.create!(listing_id: sea_listing3.id, guest_id: tony.id, checkin_date: Date.parse('2019-10-26'), checkout_date: Date.parse('2019-10-28'), guest_num: 2)
+sea_booking7 = Booking.create!(listing_id: sea_listing3.id, guest_id: rika.id, checkin_date: Date.parse('2018-12-05'), checkout_date: Date.parse('2018-12-08'), guest_num: 2)
+sea_booking8 = Booking.create!(listing_id: sea_listing3.id, guest_id: demo.id, checkin_date: Date.parse('2018-11-05'), checkout_date: Date.parse('2018-11-09'), guest_num: 2)
+sea_booking9 = Booking.create!(listing_id: sea_listing4.id, guest_id: demo.id, checkin_date: Date.parse('2018-11-13'), checkout_date: Date.parse('2018-11-18'), guest_num: 1)
+sea_booking10 = Booking.create!(listing_id: sea_listing5.id, guest_id: demo.id, checkin_date: Date.parse('2018-11-20'), checkout_date: Date.parse('2018-11-25'), guest_num: 2)
+
+
+
+sea_review1 = Review.create!(author_id: danny.id, listing_id: sea_listing1.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 5, value: 4)
+sea_review2 = Review.create!(author_id: carly.id, listing_id: sea_listing1.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 2, location: 3, communication: 8, check_in: 4, cleanliness: 1, value: 2)
+sea_review3 = Review.create!(author_id: rika.id, listing_id: sea_listing1.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 4, location: 5, communication: 5, check_in: 5, cleanliness: 5, value: 4)
+sea_review4 = Review.create!(author_id: john.id, listing_id: sea_listing2.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 3, check_in: 5, cleanliness: 2, value: 4)
+sea_review5 = Review.create!(author_id: tony.id, listing_id: sea_listing2.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 1, value: 4)
+sea_review6 = Review.create!(author_id: chris.id, listing_id: sea_listing2.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 4, location: 4, communication: 5, check_in: 3, cleanliness: 5, value: 4)
+sea_review7 = Review.create!(author_id: stephanie.id, listing_id: sea_listing3.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 2, value: 4)
+sea_review8 = Review.create!(author_id: danny.id, listing_id: sea_listing3.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 15, check_in: 5, cleanliness: 5, value: 1)
+sea_review9 = Review.create!(author_id: stephanie.id, listing_id: sea_listing3.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 3, communication: 5, check_in: 5, cleanliness: 5, value: 4)
+sea_review10 = Review.create!(author_id: rika.id, listing_id: sea_listing4.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 4, cleanliness: 5, value: 4)
+sea_review11 = Review.create!(author_id: danny.id, listing_id: sea_listing4.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 3, cleanliness: 5, value: 4)
+sea_review12 = Review.create!(author_id: danny.id, listing_id: sea_listing4.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 4, check_in: 5, cleanliness: 5, value: 4)
+sea_review13 = Review.create!(author_id: stephanie.id, listing_id: sea_listing5.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 5, value: 4)
+sea_review14 = Review.create!(author_id: danny.id, listing_id: sea_listing5.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 4, location: 5, communication: 5, check_in: 4, cleanliness: 5, value: 4)
+sea_review15 = Review.create!(author_id: rika.id, listing_id: sea_listing5.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 3, check_in: 5, cleanliness: 2, value: 4)
+
+# Miami
+
+mia_listing1 = Listing.create!(name: 'Cozy and charming cottage', host_id: rika.id, description: 'Our cottage is located in a very quiet residential area, 15mn to the beach (Bal Harbor area). Located in the backyard of the main house but separate and with a independent entry. Enjoy our tropical garden and beautiful pool, secluded with no eyes from neighbors. We use the pool very little and give priority to our guests to enjoy it! Parking available in our front yard. No kitchen but microwave and fridge. TV, cable and WIFI. It is suggested to have a car. Public transportations are slow.',
+                          price: 95, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: true, hair_dryer: false, shampoo: false,
+                          address: '100 3rd St', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '90001', lat: 25.802181, lng: -80.221561)
+mia_listing2 = Listing.create!(name: 'Amazing Brickell Bay Penthouse', host_id: carly.id, description: 'Amazing Penthouse 1/1.5 furnished in the heart of Brickell with an incomparable view...walking distance to metro mover and Mary Brickell Village...perfect place to enjoy Miami and its attractions, the beaches and malls. Parking Included!!!',
+                          price: 109, room_num: 4, bed_num: 2, bath_num: 3, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true,
+                          address: '2304 Aurora Rd', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '90001', lat: 25.770643, lng: -80.221220)
+mia_listing3 = Listing.create!(name: 'LUXURY CONDO TOP FLOOR SPA + GYM', host_id: dirk.id, description: 'This is a nice luxury place for vacations. Beautiful 1 bedroom apartment with spectacular OCEAN view in the hottest building in Miami\'s Brickell area: "The Icon Brickell". Brickell area is also located in the heart of Miami.',
+                          price: 59, room_num: 1, bed_num: 2, bath_num: 2, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
+                          address: '621 Bellvue Blvd', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '94411', lat: 25.792900, lng: -80.189967)
+mia_listing4 = Listing.create!(name: 'SOUTH BEACH FLAT STEPS TO THE BEACH', host_id: carly.id, description: 'Come experience South Beach in this Ultra Modern/Chic Condo. This is a Studio apartment complete with full size kitchen and bathroom, Netflix, Amazon TV and FREE WIFI.',
+                          price: 105, room_num: 2, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
+                          address: '10 114th St', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '94411', lat: 25.826601, lng: -80.190991)
+mia_listing5 = Listing.create!(name: 'Amazing Brickell Bay Penthouse', host_id: chris.id, description: 'Amazing Penthouse 1/1.5 furnished in the heart of Brickell with an incomparable view...walking distance to metro mover and Mary Brickell Village...perfect place to enjoy Miami and its attractions, the beaches and malls. Parking Included!!!',
+                          price: 239, room_num: 4, bed_num: 3, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
+                          address: '481 Redwood Dr', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '94411', lat: 25.799535, lng: -80.134684)
+
+home1 = File.open('app/assets/images/h1-1.jpeg')
+home2 = File.open('app/assets/images/h2-1.jpeg')
+home3 = File.open('app/assets/images/h3-1.jpeg')
+home4 = File.open('app/assets/images/h4-1.jpeg')
+home5 = File.open('app/assets/images/h5-1.jpeg')
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+mia_listing1.photos.attach(io: home1, filename: 'home.jpeg')
+mia_listing1.photos.attach(io: inte5, filename: 'home.jpeg')
+mia_listing1.photos.attach(io: inte6, filename: 'home.jpeg')
+mia_listing1.photos.attach(io: inte7, filename: 'home.jpeg')
+mia_listing1.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+mia_listing2.photos.attach(io: home2, filename: 'home.jpeg')
+mia_listing2.photos.attach(io: inte5, filename: 'home.jpeg')
+mia_listing2.photos.attach(io: inte6, filename: 'home.jpeg')
+mia_listing2.photos.attach(io: inte7, filename: 'home.jpeg')
+mia_listing2.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+mia_listing3.photos.attach(io: home3, filename: 'home.jpeg')
+mia_listing3.photos.attach(io: inte5, filename: 'home.jpeg')
+mia_listing3.photos.attach(io: inte6, filename: 'home.jpeg')
+mia_listing3.photos.attach(io: inte7, filename: 'home.jpeg')
+mia_listing3.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+mia_listing4.photos.attach(io: home4, filename: 'home.jpeg')
+mia_listing4.photos.attach(io: inte5, filename: 'home.jpeg')
+mia_listing4.photos.attach(io: inte6, filename: 'home.jpeg')
+mia_listing4.photos.attach(io: inte7, filename: 'home.jpeg')
+mia_listing4.photos.attach(io: inte8, filename: 'home.jpeg')
+
+inte5 = File.open('app/assets/images/in-5.jpeg')
+inte6 = File.open('app/assets/images/in-6.jpeg')
+inte7 = File.open('app/assets/images/in-7.jpeg')
+inte8 = File.open('app/assets/images/in-8.jpeg')
+
+mia_listing5.photos.attach(io: home5, filename: 'home.jpeg')
+mia_listing5.photos.attach(io: inte5, filename: 'home.jpeg')
+mia_listing5.photos.attach(io: inte6, filename: 'home.jpeg')
+mia_listing5.photos.attach(io: inte7, filename: 'home.jpeg')
+mia_listing5.photos.attach(io: inte8, filename: 'home.jpeg')
+
+mia_booking1 = Booking.create!(listing_id: mia_listing1.id, guest_id: danny.id, checkin_date: Date.parse('2018-11-12'), checkout_date: Date.parse('2018-11-15'), guest_num: 2)
+mia_booking2 = Booking.create!(listing_id: mia_listing1.id, guest_id: demo.id, checkin_date: Date.parse('2018-10-23'), checkout_date: Date.parse('2018-10-26'), guest_num: 1)
+mia_booking3 = Booking.create!(listing_id: mia_listing2.id, guest_id: rika.id, checkin_date: Date.parse('2018-12-12'), checkout_date: Date.parse('2018-12-15'), guest_num: 2)
+mia_booking4 = Booking.create!(listing_id: mia_listing2.id, guest_id: dirk.id, checkin_date: Date.parse('2018-11-03'), checkout_date: Date.parse('2018-11-09'), guest_num: 1)
+mia_booking5 = Booking.create!(listing_id: mia_listing2.id, guest_id: demo.id, checkin_date: Date.parse('2018-10-26'), checkout_date: Date.parse('2018-10-31'), guest_num: 2)
+mia_booking6 = Booking.create!(listing_id: mia_listing3.id, guest_id: tony.id, checkin_date: Date.parse('2019-10-26'), checkout_date: Date.parse('2019-10-28'), guest_num: 2)
+mia_booking7 = Booking.create!(listing_id: mia_listing3.id, guest_id: rika.id, checkin_date: Date.parse('2018-12-05'), checkout_date: Date.parse('2018-12-08'), guest_num: 2)
+mia_booking8 = Booking.create!(listing_id: mia_listing3.id, guest_id: demo.id, checkin_date: Date.parse('2018-11-05'), checkout_date: Date.parse('2018-11-09'), guest_num: 2)
+mia_booking9 = Booking.create!(listing_id: mia_listing4.id, guest_id: demo.id, checkin_date: Date.parse('2018-11-13'), checkout_date: Date.parse('2018-11-18'), guest_num: 1)
+mia_booking10 = Booking.create!(listing_id: mia_listing5.id, guest_id: demo.id, checkin_date: Date.parse('2018-11-20'), checkout_date: Date.parse('2018-11-25'), guest_num: 2)
+
+
+
+mia_review1 = Review.create!(author_id: danny.id, listing_id: mia_listing1.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 5, value: 4)
+mia_review2 = Review.create!(author_id: carly.id, listing_id: mia_listing1.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 2, location: 3, communication: 8, check_in: 4, cleanliness: 1, value: 2)
+mia_review3 = Review.create!(author_id: rika.id, listing_id: mia_listing1.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 4, location: 5, communication: 5, check_in: 5, cleanliness: 5, value: 4)
+mia_review4 = Review.create!(author_id: john.id, listing_id: mia_listing2.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 3, check_in: 5, cleanliness: 2, value: 4)
+mia_review5 = Review.create!(author_id: tony.id, listing_id: mia_listing2.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 1, value: 4)
+mia_review6 = Review.create!(author_id: chris.id, listing_id: mia_listing2.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 4, location: 4, communication: 5, check_in: 3, cleanliness: 5, value: 4)
+mia_review7 = Review.create!(author_id: stephanie.id, listing_id: mia_listing3.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 2, value: 4)
+mia_review8 = Review.create!(author_id: danny.id, listing_id: mia_listing3.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 15, check_in: 5, cleanliness: 5, value: 1)
+mia_review9 = Review.create!(author_id: stephanie.id, listing_id: mia_listing3.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 3, communication: 5, check_in: 5, cleanliness: 5, value: 4)
+mia_review10 = Review.create!(author_id: rika.id, listing_id: mia_listing4.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 4, cleanliness: 5, value: 4)
+mia_review11 = Review.create!(author_id: danny.id, listing_id: mia_listing4.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 3, cleanliness: 5, value: 4)
+mia_review12 = Review.create!(author_id: danny.id, listing_id: mia_listing4.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 4, check_in: 5, cleanliness: 5, value: 4)
+mia_review13 = Review.create!(author_id: stephanie.id, listing_id: mia_listing5.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 5, location: 5, communication: 5, check_in: 5, cleanliness: 5, value: 4)
+mia_review14 = Review.create!(author_id: danny.id, listing_id: mia_listing5.id, body: Faker::RickAndMorty.quote,
+                        accuracy: 4, location: 5, communication: 5, check_in: 4, cleanliness: 5, value: 4)
+mia_review15 = Review.create!(author_id: rika.id, listing_id: mia_listing5.id, body: Faker::RickAndMorty.quote,
                         accuracy: 5, location: 5, communication: 3, check_in: 5, cleanliness: 2, value: 4)

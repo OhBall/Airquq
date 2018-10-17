@@ -35,7 +35,8 @@ class SearchBar extends React.Component {
   }
 
   handleSubmit(e) {
-    // e.preventDefault();
+
+    this.props.closeModal();
 
     const geocoder = new google.maps.Geocoder();
 

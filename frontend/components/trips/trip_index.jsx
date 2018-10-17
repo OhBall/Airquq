@@ -27,7 +27,7 @@ class TripIndex extends React.Component {
     } else if (this.props.trips.length === 0) {
       return (
         <div className="no-trip">
-          <h3>Explore Airquq to plan your next trip</h3>
+          <h3>Explore Airquq to choose your next adventure</h3>
           <img src={window.images.notrip}/>
         </div>
       )

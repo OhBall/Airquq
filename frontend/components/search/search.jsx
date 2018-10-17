@@ -38,7 +38,7 @@ class Search extends React.Component {
         <Filterbar />
         <div className="search-results-and-map">
           <div className="search-results-section">
-            <h3><CountUp useEasing={true} start={0} end={listings.length} duration={3} delay={1}/> Airquq homes in this area</h3>
+            <h3><CountUp useEasing={true} start={0} end={listings.length} duration={3} /> Airquq homes in this area</h3>
             <p>A selection of homes verified for quality and comfort</p>
             <div>
               <SearchResultIndex listings={this.props.listings} />
@@ -49,7 +49,6 @@ class Search extends React.Component {
             <SearchMap listings={listings} updateFilter={updateFilter} />
           </div>
         </div>
-        <Footer />
       </div>
     )
   }

@@ -19,7 +19,7 @@ const NotLoggedIn = ({ openModal }) => {
   </ul>)
 };
 
-const Navbar = ({ currentUser, openModal, logout }) => {
+const Navbar = ({ currentUser, openModal, closeModal }) => {
 
   if (currentUser) {
     var component = (
@@ -38,7 +38,7 @@ const Navbar = ({ currentUser, openModal, logout }) => {
         </Link>
         
         <div id='nav-search' className='shadow'>
-          <SearchBar openModal={openModal} />
+          <SearchBar openModal={openModal} closeModal={closeModal} />
         </div>
       </div> 
       {component}

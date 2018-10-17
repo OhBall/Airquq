@@ -1,13 +1,10 @@
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
-
-
 import React from 'react';
 import {
   Route,
   Redirect,
   Switch,
-  Link
 } from 'react-router-dom';
 
 import Modal from './modal/modal';
@@ -26,7 +23,7 @@ const App = () => (
     <header>
       <Switch>
         <Route exact path="/listings/:listingId" component={ListingShowContainer} />
-        <Route exact path="/trips" component={TripIndexContainer} />
+        <ProtectedRoute exact path="/trips" component={TripIndexContainer} />
         <Route exact path="/listings" component={HomepageContainer} />
         <Route path="/search" component={SearchContainer} />
         <Route exact path="/" component={Splash} />
