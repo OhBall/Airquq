@@ -1,8 +1,8 @@
-import { UPDATE_FILTER, CLEAR_FILTER } from '../actions/filter_actions';
+import { UPDATE_FILTER, RESET_ONE_FILTER, CLEAR_ALL_FILTER } from '../actions/filter_actions';
 
 const defaultFilters = Object.freeze({
   bounds: {},
-  price: []
+  price: [1, 525]
 });
 
 const filtersReducer = (state = defaultFilters, action) => {
@@ -14,8 +14,12 @@ const filtersReducer = (state = defaultFilters, action) => {
         [action.filter]: action.value
       };
       return Object.assign({}, state, newFilter);
-    case CLEAR_FILTER:
-      return state;
+    case CLEAR_ALL_FILTER:
+      return defaultFilters;
+    case RESET_ONE_FILTER:
+      let newState = Object.assign({}, state);
+      newState[action.filter] = defaultFilters[action.filter];
+      return newState;
     default: 
       return state;
   }

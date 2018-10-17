@@ -1,23 +1,22 @@
 import { fetchListings } from '../actions/listing_actions';
 
 export const UPDATE_FILTER = 'UPDATE_FILTER';
-export const RESET_FILTER = 'RESET_FILTER';
-export const CLEAR_FILTER = 'CLEAR_FILTER';
+export const RESET_ONE_FILTER = 'RESET_ONE_FILTER';
+export const CLEAR_ALL_FILTER = 'CLEAR_ALL_FILTER';
 
-export const changeFilter = (filter, value) => ({
+const changeFilter = (filter, value) => ({
   type: UPDATE_FILTER,
   filter, 
   value
 });
 
-export const resetFilter = (filter, value) => ({
-  type: RESET_FILTER,
-  filter, 
-  value
+const resetOneFilter = (filter) => ({
+  type: RESET_ONE_FILTER,
+  filter
 });
 
-export const clearFilter = () => ({
-  type: CLEAR_FILTER
+const clearAllFilter = () => ({
+  type: CLEAR_ALL_FILTER
 })
 
 export const updateFilter = (filter, value) => (dispatch, getState) => {
@@ -25,4 +24,8 @@ export const updateFilter = (filter, value) => (dispatch, getState) => {
   return fetchListings(getState().ui.filters)(dispatch);
 };
 
+export const resetFilter = (filter) => (dispatch, getState) => {
+  dispatch(resetOneFilter(filter));
+  return fetchListings(getState().ui.filters)(dispatch);
+};
 

@@ -12,6 +12,7 @@ class PriceFilter extends React.Component {
       maxPrice: this.props.maxPrice
     };
     this.updatePrice = this.updatePrice.bind(this);
+    this.handleClear = this.handleClear.bind(this);
   }
 
   updatePrice(e) {
@@ -22,7 +23,22 @@ class PriceFilter extends React.Component {
   }
   
   handleSubmit(price) {
+    this.props.closeModal();
     this.props.updateFilter('price', price);
+  }
+
+  handleClear() {
+    this.props.closeModal();
+    this.props.resetFilter('price');
+  }
+
+  calculateAverage() {
+    let average = 0;
+    this.props.listings.forEach(listing => average += parseInt(listing.price))
+    if (this.props.listings.length !== 0) {
+      average = average / this.props.listings.length;
+    }
+    return Math.round(average);
   }
 
   render() {
@@ -31,13 +47,13 @@ class PriceFilter extends React.Component {
     return (
       <div id="price-filter-container">
         <div className="slider-container">
-          <h3>The average price is $100</h3>
+          <h3>The average price is ${this.calculateAverage()}</h3>
 
           <div className="price-slider">
             <p>${minPrice}</p>
             <Range
-              min={10}
-              max={1250}
+              min={1}
+              max={525}
               allowCross={false}
               value={[minPrice, maxPrice]}
               defaultValue={[minPrice, maxPrice]}
@@ -45,10 +61,12 @@ class PriceFilter extends React.Component {
             />
             <p>${maxPrice}</p>
           </div>
-          <div className="price-clear-button" onClick={this.props.clearFilter} >Clear</div>
-          <div className="price-apply-button"
-            onClick={ () => this.handleSubmit([minPrice, maxPrice]) }
-          >Apply</div>
+          <div className="price-buttons">
+            <div className="price-clear-button" onClick={this.handleClear} >Clear</div>
+            <div className="price-apply-button"
+              onClick={() => this.handleSubmit([minPrice, maxPrice])}
+            >Apply</div>
+          </div>
         </div>
       </div>
     )

@@ -57,7 +57,7 @@
 }
 
 .slider-container {
-  width: 450px;
+  width: 470px;
   background-color: white;
   border: 1px solid lightgrey;
   position: absolute;
@@ -75,20 +75,24 @@
 
 .price-slider {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 15px;
 }
 
 .price-slider p {
   font-weight: 500;
   font-size: 15px;
+  width: 20px;
+  text-align: left;
 }
 
-.price-apply-button {
+.price-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 33px;
+}
+
+.price-buttons div {
   color: $airbnb-blue;
   cursor: pointer;
-  text-align: right;
-  margin-top: 20px;
-  margin-right: 2px;
-  font-size: 16px;
 }

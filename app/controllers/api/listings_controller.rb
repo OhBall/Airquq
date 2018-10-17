@@ -8,7 +8,27 @@ class Api::ListingsController < ApplicationController
 
       render :homepage_listings
     else
-      @listings = bounds ? Listing.in_bounds(bounds) : Listing.all 
+      if bounds
+        @listings = Listing.in_bounds(bounds)
+        
+        if params[:price]
+          @listings = @listings.where('price BETWEEN ? AND ?', params[:price][0].to_i, params[:price][1].to_i)
+        end
+
+      else 
+        @listings = Listing.all 
+      end 
+
+      @max_price, @average_price = 0, 0
+      @min_price = Float::INFINITY
+      @listings.each do |listing|
+        @min_price = listing.price if listing.price < @min_price
+        @max_price = listing.price if listing.price > @max_price
+        @average_price += listing.price
+      end
+
+      @average_price = @average_price / @listings.length unless @listings.length == 0
+
       render :index
     end
   end
