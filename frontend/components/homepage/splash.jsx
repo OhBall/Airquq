@@ -20,7 +20,7 @@ class Splash extends React.Component {
         <div className="splash-container">
           <SplashNav />
           <div id="splash-search-container">
-            <p id="welcome-message">Book Unique homes around the world.</p>
+            
             <SplashSearchBar />
           </div>
          </div>

@@ -15,7 +15,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 [class*="session-form"] {
@@ -104,8 +104,11 @@
 
 .errors-ul {
   margin: 10px;
-  color: $airbnb-orange;
   margin-bottom: 25px;
+}
+
+.errors-ul li {
+  color: $airbnb-orange;
 }
 
 // logout
@@ -140,4 +143,5 @@
 #logout-parent {
   position: fixed;
   right: 0px;
+  z-index: 10;
 }

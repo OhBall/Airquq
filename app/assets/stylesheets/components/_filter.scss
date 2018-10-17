@@ -1,0 +1,94 @@
+
+// filter bar
+
+.filterbar-container {
+  border-bottom: 2px solid $lightest-grey;
+  height: 62px;
+  position: sticky;
+  top: 80px;
+  background-color: white;
+  z-index: 2;
+}
+
+#filter-bar-placeholder {
+  height: 8px;
+}
+
+.filterbar-container ul {
+  display: flex;
+  margin-left: 45px;
+}
+
+
+.filterbar-container ul li {
+  border: 1px solid $lightest-grey;
+  box-sizing: border-box;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.filterbar-container ul li:hover {
+  background-color: $airbnb-blue;
+  color: white;
+}
+
+
+// modal screen
+
+.filter-modal-screen {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+
+// price
+
+#price-filter-container {
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+}
+
+.slider-container {
+  width: 450px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  position: absolute;
+  top: 150px;
+  left: 46px;
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+.slider-container h3 {
+  margin: 0;
+  font-weight: 500;
+  margin-bottom: 27px;
+}
+
+.price-slider {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.price-slider p {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.price-apply-button {
+  color: $airbnb-blue;
+  cursor: pointer;
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 2px;
+  font-size: 16px;
+}

@@ -13,9 +13,13 @@
 #
 
 class User < ApplicationRecord
-  validates :email, :session_token, presence: true, uniqueness: true
+  validates :session_token, presence: true, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
-  validates :password_digest, :first_name, :last_name, presence: true
+  validates :password_digest, presence: true
+  validates_presence_of :email, :message => ": Please enter your Email."
+  validates_uniqueness_of :email, :message => ": sorry, this email has already been taken."
+  validates_presence_of :first_name, :message => ": Please enter your first name."
+  validates_presence_of :last_name, :message => ": Please enter your last name."
   
   after_initialize :ensure_session_token
 

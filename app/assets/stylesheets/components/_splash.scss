@@ -76,13 +76,13 @@
 .splash-search-bar {
   background-color: white;
   position: absolute;
-  left: 27%;
-  top: 310px;;
+  left: 174px;
+  top: 320px;;
   padding: 15px;
   padding-left: 60px;
   box-sizing: border-box;
   font-size: 19px;
-  width: 48%;
+  width: 630px;
   height: 70px;
   font-family: Open Sans;
   font-weight: 700;
@@ -96,17 +96,17 @@
 
 // parent
 
-#splash-search-container {
-  position: relative;
-}
+// #splash-search-container {
+//   position: absolute;
+// }
 
 
 
 .splash-search i {
   position: absolute;
   font-size: 27px;
-  left: 28%;
-  top: 333px;;
+  left: 195px;
+  top: 343px;
   z-index: 2;
 }
 
@@ -115,8 +115,8 @@
 
 #welcome-message {
   position: absolute;
-  left: 27%;
-  top: 240px;;
+  left: 177px;
+  top: 247px;
   color: white;
   font-size: 35px;
   font-family: ircular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
@@ -126,8 +126,8 @@
 
 #splash-nav-bar-button {
   position: absolute;
-  left: 68%;
-  top: 319px;;
+  left: 690px;
+  top: 329px;
   background-color: $airbnb-orange;
   color: white;
   cursor: pointer;

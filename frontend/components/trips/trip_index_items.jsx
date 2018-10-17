@@ -40,7 +40,7 @@ class TripIndexItem extends React.Component {
           <p>{this.props.trip.checkoutDate}</p>
           <p>Host: {host.firstName}</p>
           <p>{listing.name}</p>
-          <div id="delete-trip-button" onClick={this.handleClick}>Cancel this booking</div>
+          <div id="delete-trip-button" onClick={this.handleClick}>Cancel</div>
        </div>
       )
     }

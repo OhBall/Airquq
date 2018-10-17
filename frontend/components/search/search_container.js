@@ -12,7 +12,7 @@ const MapStateToProps = state => ({
 const MapDispatchToProps = dispatch => ({
   updateFilter: (filter, value) => dispatch(updateFilter(filter, value)), 
   removeListings: () => dispatch(removeListings()),
-  openModal: () => dispatch(openModal)
+  openModal: modal => dispatch(openModal(modal))
 });
 
 export default connect(MapStateToProps, MapDispatchToProps)(SearchIndex);

@@ -5,6 +5,7 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import LogoutFormContainer from '../session_form/logout_form_container';
 import SearchDropdown from '../navbar/search_dropdown';
+import PriceFilterContainer from '../search/filters/price_filter_container';
 import { clearErrors } from '../../actions/session_actions';
 
 function Modal({ modal, closeModal }) {
@@ -39,6 +40,16 @@ function Modal({ modal, closeModal }) {
             </div>
           </div>
         )
+    case 'price':
+      component = <PriceFilterContainer />
+      return (
+        <div id='modal' onClick={closeModal}>
+          <div onClick={e => e.stopPropagation()}>
+            {component}
+            <div onClick={closeModal} className="filter-modal-screen" />
+          </div>
+        </div>
+      )
     default:
       return null;
   }

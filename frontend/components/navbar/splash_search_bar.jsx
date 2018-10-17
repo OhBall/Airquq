@@ -63,6 +63,8 @@ class SearchBar extends React.Component {
 
     return (
       <div className="splash-search">
+        <p id="welcome-message">Book Unique homes around the world.</p>
+        
         <form onSubmit={this.handleSubmit}>
           <i className="fas fa-search"></i>
 
