@@ -10,6 +10,7 @@ class SearchDropdown extends React.Component {
 
   render() {
     return(
+      <div id="search-drop-down-parent">
       <div className="search-dropdown-container">
         <p>Explore Airquq homes</p>
         <ul>
@@ -18,6 +19,7 @@ class SearchDropdown extends React.Component {
           <Link to="/search?lat=25.7617&lng=-80.1918"><li onClick={this.props.closeModal}><i className="fas fa-map-marker-alt"></i>Miami</li></Link>
           <Link to="/search?lat=47.6062095&lng=-122.3320708"><li onClick={this.props.closeModal}><i className="fas fa-map-marker-alt"></i>Seattle</li></Link >
         </ul>
+      </div>
       </div>
     )
   }

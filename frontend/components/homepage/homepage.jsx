@@ -17,17 +17,18 @@ class Homepage extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchHomepageListings(['Los Angeles', 'San Francisco', 'Los Angeles']);
+    this.props.fetchHomepageListings(['Los Angeles', 'Miami', 'Seattle', 'San Francisco']);
   }
 
   render() {
     if (this.state.loading || !this.props.listings) {
       return <DotLoading state={this.state} />;
     } else {    
-
+      
       const listings1 = Object.values(this.props.listings['los Angeles']).slice(0, 5);
-      const listings2 = Object.values(this.props.listings['san Francisco']).slice(0, 5);
-      const listings3 = Object.values(this.props.listings['los Angeles']).slice(0, 5)
+      const listings2 = Object.values(this.props.listings['miami']).slice(0, 5);
+      const listings3 = Object.values(this.props.listings['seattle']).slice(0, 5)
+      const listings4 = Object.values(this.props.listings['san Francisco']).slice(0, 5)
       
       return (
         <div className="homepage-container">
@@ -43,8 +44,9 @@ class Homepage extends React.Component {
           </ul>
           </div>
           <ListingIndex listings={listings1} city="Los Angeles" />
-          <ListingIndex listings={listings2} city="San Francisco" />
-          <ListingIndex listings={listings3} city="Los Angeles" />
+          <ListingIndex listings={listings2} city="Miami" />
+          <ListingIndex listings={listings3} city="Seattle" />
+          <ListingIndex listings={listings4} city="San Francisco" />
           <Footer />
         </div>
       )

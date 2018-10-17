@@ -408,19 +408,19 @@ sea_review15 = Review.create!(author_id: rika.id, listing_id: sea_listing5.id, b
 
 mia_listing1 = Listing.create!(name: 'Cozy and charming cottage', host_id: rika.id, description: 'Our cottage is located in a very quiet residential area, 15mn to the beach (Bal Harbor area). Located in the backyard of the main house but separate and with a independent entry. Enjoy our tropical garden and beautiful pool, secluded with no eyes from neighbors. We use the pool very little and give priority to our guests to enjoy it! Parking available in our front yard. No kitchen but microwave and fridge. TV, cable and WIFI. It is suggested to have a car. Public transportations are slow.',
                           price: 95, room_num: 1, bed_num: 1, bath_num: 1, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: true, hair_dryer: false, shampoo: false,
-                          address: '100 3rd St', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '90001', lat: 25.802181, lng: -80.221561)
+                          address: '100 3rd St', city: 'Miami', state: 'Florida', country: 'USA', zipcode: '90001', lat: 25.802181, lng: -80.221561)
 mia_listing2 = Listing.create!(name: 'Amazing Brickell Bay Penthouse', host_id: carly.id, description: 'Amazing Penthouse 1/1.5 furnished in the heart of Brickell with an incomparable view...walking distance to metro mover and Mary Brickell Village...perfect place to enjoy Miami and its attractions, the beaches and malls. Parking Included!!!',
                           price: 109, room_num: 4, bed_num: 2, bath_num: 3, air_conditioning: true, heating: true, essentials: true, wifi: true, tv: true, washer: true, kitchen: true, free_parking: true, hair_dryer: true, shampoo: true,
-                          address: '2304 Aurora Rd', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '90001', lat: 25.770643, lng: -80.221220)
+                          address: '2304 Aurora Rd', city: 'Miami', state: 'Florida', country: 'USA', zipcode: '90001', lat: 25.770643, lng: -80.221220)
 mia_listing3 = Listing.create!(name: 'LUXURY CONDO TOP FLOOR SPA + GYM', host_id: dirk.id, description: 'This is a nice luxury place for vacations. Beautiful 1 bedroom apartment with spectacular OCEAN view in the hottest building in Miami\'s Brickell area: "The Icon Brickell". Brickell area is also located in the heart of Miami.',
                           price: 59, room_num: 1, bed_num: 2, bath_num: 2, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
-                          address: '621 Bellvue Blvd', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '94411', lat: 25.792900, lng: -80.189967)
+                          address: '621 Bellvue Blvd', city: 'Miami', state: 'Florida', country: 'USA', zipcode: '94411', lat: 25.792900, lng: -80.189967)
 mia_listing4 = Listing.create!(name: 'SOUTH BEACH FLAT STEPS TO THE BEACH', host_id: carly.id, description: 'Come experience South Beach in this Ultra Modern/Chic Condo. This is a Studio apartment complete with full size kitchen and bathroom, Netflix, Amazon TV and FREE WIFI.',
                           price: 105, room_num: 2, bed_num: 1, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
-                          address: '10 114th St', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '94411', lat: 25.826601, lng: -80.190991)
+                          address: '10 114th St', city: 'Miami', state: 'Florida', country: 'USA', zipcode: '94411', lat: 25.826601, lng: -80.190991)
 mia_listing5 = Listing.create!(name: 'Amazing Brickell Bay Penthouse', host_id: chris.id, description: 'Amazing Penthouse 1/1.5 furnished in the heart of Brickell with an incomparable view...walking distance to metro mover and Mary Brickell Village...perfect place to enjoy Miami and its attractions, the beaches and malls. Parking Included!!!',
                           price: 239, room_num: 4, bed_num: 3, bath_num: 1, air_conditioning: false, heating: true, essentials: true, wifi: true, tv: true, washer: false, kitchen: true, free_parking: false, hair_dryer: true, shampoo: false,
-                          address: '481 Redwood Dr', city: 'Seattle', state: 'Washington', country: 'USA', zipcode: '94411', lat: 25.799535, lng: -80.134684)
+                          address: '481 Redwood Dr', city: 'Miami', state: 'Florida', country: 'USA', zipcode: '94411', lat: 25.799535, lng: -80.134684)
 
 home1 = File.open('app/assets/images/h1-1.jpeg')
 home2 = File.open('app/assets/images/h2-1.jpeg')

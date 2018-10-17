@@ -23,7 +23,7 @@ function Modal({ modal, closeModal }) {
       component = <LogoutFormContainer />;
       return (
         <div id='modal' onClick={closeModal}>
-          <div onClick={e => e.stopPropagation()}>
+          <div onClick={e => e.stopPropagation()} >
             {component}
             <div onClick={closeModal} className="logout-modal-screen" />
           </div>

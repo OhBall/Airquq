@@ -19,8 +19,10 @@ class LogoutForm extends React.Component {
 
   render() {
     return(
-    <div className="logout-modal">
-        <p onClick={this.handleSubmit}>Log Out</p>
+    <div id="logout-parent">
+      <div className="logout-modal">
+          <p onClick={this.handleSubmit}>Log Out</p>
+      </div>
     </div>
     )
   }
