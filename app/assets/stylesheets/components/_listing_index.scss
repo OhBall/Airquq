@@ -48,14 +48,13 @@
   }
 }
 
-
 .listing-details-container img {
   height: 230px;
 }
 
 .listing-details-text div {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #listing-city{
@@ -76,6 +75,7 @@
 #listing-price {
   font-size: 13px;
   font-weight: 300;
+  margin-bottom: 0;
 }
 
 // .listing-details-container button {
@@ -100,3 +100,20 @@
 // .listing-details-container img:hover {
 //   background-color: white;
 // }
+
+// starts
+
+.index-stars {
+  font-size: 10px;
+  display: flex;
+  color: $airbnb-blue;
+  align-items: center;
+  margin-top: 0;
+}
+
+.index-stars > p {
+  margin-right: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $airbnb-blue;
+}

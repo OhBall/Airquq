@@ -1,5 +1,5 @@
 import React from 'react';
-import ShowStars from './show_stars';
+import { ShowStars }from './show_stars';
 
 class ReviewStars extends React.Component {
     

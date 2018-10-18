@@ -47,7 +47,6 @@ class Listing < ApplicationRecord
 
   has_many :bookings
 
-  # has_one_attached :photo
   has_many_attached :photos
 
   def booked_dates
@@ -73,11 +72,30 @@ class Listing < ApplicationRecord
         .where("lng < ?", bounds[:northEast][:lng])
   end 
 
-  # def calculate_value 
+  def calculate_average_ratings
+    average_rating = 0
+    total_count = 0
 
-  # end 
+    self.reviews.each do |review|
+      count, rating = 0, 0
+      rating_array = [review.accuracy, review.location, review.communication, review.check_in, review.cleanliness, review.value]
+      rating_array.each do |category_rating|
+        if category_rating
+          count += 1
+          rating += category_rating
+        end
+      end
 
-  # json 
-  
-  # json.value_avg @listing.calculate_value 
+      rating = rating.to_f / count if count != 0
+
+      if rating != 0
+        average_rating += rating 
+        total_count += 1
+      end 
+    end 
+
+    average_rating = average_rating / total_count if total_count != 0
+
+    return average_rating.round(2)
+  end 
 end

@@ -22,8 +22,8 @@
 }
 
 .search-results-section p {
-  margin-top: 15px;
-  font-size: 18px;
+  margin-top: 0px;
+  font-size: 12px;
 }
 
 .search-result-ul {
@@ -31,17 +31,23 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 30% [col-start]);
   column-gap: 20px;
+  row-gap: 20px;
 }
 
 // map
 .map-container {
   height: 100%;
+  width: 30%;
+  position: fixed;
+  top: 2%;
+  right: 5%;
+  margin-top: 100px;
 }
 
 #search-map {
-  height: 80%;
-  width: 500px;
+  height: 75%;
+  width: 100%;
   z-index: 1;
-  position: sticky; //not working?
-  top: 0px;
+  position: sticky;
+  top: 5%;
 }

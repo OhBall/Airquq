@@ -25,7 +25,7 @@ class Search extends React.Component {
     }
 
     const { listings, updateFilter } = this.props;
-    return(
+    return (
       <div className="search-index-container">
         <Filterbar openModal={this.props.openModal} />
         <div className="search-results-and-map">

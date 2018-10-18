@@ -24,3 +24,5 @@ if @listing.reviews.length != 0
     end
   end 
 end 
+
+json.average_rating @listing.calculate_average_ratings

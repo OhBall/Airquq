@@ -6,5 +6,6 @@
     # json.min_price @min_price
     # json.max_price @max_price
     # json.average_price @average_price
+    json.average_rating listing.calculate_average_ratings
   end 
 end 

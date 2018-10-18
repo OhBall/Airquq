@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
+import { toStars } from '../review/show_stars';
 
 const ListingIndexItem = ({ listing }) => {
   if (!listing) {
@@ -21,6 +22,7 @@ const ListingIndexItem = ({ listing }) => {
         <div id="listing-city">{ listing.city.toUpperCase() }</div>
         <Link to={`/listings/${listing.id}`}><div id="listing-name">{listing.name}</div></Link>
         <div id="listing-price">${listing.price} per night · Free Cancellation  </div>
+        <div className="index-stars"><p>{listing.averageRating}</p>{toStars(listing.averageRating)}</div>
       </div>
     </div>
   )
