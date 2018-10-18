@@ -76,7 +76,7 @@ class BookingForm extends React.Component {
 
   render() {
     const listing = this.props.listing;
-    console.log(this.state.fireRedirect);
+
     if (this.state.loading) {
       return <DotLoading state={this.state} />;
     } else if (!listing){

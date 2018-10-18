@@ -2,6 +2,8 @@
 
 [Airquq Live](https://airquq.herokuapp.com/)
 
+![](airquq_logo.png)
+
 Airquq is a full-stack, single-page application inspired by Airbnb. It utilizes a Ruby on Rails backend with a PostgreSQL database and a React and Redux frontend. It features four cities with comfortable homes that users can view, book and read reviews. Users can search for homes by location and apply price filter to find the best matches for them.
 
 ## Features
