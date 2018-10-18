@@ -14,9 +14,13 @@ Airquq is a full-stack, single-page application inspired by Airbnb. It utilizes 
 
 ### Homepage
 
+![](homepage.jpg)
+
 The splash page features a search bar that is built using Google Place Autocomplete. The search bar component also utilizes Google Geocoding API to turn location into geography coordinates.
 
 ### Search Result page
+
+![](search.gif)
 
 This page is for users to search and views listings based on map locations and filter search results by price range.
 
@@ -24,9 +28,13 @@ The backend is only queried for listings within the current map bounds. Any user
 
 ### Listing index page
 
+![](index.jpg)
+
 Any time user clicks on the logo on the left top corner, user will be directed to the listing index page which shows recommendations for travel destination and homes in those cities. There are quick links to go to the cities Airquq have listings in.
 
 ### Trips page
+
+![](trips.gif)
 
 This page shows all of the current user's trips(bookings), user can cancel their trips on this page.
 
