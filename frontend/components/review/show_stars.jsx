@@ -15,26 +15,6 @@ export const toStars = (rating) => {
   const emptyStar = <i className="far fa-star empty-star"></i>;
   const halfStar = <i className="fas fa-star-half-alt"></i>;
 
-  // const result = []
-  // const solidStarNum = Math.floor(rating);
-  // const remainder = (rating - solidStarNum) > 0.25 ? rating - solidStarNum : 0;
-
-  // for (let i = 0; i < 5; i++) {
-  //   if (i < solidStarNum || remainder > 0.75) {
-  //     result.push(solidStar)
-  //   } else if (remainder > 0.25) {
-  //     result.push(halfStar)
-  //   } else {
-  //     result.push(emptyStar)
-  //   };
-  // }
-
-  // return (
-  //   <div className="individual-stars-container">
-  //     {result}
-  //   </div>
-  // )
-
   if (rating <= 0.25) {
     return (
       <div className="individual-stars-container">

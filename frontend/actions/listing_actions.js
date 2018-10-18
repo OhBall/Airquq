@@ -38,7 +38,3 @@ export const fetchHomepageListings = cities => dispatch => (
   APIUtil.fetchHomepageListings(cities)
     .then(homepageListings => dispatch(receiveHomepageListings(homepageListings)))
 );
-
-// export const removeListingsFromStore = () => dispatch => (
-//   () => dispatch(removeListings())
-// )

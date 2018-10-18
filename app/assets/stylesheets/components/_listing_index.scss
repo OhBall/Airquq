@@ -11,23 +11,14 @@
   font-weight: 500;
   font-size: 25px;
   color: $dark-grey;
-  // margin-top: 20px;
-  // margin-bottom: 10px;
-  // margin-left: 10px;
 }
 
 @media (max-width: 1100px) {
 
 .listings-container {
-  // display: flex;
-  // justify-content: space-between;
-  // flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(auto-fit, 230px [col-start]);
-  // grid-template-columns: repeat(auto-fit, 19% [col-start]);
   justify-content: space-between;
-  // grid-gap: 2%;
-  // grid-template-columns: repeat(5, 18%);
   margin-bottom: 30px;
   }
 }
@@ -35,15 +26,9 @@
 @media (min-width: 1100px) {
 
 .listings-container {
-  // display: flex;
-  // justify-content: space-between;
-  // flex-wrap: wrap;
   display: grid;
-  // grid-template-columns: repeat(auto-fit, 230px [col-start]);
   grid-template-columns: repeat(auto-fit, 19% [col-start]);
   justify-content: space-between;
-  // grid-gap: 2%;
-  // grid-template-columns: repeat(5, 18%);
   margin-bottom: 30px;
   }
 }
@@ -64,12 +49,8 @@
   margin-top: 20px;
 }
 
-
-
 #listing-name {
   font-weight: 500;
-  // font-family: Noto Sans;
-  
 }
 
 #listing-price {
@@ -78,30 +59,7 @@
   margin-bottom: 0;
 }
 
-// .listing-details-container button {
-//   font-size: 17px;
-//   background-color: black;
-//   color: white;
-//   opacity: 0.5;
-//   height: 20px;
-//   font-weight: 700;
-//   font-family: Arial, Helvetica, sans-serif;
-
-//   -moz-transition: all 0.5s;
-//   -webkit-transition: all 0.5s;
-//   transition: all 0.5s;
-// }
-
-// .listing-details-container button:hover {
-//   transform: 1.5;
-//   transform: scale(1.5);
-// }
-
-// .listing-details-container img:hover {
-//   background-color: white;
-// }
-
-// starts
+// stars
 
 .index-stars {
   font-size: 10px;

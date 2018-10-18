@@ -7,7 +7,7 @@ const ListingIndexItem = ({ listing }) => {
   if (!listing) {
     return <div />
   }
-// debugger
+
   return (
     <div className="listing-details-container">
       <Link to={`/listings/${listing.id}`}><Carousel>

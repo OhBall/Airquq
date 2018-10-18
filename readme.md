@@ -34,7 +34,7 @@ Any time user clicks on the logo on the left top corner, user will be directed t
 
 ### Trips page
 
-![](trips.gif)
+![](trips2.gif)
 
 This page shows all of the current user's trips(bookings), user can cancel their trips on this page.
 

@@ -7,7 +7,6 @@ import LogoutFormContainer from '../session_form/logout_form_container';
 import SearchDropdown from '../navbar/search_dropdown';
 import PriceFilterContainer from '../search/filters/price_filter_container';
 import ListingIndexItem from '../listing/listing_index_item';
-import { clearErrors } from '../../actions/session_actions';
 
 function Modal({ modal, closeModal }) {
   if (!modal) {

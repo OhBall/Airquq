@@ -1,13 +1,8 @@
 .all-trip-items {
   width: 80%;
   margin: auto;
-  // display: flex;
-  // justify-content: space-between;
-  // flex-wrap: wrap;
   display: grid;
-  // grid-template-columns: [line1] 25% [line2] 25% [line3] 25%;
   grid-template-columns: repeat(3, 33% [col-start]);
-  // grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 50px;
 }
@@ -27,14 +22,6 @@
   box-sizing: border-box;
 }
 
-.trip-index-item-container h3 {
-
-}
-
-.trip-index-item-container p {
-
-}
-
 .trip-index-item-container img {
   height: 280px;
 }
@@ -52,12 +39,7 @@
   box-sizing: border-box;
   margin-bottom: 30px;
   padding-bottom: 15px;
-  // align-items: 
-    color: white;
-}
-
-#delete-trip-button p {
-
+  color: white;
 }
 
 .no-trip h3 {

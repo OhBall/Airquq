@@ -10,11 +10,6 @@ class ListingMap extends React.Component {
     }
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-    // this.marker = new google.maps.Marker({
-    //   position: { lat, lng },
-    //   map: this.map,
-    //   title: "listing"
-    // })
 
     this.marker = new google.maps.Circle({
       strokeColor: '#71cec9',

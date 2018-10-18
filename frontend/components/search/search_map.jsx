@@ -66,6 +66,10 @@ class SearchMap extends React.Component {
     this.MarkerManager.updateMarkers(this.props.listings);
   }
 
+  componentWillUnmount() {
+    this.props.closeModal();
+  }
+  
   render() {
     return (
       <div ref={map => this.mapNode = map} id="search-map"></div>

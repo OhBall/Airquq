@@ -15,10 +15,9 @@ class ListingShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true //change to true later
+      loading: true
     }
 
-    // for spinner to work
     setTimeout(() => this.setState({ loading: false}), 1500);
   }
 
@@ -39,7 +38,6 @@ class ListingShow extends React.Component {
   } 
 
   render() {
-    // const listing = this.props.listing;
     const { listing, reviews } = this.props;
 
     if(!listing || this.state.loading) {
@@ -69,11 +67,11 @@ class ListingShow extends React.Component {
                 <h3>Availability</h3>
                 <div className="availability-calendar">
                   <DayPickerRangeController
-                    startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-                    endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-                    onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-                    focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-                    onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                    startDate={this.state.startDate}
+                    endDate={this.state.endDate}
+                    onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
+                    focusedInput={this.state.focusedInput}
+                    onFocusChange={focusedInput => this.setState({ focusedInput })}
                     hideKeyboardShortcutsPanel={true}
                     isDayBlocked={day => this.isDayBooked(day)}
                     numberOfMonths={2}

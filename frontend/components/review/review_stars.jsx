@@ -35,9 +35,6 @@ class ReviewStars extends React.Component {
     )
   }
 
-  // parseSumAverage() {
-
-  // }
   calculateFinalStars() {
     const result = (this.parseDetail('accuracy') + this.parseDetail('location') + 
       this.parseDetail('communication') + this.parseDetail('checkIn') +

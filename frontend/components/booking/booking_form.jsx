@@ -2,8 +2,7 @@ import React from 'react';
 import bulb from '../../../app/assets/images/bulb.png';
 import DotLoading from '../dot_loading';
 import { withRouter } from 'react-router-dom'
-// import DateRangePicker from 'react-dates/lib/components/DateRangePicker';
-import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+import { DateRangePicker } from 'react-dates';
 import momentPropTypes from 'react-moment-proptypes';
 import moment from 'moment';
 
@@ -30,10 +29,6 @@ class BookingForm extends React.Component {
   componentDidMount() {
     this.props.clearBookingErrors();
   }
-
-  // componentWillUnmount() {
-  //   this.props.clearBookingErrors();
-  // }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -102,13 +97,13 @@ class BookingForm extends React.Component {
 
 
           <DateRangePicker
-            startDate={this.state.checkin_date} // momentPropTypes.momentObj or null,
-            startDateId="booking-form-checkin" // PropTypes.string.isRequired,
-            endDate={this.state.checkout_date} // momentPropTypes.momentObj or null,
-            endDateId="booking-from-checkout" // PropTypes.string.isRequired,
-            onDatesChange={({ startDate, endDate }) => this.setState({ checkin_date: startDate, checkout_date: endDate })}  // PropTypes.func.isRequired,
-            focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-            onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+            startDate={this.state.checkin_date} 
+            startDateId="booking-form-checkin" 
+            endDate={this.state.checkout_date} 
+            endDateId="booking-from-checkout" 
+            onDatesChange={({ startDate, endDate }) => this.setState({ checkin_date: startDate, checkout_date: endDate })}
+            focusedInput={this.state.focusedInput}
+            onFocusChange={focusedInput => this.setState({ focusedInput })}
             startDatePlaceholderText="Check In"
             endDatePlaceholderText="Check Out"
             showClearDates={true}

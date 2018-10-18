@@ -24,7 +24,7 @@ class Search extends React.Component {
       return <div />
     }
 
-    const { listings, updateFilter, openModalWithListing } = this.props;
+    const { listings, updateFilter, openModalWithListing, closeModal } = this.props;
     
     return (
       <div className="search-index-container">
@@ -39,7 +39,7 @@ class Search extends React.Component {
           </div>
 
           <div className="map-container">
-            <SearchMap listings={listings} updateFilter={updateFilter} openModalWithListing={openModalWithListing} />
+            <SearchMap listings={listings} updateFilter={updateFilter} openModalWithListing={openModalWithListing} closeModal={closeModal}/>
           </div>
         </div>
       </div>

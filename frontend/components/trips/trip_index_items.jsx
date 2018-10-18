@@ -48,5 +48,3 @@ class TripIndexItem extends React.Component {
 }
 
 export default TripIndexItem;
-
-// 

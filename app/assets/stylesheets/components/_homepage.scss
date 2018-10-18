@@ -9,8 +9,6 @@
 .homepage-container {
   color: $dark-grey;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-  // max-width: 1440px;
-  // min-width: 1000px;
   margin-left: 50px;
   margin: auto;
   display: grid;
@@ -42,15 +40,10 @@
 }
 
 .homepage-item-container {
-  // display: flex;
   width: 90%;
   margin: auto;
   display: grid;
-  // grid-template-columns: 400px 400px 400px;
-  // grid-column-gap: 10px;
-  // justify-content: space-around;
   grid-template-columns: repeat(auto-fit, 32.5% [col-start]);
-  // grid-column-gap: 10px;
   justify-content: space-between;
 }
 
@@ -61,9 +54,6 @@
 .item-text-container div {
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.homepage-detail-container {
 }
 
 #city-name {
