@@ -48,7 +48,7 @@ This section shows all reviews for a particular home, and the average rating for
 
 The review texts are generated using Faker gem (from  RickAndMorty section!)
 
-![](listing_show_3.jpg)
+![](listing_show_4.jpg)
 
 ### Trips page
 
