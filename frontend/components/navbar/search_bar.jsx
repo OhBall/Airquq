@@ -20,11 +20,11 @@ class SearchBar extends React.Component {
     autocomplete.addListener("place_changed", () => {
       if (!autocomplete.getPlace().formatted_address) {
         address = autocomplete.getPlace().name;
-        this.setState({address});
+        this.setState({ address });
         this.handleSubmit();
       } else {
         address = autocomplete.getPlace().formatted_address;
-        this.setState({address});
+        this.setState({ address });
         this.handleSubmit();
       }
     })
@@ -54,19 +54,19 @@ class SearchBar extends React.Component {
 
   handleInput(e) {
     this.setState({ address: e.currentTarget.value })
-  }  
+  }
 
   render() {
     const cities = ['Los Angeles', 'San Francisco', 'New York', 'Seattle'];
     const randomCity = cities[Math.floor(Math.random() * cities.length)];
-    return(
+    return (
       <div>
-       <form onSubmit={this.handleSubmit}>
-         <i className="fas fa-search"></i>
-          <input 
-            className="main-search-bar" type="text" 
-            value={this.state.address} placeholder={`Try "${randomCity}"`} 
-            onChange={this.handleInput} 
+        <form onSubmit={this.handleSubmit}>
+          <i className="fas fa-search"></i>
+          <input
+            className="main-search-bar" type="text"
+            value={this.state.address} placeholder={`Try "${randomCity}"`}
+            onChange={this.handleInput}
             onClick={() => this.props.openModal('search')} />
         </form>
       </div>

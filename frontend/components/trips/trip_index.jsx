@@ -8,7 +8,6 @@ class TripIndex extends React.Component {
     super(props);
     this.state = {
       loading: true
-
     }
 
     setTimeout(() => this.setState({ loading: false }), 1500);
@@ -16,7 +15,6 @@ class TripIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchTrips();
-
   }
 
   render() {

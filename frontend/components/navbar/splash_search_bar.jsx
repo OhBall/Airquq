@@ -8,7 +8,6 @@ class SearchBar extends React.Component {
       address: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.setAddress = this.setAddress.bind(this);
     this.handleInput = this.handleInput.bind(this);
   }
 
@@ -28,10 +27,6 @@ class SearchBar extends React.Component {
         this.handleSubmit();
       }
     })
-  }
-
-  setAddress(address) {
-    this.setState({ address })
   }
 
   handleSubmit(e) {
@@ -64,13 +59,13 @@ class SearchBar extends React.Component {
     return (
       <div className="splash-search">
         <p id="welcome-message">Book Unique homes around the world.</p>
-        
+
         <form onSubmit={this.handleSubmit}>
           <i className="fas fa-search"></i>
 
-          <input className="splash-search-bar" 
-            type="text" onChange={this.handleInput} 
-            value={this.state.address} placeholder={`Try "${randomCity}"`} 
+          <input className="splash-search-bar"
+            type="text" onChange={this.handleInput}
+            value={this.state.address} placeholder={`Try "${randomCity}"`}
           />
 
           <p id="splash-nav-bar-button" onClick={this.handleSubmit}>Search</p>

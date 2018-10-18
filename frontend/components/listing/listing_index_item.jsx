@@ -10,7 +10,6 @@ const ListingIndexItem = ({ listing }) => {
 // debugger
   return (
     <div className="listing-details-container">
-      {/* <Link to={`/listings/${listing.id}`}><img src={listing.photoUrls[0]} /></Link> */}
       <Link to={`/listings/${listing.id}`}><Carousel>
         <img src={listing.photoUrls[0]} />
         <img src={listing.photoUrls[1]} />
