@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/OscarAlvarez8830/EZDownload.git
+  revision: c4f20fb9545d7785d378b0e400e20c553fcf3748
+  specs:
+    ez_download (0.2.0)
+      rails (~> 5.2.0)
+
+GIT
   remote: https://github.com/stympy/faker.git
   revision: ac17fdd694f59974782389ba4133682826e141d1
   branch: master
@@ -249,6 +256,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  ez_download!
   faker!
   jbuilder (~> 2.5)
   jquery-rails
