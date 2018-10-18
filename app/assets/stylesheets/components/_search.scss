@@ -84,3 +84,46 @@
 .pac-icon {
   display: none;
 }
+
+
+// listing map modal
+
+#map-modal-screen {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.705);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#listing-map-modal {
+  z-index: 5;
+  position: fixed;
+  width: 450px;
+  right: 37%;
+  top: 18%;
+  background-color: white;
+  padding: 20px;
+  border: 2px solid grey;
+  box-shadow: 3px 3px 10px #grey;
+}
+
+
+#listing-map-modal-component {
+  z-index: 10;
+  position: relative;
+}
+
+#listing-map-modal-component img {
+  height: 300px;
+}
+
+#listing-map-modal-component div, p {
+  font-size: 18px;
+}
+
+#listing-map-modal-component p {
+  font-size: 18px;
+}

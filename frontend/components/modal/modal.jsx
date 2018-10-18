@@ -6,6 +6,7 @@ import SignupFormContainer from '../session_form/signup_form_container';
 import LogoutFormContainer from '../session_form/logout_form_container';
 import SearchDropdown from '../navbar/search_dropdown';
 import PriceFilterContainer from '../search/filters/price_filter_container';
+import ListingIndexItem from '../listing/listing_index_item';
 import { clearErrors } from '../../actions/session_actions';
 
 function Modal({ modal, closeModal }) {
@@ -13,14 +14,11 @@ function Modal({ modal, closeModal }) {
     return null;
   }
   let component;
-  switch (modal) {
-    case 'login':
+    if (modal === 'login') {
       component = <LoginFormContainer />;
-      break;
-    case 'signup':
+    } else if (modal === 'signup') {
       component = <SignupFormContainer />;
-      break;
-    case 'logout':
+    } else if (modal === 'logout') {
       component = <LogoutFormContainer />;
       return (
         <div id='modal' onClick={closeModal}>
@@ -30,17 +28,17 @@ function Modal({ modal, closeModal }) {
           </div>
         </div>
       )
-    case 'search':
-        component = <SearchDropdown closeModal={closeModal} />
-        return (
-          <div id='modal' onClick={closeModal}>
-            <div onClick={e => e.stopPropagation()}>
-              {component}
-              <div onClick={closeModal} className="logout-modal-screen" />
-            </div>
+    } else if (modal === 'search') {
+      component = <SearchDropdown closeModal={closeModal} />
+      return (
+        <div id='modal' onClick={closeModal}>
+          <div onClick={e => e.stopPropagation()}>
+            {component}
+            <div onClick={closeModal} className="logout-modal-screen" />
           </div>
-        )
-    case 'price':
+        </div>
+      )
+    } else if (modal === 'price') {
       component = <PriceFilterContainer />
       return (
         <div id='modal' onClick={closeModal}>
@@ -50,9 +48,21 @@ function Modal({ modal, closeModal }) {
           </div>
         </div>
       )
-    default:
+    } else if (modal.modal === 'listing') {
+      component = <ListingIndexItem listing={modal.listing} />
+      return (
+        <div id='listing-map-modal' onClick={closeModal}>
+          <div onClick={e => e.stopPropagation()}>
+            <div id="listing-map-modal-component">
+              {component}
+            </div>
+            <div onClick={closeModal} id="map-modal-screen" />
+          </div>
+        </div>
+      )
+    } else {
       return null;
-  }
+    }  
   return (
     <div id='modal' onClick={ closeModal }>
       <div onClick={ e => e.stopPropagation() }>

@@ -24,21 +24,21 @@ class Search extends React.Component {
       return <div />
     }
 
-    const { listings, updateFilter } = this.props;
+    const { listings, updateFilter, openModalWithListing } = this.props;
     return (
       <div className="search-index-container">
         <Filterbar openModal={this.props.openModal} />
         <div className="search-results-and-map">
           <div className="search-results-section">
             <h3><CountUp useEasing={true} start={0} end={listings.length} duration={3} /> Airquq homes in this area</h3>
-            <p>A selection of homes verified for quality and comfort</p>
+            <h4>A selection of homes verified for quality and comfort</h4>
             <div>
               <SearchResultIndex listings={this.props.listings} />
             </div>
           </div>
 
           <div className="map-container">
-            <SearchMap listings={listings} updateFilter={updateFilter} />
+            <SearchMap listings={listings} updateFilter={updateFilter} openModalWithListing={openModalWithListing} />
           </div>
         </div>
       </div>

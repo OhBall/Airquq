@@ -1,7 +1,8 @@
 class MarkerManager {
-  constructor(map) {
+  constructor(map, openModalWithListing) {
     this.map = map;
     this.markers = {};
+    this.openModalWithListing = openModalWithListing;
   }
 
   updateMarkers(listings) {
@@ -40,12 +41,17 @@ class MarkerManager {
     });
 
     let marker = this.markers[listing.id];
+    marker.addListener('click', () => this.handleClick(listing))
     marker.setMap(this.map);
   }
 
   removeMarker(marker) {
     this.markers[marker.listingId].setMap(null);
     delete this.markers[marker.listingId];
+  }
+
+  handleClick(listing) {
+    this.openModalWithListing('listing', listing)
   }
 }
 
