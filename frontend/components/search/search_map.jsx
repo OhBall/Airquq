@@ -14,8 +14,7 @@ class SearchMap extends React.Component {
       center: { lat: this.lat, lng: this.lng },
       zoom: 10
     }
-    debugger
-
+    
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this.props.openModalWithListing);
     this.MarkerManager.updateMarkers(this.props.listings);
@@ -52,7 +51,7 @@ class SearchMap extends React.Component {
       };
 
       this.map = new google.maps.Map(this.mapNode, mapOptions);
-      this.MarkerManager = new MarkerManager(this.map, this.handleClick);
+      this.MarkerManager = new MarkerManager(this.map, this.props.openModalWithListing);
       this.MarkerManager.updateMarkers(this.props.listings);
 
       this.registerListeners();
