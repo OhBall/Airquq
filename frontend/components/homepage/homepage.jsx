@@ -20,10 +20,10 @@ class Homepage extends React.Component {
   }
 
   render() {
-    if (this.state.loading || !this.props.listings) {
+    if (this.state.loading || Object.values(this.props.listings).length === 0) {
       return <DotLoading state={this.state} />;
     } else {    
-      
+      debugger
       const listings1 = Object.values(this.props.listings['los Angeles']).slice(0, 5);
       const listings2 = Object.values(this.props.listings['miami']).slice(0, 5);
       const listings3 = Object.values(this.props.listings['seattle']).slice(0, 5)
