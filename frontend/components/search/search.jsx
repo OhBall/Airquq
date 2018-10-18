@@ -25,6 +25,7 @@ class Search extends React.Component {
     }
 
     const { listings, updateFilter, openModalWithListing } = this.props;
+    debugger
     return (
       <div className="search-index-container">
         <Filterbar openModal={this.props.openModal} />
