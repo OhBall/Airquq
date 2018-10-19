@@ -36,19 +36,13 @@ Any time user clicks on the logo on the left top corner, user will be directed t
 
 ### Listing Show Page
 
-This is the page for users to view all the detailed information of a Airquq listed home.
+This is the page for users to view all the detailed information of a Airquq listed home, consisting of descriptions, availability, location, and reviews.
 
 ![](readme_img/listing_show_1-1.jpg)
 
-This section shows availability of recent 2 months and the neighborhood around the home on google map.
+Users can book their trip throught the calendar.
 
-![](readme_img/listing_show_2.jpg)
-
-This section shows all reviews for a particular home, and the average rating for each category in stars format. 
-
-The review texts are generated using Faker gem (from  RickAndMorty section!)
-
-![](readme_img/listing_show_3.jpg)
+![](readme_img/booking.gif)
 
 ### Trips page
 
