@@ -32,13 +32,13 @@ The backend is only queried for listings within the current map bounds. Any user
 
 Any time user clicks on the logo on the left top corner, user will be directed to the listing index page which shows recommendations for travel destination and homes in those cities. There are quick links to go to the cities Airquq have listings in.
 
-![](index.jpg)
+![](listing_index.jpg)
 
 ### Listing Show Page
 
 This is the page for users to view all the detailed information of a Airquq listed home.
 
-![](listing_show_1.jpg)
+![](listing_show_1-1.jpg)
 
 This section shows availability of recent 2 months and the neighborhood around the home on google map.
 
@@ -48,7 +48,7 @@ This section shows all reviews for a particular home, and the average rating for
 
 The review texts are generated using Faker gem (from  RickAndMorty section!)
 
-![](listing_show_4.jpg)
+![](listing_show_3.jpg)
 
 ### Trips page
 
