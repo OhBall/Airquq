@@ -26,7 +26,7 @@ This page is for users to search and views listings based on map locations and f
 
 The backend is only queried for listings within the current map bounds. Any user movement of the map will query the backend based on the updated map bounds.
 
-![](search.gif)
+![](search_show.gif)
 
 ### Listing index page
 
