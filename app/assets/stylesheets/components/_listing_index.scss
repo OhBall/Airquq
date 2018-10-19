@@ -27,14 +27,15 @@
 
 .listings-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 19% [col-start]);
+  grid-template-columns: repeat(auto-fit, 24% [col-start]);
   justify-content: space-between;
   margin-bottom: 30px;
   }
 }
 
 .listing-details-container img {
-  height: 230px;
+  height: 200px;
+  border-radius: 3px;
 }
 
 .listing-details-text div {
@@ -43,7 +44,7 @@
 }
 
 #listing-city{
-  color: $airbnb-blue;
+  color: $dark-grey;
   font-size: 12px;
   font-weight: 600;
   margin-top: 20px;
@@ -51,10 +52,11 @@
 
 #listing-name {
   font-weight: 500;
+  font-size: 14px;
 }
 
 #listing-price {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 300;
   margin-bottom: 0;
 }
@@ -69,9 +71,10 @@
   margin-top: 0;
 }
 
-.index-stars > p {
+.index-stars p {
   margin-right: 5px;
   font-size: 12px;
   font-weight: 600;
-  color: $airbnb-blue;
+  color: $dark-grey;
+  margin-left: 5px;
 }

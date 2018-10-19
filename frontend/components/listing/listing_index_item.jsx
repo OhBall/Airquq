@@ -21,7 +21,7 @@ const ListingIndexItem = ({ listing }) => {
         <div id="listing-city">{ listing.city.toUpperCase() }</div>
         <Link to={`/listings/${listing.id}`}><div id="listing-name">{listing.name}</div></Link>
         <div id="listing-price">${listing.price} per night · Free Cancellation  </div>
-        <div className="index-stars"><p>{listing.averageRating}</p>{toStars(listing.averageRating)}</div>
+        <div className="index-stars">{toStars(listing.averageRating)}<p>{listing.reviewNum}</p></div>
       </div>
     </div>
   )

@@ -23,10 +23,10 @@ class Homepage extends React.Component {
     if (this.state.loading || Object.values(this.props.listings).length === 0) {
       return <DotLoading state={this.state} />;
     } else {    
-      const listings1 = Object.values(this.props.listings['los Angeles']).slice(0, 5);
-      const listings2 = Object.values(this.props.listings['miami']).slice(0, 5);
-      const listings3 = Object.values(this.props.listings['seattle']).slice(0, 5)
-      const listings4 = Object.values(this.props.listings['san Francisco']).slice(0, 5)
+      const listings1 = Object.values(this.props.listings['los Angeles']).slice(0, 4);
+      const listings2 = Object.values(this.props.listings['miami']).slice(0, 4);
+      const listings3 = Object.values(this.props.listings['seattle']).slice(0, 4)
+      const listings4 = Object.values(this.props.listings['san Francisco']).slice(0, 4)
       
       return (
         <div className="homepage-container">

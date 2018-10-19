@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom'
 import { DateRangePicker } from 'react-dates';
 import momentPropTypes from 'react-moment-proptypes';
 import moment from 'moment';
+import { toStars } from '../review/show_stars';
 
 class BookingForm extends React.Component {
   constructor(props) {
@@ -88,6 +89,7 @@ class BookingForm extends React.Component {
           <div>${listing.price}</div>
           <p>per night</p>
         </div>
+          <div id="booking-form-star">{toStars(listing.averageRating)}<p>{Object.keys(listing.reviews).length}</p></div>
         
         <div className="divide-line" />
 

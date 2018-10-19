@@ -6,6 +6,7 @@
         json.review_num listing.reviews.length
         json.photoUrls listing.photos.map { |photo| url_for(photo) }
         json.average_rating listing.calculate_average_ratings
+        json.review_num listing.reviews.length
       end 
     end
   end 

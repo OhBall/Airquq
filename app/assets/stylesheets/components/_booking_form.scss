@@ -5,18 +5,18 @@
   width: 370px;
   position: sticky;
   top: 110px;
-  margin-left: 150px;
+  margin-left: 50px;
 }
 
 .price-container {
   display: flex;
   align-items: baseline;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 // price number
 .price-container div {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: $dark-grey;
 }
@@ -26,7 +26,7 @@
 .price-container p {
   color: $dark-grey;
   margin-left: 7px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 // booking form
@@ -54,6 +54,7 @@
 .booking-form p {
   margin-bottom: 10px;
   margin-top: 10px;
+  font-size: 11px;
 }
 
 
@@ -85,8 +86,8 @@
 }
 
 .info-under-text p {
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .info-under-text p:first-child {
@@ -114,4 +115,19 @@
 // z-index of date range picker
 .date-range-picker {
   z-index: 1;
+}
+
+// stars
+
+#booking-form-star {
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 10px;
+  align-items: center;
+}
+
+#booking-form-star p {
+  color: $dark-grey;
+  font-size: 12px;
+  margin-left: 5px;
 }

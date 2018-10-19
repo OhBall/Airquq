@@ -23,6 +23,8 @@
 .text-review-container p {
   margin-left: 30px;
   line-height: 24px;
+  font-family:  Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-weight: normal;
 }
 
 .review-first-line {
@@ -37,13 +39,13 @@
 
 .review-author-name {
   font-weight: bold;
+  font-size: 16px;
 }
+
 .each-review-stars-container {
   box-sizing: border-box;
   padding-top: 20px;
 }
-
-
 
 // average review line
 .average-reviews-container {
@@ -53,7 +55,7 @@
 }
 
 .average-reviews-container p {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -67,6 +69,14 @@
   flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.stars-details-container i, .average-reviews-container i {
+  font-size: 10x;
+}
+
+.average-reviews-container i {
+  margin-left: 2px;
 }
 
 .stars-details-container li {

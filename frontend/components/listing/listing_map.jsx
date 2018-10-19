@@ -6,7 +6,7 @@ class ListingMap extends React.Component {
     const { lat, lng } = this.props.listing;
     const mapOptions = {
       center: { lat, lng },
-      zoom: 10.5
+      zoom: 9
     }
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
