@@ -1,8 +1,6 @@
 import React from 'react';
 import Range from 'rc-slider/lib/Range';
-import 'rc-slider/assets/index.css';
-import 'rc-slider/dist/rc-slider.min.css';
-import InputRange from 'react-input-range';
+import '../../../../app/assets/stylesheets/components/rc-slider.css';
 
 class PriceFilter extends React.Component {
   constructor(props) {
