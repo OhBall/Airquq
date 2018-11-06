@@ -6,6 +6,14 @@
 
 Airquq is a full-stack, single-page application inspired by Airbnb. It utilizes a Ruby on Rails backend with a PostgreSQL database and a React and Redux frontend. It features four cities with comfortable homes that users can view, book and read reviews. Users can search for homes by location and apply price filter to find the best matches for them.
 
+
+## Technologies uesd
+- Javascript
+- Ruby on Rails
+- PostgreSQL
+- React / Redux
+- HTML / CSS
+
 ## Features
 
 - Maintain user authenticiation security from frontend to backend
@@ -49,14 +57,6 @@ Users can book their trip throught the calendar.
 This page shows all of the current user's trips(bookings), user can cancel their trips on this page.
 
 ![](readme_img/trips2.gif)
-
-
-## Technologies uesd
-- Javascript
-- Ruby on Rails
-- PostgreSQL
-- HTML
-- CSS
 
 ## Possible future features
 - Messages and chat bot
