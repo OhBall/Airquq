@@ -19,7 +19,7 @@ class PriceFilter extends React.Component {
       maxPrice: e[1]
     });
   }
-  
+
   handleSubmit(price) {
     this.props.closeModal();
     this.props.updateFilter('price', price);
@@ -32,7 +32,9 @@ class PriceFilter extends React.Component {
 
   calculateAverage() {
     let average = 0;
-    this.props.listings.forEach(listing => average += parseInt(listing.price))
+    this.props.listings.forEach(
+      listing => (average += parseInt(listing.price))
+    );
     if (this.props.listings.length !== 0) {
       average = average / this.props.listings.length;
     }
@@ -60,14 +62,19 @@ class PriceFilter extends React.Component {
             <p>${maxPrice}</p>
           </div>
           <div className="price-buttons">
-            <div className="price-clear-button" onClick={this.handleClear} >Clear</div>
-            <div className="price-apply-button"
+            <div className="price-clear-button" onClick={this.handleClear}>
+              Clear
+            </div>
+            <div
+              className="price-apply-button"
               onClick={() => this.handleSubmit([minPrice, maxPrice])}
-            >Apply</div>
+            >
+              Apply
+            </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

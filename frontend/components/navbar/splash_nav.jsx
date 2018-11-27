@@ -5,23 +5,25 @@ import { openModal } from '../../actions/modal_actions';
 import { Link } from 'react-router-dom';
 
 const LoggedIn = ({ currentUser, openModal }) => (
-  <ul className='splash-nav-right'>
+  <ul className="splash-nav-right">
     <p>Hello, {currentUser.firstName}</p>
-    <Link to="/trips"><li>Trips</li></Link>
+    <Link to="/trips">
+      <li>Trips</li>
+    </Link>
     <img src={currentUser.photoUrl} onClick={() => openModal('logout')} />
   </ul>
 );
 
 const NotLoggedIn = ({ openModal }) => {
-
-  return (<ul className='splash-nav-right'>
-    <li onClick={() => openModal('signup')}>Sign Up</li>
-    <li onClick={() => openModal('login')}>Log In</li>
-  </ul>)
+  return (
+    <ul className="splash-nav-right">
+      <li onClick={() => openModal('signup')}>Sign Up</li>
+      <li onClick={() => openModal('login')}>Log In</li>
+    </ul>
+  );
 };
 
 const Navbar = ({ currentUser, openModal, logout }) => {
-
   if (currentUser) {
     var component = (
       <LoggedIn currentUser={currentUser} openModal={openModal} />
@@ -31,13 +33,13 @@ const Navbar = ({ currentUser, openModal, logout }) => {
   }
 
   const sessionLinks = () => (
-    <nav className='splash-navbar'>
-      <div className='splash-nav-left'>
-
+    <nav className="splash-navbar">
+      <div className="splash-nav-left">
         <Link to="/listings">
-          <div id='splash-logo-container'><img src={window.images.whitelogo} /></div>
+          <div id="splash-logo-container">
+            <img src={window.images.whitelogoc} />
+          </div>
         </Link>
-
       </div>
       {component}
     </nav>
@@ -48,10 +50,10 @@ const Navbar = ({ currentUser, openModal, logout }) => {
 
 const mapStateToProps = state => {
   if (state.session) {
-    return ({
+    return {
       currentUserId: state.session.id,
       currentUser: state.entities.users[state.session.id]
-    })
+    };
   } else {
     return null;
   }
