@@ -23,7 +23,7 @@ const NotLoggedIn = ({ openModal }) => {
   );
 };
 
-const Navbar = ({ currentUser, openModal, logout }) => {
+const Navbar = ({ currentUser, openModal }) => {
   if (currentUser) {
     var component = (
       <LoggedIn currentUser={currentUser} openModal={openModal} />

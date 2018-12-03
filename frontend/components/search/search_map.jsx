@@ -3,7 +3,6 @@ import MarkerManager from '../../util/marker_manager';
 import { withRouter } from 'react-router-dom';
 
 class SearchMap extends React.Component {
-
   componentDidMount() {
     const query = this.props.location.search;
     const search = new URLSearchParams(query);
@@ -13,10 +12,13 @@ class SearchMap extends React.Component {
     const mapOptions = {
       center: { lat: this.lat, lng: this.lng },
       zoom: 10
-    }
-    
+    };
+
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-    this.MarkerManager = new MarkerManager(this.map, this.props.openModalWithListing);
+    this.MarkerManager = new MarkerManager(
+      this.map,
+      this.props.openModalWithListing
+    );
     this.MarkerManager.updateMarkers(this.props.listings);
     this.registerListeners();
   }
@@ -29,8 +31,8 @@ class SearchMap extends React.Component {
         southWest: { lat: south, lng: west }
       };
 
-      this.props.updateFilter("bounds", bounds);
-    })
+      this.props.updateFilter('bounds', bounds);
+    });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -51,16 +53,19 @@ class SearchMap extends React.Component {
       };
 
       this.map = new google.maps.Map(this.mapNode, mapOptions);
-      this.MarkerManager = new MarkerManager(this.map, this.props.openModalWithListing);
+      this.MarkerManager = new MarkerManager(
+        this.map,
+        this.props.openModalWithListing
+      );
       this.MarkerManager.updateMarkers(this.props.listings);
 
       this.registerListeners();
     }
   }
-  
-  componentWillUpdate() {
-    this.MarkerManager.updateMarkers(this.props.listings);
-  }
+
+  // componentWillUpdate() {
+  //   this.MarkerManager.updateMarkers(this.props.listings);
+  // }
 
   componentDidUpdate() {
     this.MarkerManager.updateMarkers(this.props.listings);
@@ -69,11 +74,9 @@ class SearchMap extends React.Component {
   componentWillUnmount() {
     this.props.closeModal();
   }
-  
+
   render() {
-    return (
-      <div ref={map => this.mapNode = map} id="search-map"></div>
-    )
+    return <div ref={map => (this.mapNode = map)} id="search-map" />;
   }
 }
 

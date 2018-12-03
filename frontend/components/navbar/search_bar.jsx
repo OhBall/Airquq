@@ -5,19 +5,18 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      address: ""
+      address: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.setAddress = this.setAddress.bind(this);
     this.handleInput = this.handleInput.bind(this);
   }
 
   componentDidMount() {
-    const input = document.getElementsByClassName("main-search-bar")[0];
+    const input = document.getElementsByClassName('main-search-bar')[0];
     const autocomplete = new google.maps.places.Autocomplete(input);
-    google.maps.event.addDomListener(window, "load", autocomplete);
+    google.maps.event.addDomListener(window, 'load', autocomplete);
     let address;
-    autocomplete.addListener("place_changed", () => {
+    autocomplete.addListener('place_changed', () => {
       if (!autocomplete.getPlace().formatted_address) {
         address = autocomplete.getPlace().name;
         this.setState({ address });
@@ -27,15 +26,10 @@ class SearchBar extends React.Component {
         this.setState({ address });
         this.handleSubmit();
       }
-    })
-  }
-
-  setAddress(address) {
-    this.setState({ address })
+    });
   }
 
   handleSubmit(e) {
-
     this.props.closeModal();
 
     const geocoder = new google.maps.Geocoder();
@@ -53,24 +47,27 @@ class SearchBar extends React.Component {
   }
 
   handleInput(e) {
-    this.setState({ address: e.currentTarget.value })
+    this.setState({ address: e.currentTarget.value });
   }
 
   render() {
-    const cities = ['Los Angeles', 'San Francisco', 'New York', 'Seattle'];
+    const cities = ['Los Angeles', 'San Francisco', 'Miami', 'Seattle'];
     const randomCity = cities[Math.floor(Math.random() * cities.length)];
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <i className="fas fa-search"></i>
+          <i className="fas fa-search" />
           <input
-            className="main-search-bar" type="text"
-            value={this.state.address} placeholder={`Try "${randomCity}"`}
+            className="main-search-bar"
+            type="text"
+            value={this.state.address}
+            placeholder={`Try "${randomCity}"`}
             onChange={this.handleInput}
-            onClick={() => this.props.openModal('search')} />
+            onClick={() => this.props.openModal('search')}
+          />
         </form>
       </div>
-    )
+    );
   }
 }
 
